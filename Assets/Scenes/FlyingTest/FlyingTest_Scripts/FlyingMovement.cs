@@ -1,43 +1,80 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Timeline;
 
 public class FlyingMovement : MonoBehaviour
 {
     public Rigidbody player_rb;
     public GameObject player_ob;
-    public float ascendForce = 1;
-    public float forwardFlyingForce = 1;
-    public float forwardForce = 5;
+    public float verticalForce = 100;
+    public float horizontalForce = 5;
     public float rotation = 3;
-    public float boostSpeed = 8;
+    public Vector2 analogValue;
 
-    void FixedUpdate()
+    //Capture analog stick values
+    void OnMove(InputValue value)
     {
-        if(Input.GetKey(KeyCode.Space))
-        {
-            player_rb.AddForce(transform.forward * forwardFlyingForce, ForceMode.Impulse);
-            player_rb.AddForce(0, ascendForce, 0, ForceMode.Impulse);
-
-            if (Input.GetKey("w"))
-            {
-                player_rb.AddForce(transform.forward * forwardForce);
-            }
-
-            if(Input.GetKey(KeyCode.LeftShift)) {
-                player_rb.AddForce(transform.forward * boostSpeed, ForceMode.Impulse);
-            }
-
-        }
-
-        if(Input.GetKey("a"))
-        {
-            player_ob.transform.Rotate(0, rotation, 0);
-        }
-
-        if(Input.GetKey("d"))
-        {
-            player_ob.transform.Rotate(0, -rotation, 0);
-        }
+        analogValue = value.Get<Vector2>();
     }
+
+    //Jump a certain amount of height when the jump button is pressed
+    void OnJump()
+    {
+        player_rb.AddForce(0, verticalForce, 0, ForceMode.Impulse);
+    }
+
+    //Flying movement
+    void FlyingMov()
+    {
+        //horizontal and vertical forces to be applied
+        float horizontal = analogValue.x * horizontalForce;
+        float vertical = analogValue.y * horizontalForce;
+
+        //direction vector of the camera
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+
+        //set these to 0 since we don't want vertical values
+        camForward.y = 0;
+        camRight.y = 0;
+
+        //horizontal and vertical forces to be applied relative to the camera
+        Vector3 forwardRelative = vertical * camForward;
+        Vector3 rightRelative = horizontal * camRight;
+        
+        Vector3 moveDirection = forwardRelative + rightRelative;
+
+        //applying velocity and rotation
+        player_rb.velocity = new Vector3(moveDirection.x, player_rb.velocity.y, moveDirection.z);
+
+        transform.rotation = Quaternion.LookRotation(moveDirection);
+    }
+
+    private void Update()
+    {
+        FlyingMov();
+    }
+
+    //void FixedUpdate()
+    //{
+        // GetKey (instead of GetKeyDown) combined with ForceMode.Impulse is weird
+        // (Note: GetKeyDown might not work perfectly in FixedUpdate...)
+        // Time.deltaTime inside FixedUpdate is fixed - but for ForceMode.Impulse I wouldn't use it
+        //if(Input.GetKey(KeyCode.Space))
+        //{
+        //    player_rb.AddForce(transform.forward * forwardFlyingForce * Time.deltaTime, ForceMode.Impulse);
+        //    player_rb.AddForce(0, ascendForce * Time.deltaTime, 0, ForceMode.Impulse);
+
+        //    if (Input.GetKey("w"))
+        //    {
+        //        player_rb.AddForce(transform.forward * forwardForce * Time.deltaTime, ForceMode.Acceleration);
+        //    }
+
+        //    if(Input.GetKey(KeyCode.LeftShift)) {
+        //        player_rb.AddForce(transform.forward * boostSpeed * Time.deltaTime, ForceMode.Impulse);
+        //    }
+        //}
+    //}
 }
