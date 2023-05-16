@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - floor
+  - water
+  - grass
+  - flying
+  - swimming
   layers:
   - Default
   - TransparentFX

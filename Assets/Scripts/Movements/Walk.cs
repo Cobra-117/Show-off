@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Walk : MonoBehaviour
 {
@@ -27,7 +28,42 @@ public class Walk : MonoBehaviour
 	public Vector3 checkPoint;
 	private bool slide = false;
 
-	void  Start (){
+	//Gamepad values
+    public Vector2 analogValue;
+    public Vector3 rotateDirection;
+
+    //method that returns the analog stick X,Y values from -1 to 1 
+    void OnMove(InputValue value)
+    {
+        analogValue = value.Get<Vector2>();
+    }
+
+    void GetDirection()
+    {
+        float horizontal = analogValue.x;
+        float vertical = analogValue.y;
+
+        //direction vector of the camera
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+
+        //set these to 0 since we don't want vertical values
+        camForward.y = 0;
+        camRight.y = 0;
+
+        //horizontal and vertical forces to be applied relative to the camera
+        Vector3 forwardRelative = vertical * camForward;
+        Vector3 rightRelative = horizontal * camRight;
+
+        rotateDirection = forwardRelative + rightRelative;
+    }
+
+    void RotateObject()
+    {
+        transform.rotation = Quaternion.LookRotation(rotateDirection);
+    }
+
+    void  Start (){
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
 	}
@@ -46,6 +82,8 @@ public class Walk : MonoBehaviour
 	}
 	
 	void FixedUpdate () {
+		GetDirection();
+		RotateObject();
 		if (canMove)
 		{
 			if (moveDir.x != 0 || moveDir.z != 0)
