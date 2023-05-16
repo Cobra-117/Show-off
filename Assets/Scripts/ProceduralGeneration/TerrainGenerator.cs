@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class TerrainGenerator : MonoBehaviour
 {
-    public float xSize;
-    public float zSize;
-    public float blocksize;
+    public Vector2 blockSize;
     public GameObject[] blocks;
+    public int simultaneousBlocks = 7;
+
+    int nbrOfBlocks;
+    List<GameObject> blocksList;
     // Start is called before the first frame update
     void Start()
     {
+        blocksList = new List<GameObject>();
         Random.InitState(System.DateTime.Now.Millisecond);
-        Generate();
+        for (int i = 0; i < 4; i++) {
+            AddBlock();
+        }
+
+        //Generate();
     }
 
     // Update is called once per frame
@@ -21,9 +28,25 @@ public class TerrainGenerator : MonoBehaviour
         
     }
 
-    void Generate()
+    public void AddBlock()
     {
-        for (int z = 0; z < zSize; z++)
+        Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
+        0, 0);
+
+        GameObject block = GameObject.Instantiate(blocks[Random.Range(0, 4)]);
+        block.transform.position = coordinates;
+        block.transform.parent = this.transform;
+        blocksList.Add(block);
+        nbrOfBlocks += 1;
+        if (blocksList.Count > simultaneousBlocks) {
+            Destroy(blocksList[0]);
+            blocksList.RemoveAt(0);
+        }
+    }
+
+    void GenerateOld()
+    {
+        /*for (int z = 0; z < zSize; z++)
         {
             for (int x = 0; x < xSize; x++) 
             {
@@ -49,6 +72,6 @@ public class TerrainGenerator : MonoBehaviour
                         terrainBlock.RemoveWall(0);
                 }
             }
-        }
+        }*/
     }
 }

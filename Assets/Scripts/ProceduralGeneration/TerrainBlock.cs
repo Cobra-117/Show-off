@@ -14,6 +14,7 @@ public class TerrainBlock : MonoBehaviour
 
     public GameObject[] walls;
     public BlockType blockType;
+    bool hasBeenUsed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,8 @@ public class TerrainBlock : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "player") {
+        Debug.Log("trigged enter");
+        if (other.gameObject.tag == "Player") {
             if (blockType == BlockType.SWIM)
             {
                 Debug.Log("entered water");
@@ -42,6 +44,12 @@ public class TerrainBlock : MonoBehaviour
             else if (blockType == BlockType.WALK)
             {
                 Debug.Log("entered walk");
+            }
+            if (hasBeenUsed == false) {
+                transform.parent.GetComponent<TerrainGenerator>().AddBlock();
+                //generate
+                hasBeenUsed = true;
+
             }
         }
     }
