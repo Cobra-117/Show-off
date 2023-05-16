@@ -15,7 +15,7 @@ public class MovingWall : MonoBehaviour
     public float max;
     public float speed;
 
-    public bool isMovingToMin = true;
+    bool isMovingToMin = true;
 
 
     // Start is called before the first frame update
