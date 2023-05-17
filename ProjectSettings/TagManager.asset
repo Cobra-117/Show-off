@@ -13,11 +13,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PlayerTrigger
   - Water
   - UI
-  - 
-  - 
+  - MovementTrigger
+  - PlayerObject
   - 
   - 
   - 

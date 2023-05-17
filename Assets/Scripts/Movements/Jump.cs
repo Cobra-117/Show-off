@@ -54,6 +54,17 @@ public class Jump : MonoBehaviour
     {
         transform.rotation = Quaternion.LookRotation(rotateDirection);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "flying")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToFlying();
+
+        if (other.tag == "swimming")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToSwimming();
+
+        if (other.tag == "walking")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToWalking();
+    }
 
     // Start is called before the first frame update
     void Start()

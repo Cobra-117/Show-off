@@ -6,9 +6,9 @@ public class SwitchMovement : MonoBehaviour
 {
     public GameObject flyingObject;
     public GameObject swimmingObject;
-    public GameObject currentObject;
     public GameObject jumpObject;
     public GameObject walkObject;
+    public GameObject currentObject;
     public ArrayList objects = new ArrayList();
 
     private void Start()
@@ -22,6 +22,9 @@ public class SwitchMovement : MonoBehaviour
     public void SwitchToFlying()
     {
         flyingObject.SetActive(true);
+        flyingObject.transform.position = currentObject.transform.position;
+        currentObject = flyingObject;
+        //bc = currentObject.GetComponent<Collider>();
         Debug.Log("Change to flying");
         SetOthersInactiveExcept(flyingObject);
     }
@@ -29,6 +32,9 @@ public class SwitchMovement : MonoBehaviour
     public void SwitchToSwimming()
     {
         swimmingObject.SetActive(true);
+        swimmingObject.transform.position = currentObject.transform.position;
+        currentObject = swimmingObject;
+        //bc = currentObject.GetComponent<Collider>();
         Debug.Log("Change to swimming");
         SetOthersInactiveExcept(swimmingObject);
     }
@@ -56,16 +62,5 @@ public class SwitchMovement : MonoBehaviour
                 obj.SetActive(false);
             }
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
