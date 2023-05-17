@@ -74,6 +74,18 @@ public class SwimmingMovement : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(moveDirection);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "flying")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToFlying();
+
+        if (other.tag == "walking")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToWalking();
+
+        if (other.tag == "jumping")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToJumping();
+    }
+
     private void Update()
     {
         SwimmingMov();

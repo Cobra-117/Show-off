@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Jump : MonoBehaviour
 {
@@ -11,6 +12,59 @@ public class Jump : MonoBehaviour
     public float cooldown = 0;
     public bool good;
     public bool perfect;
+
+    //used for gamepad controls
+    public Vector2 analogValue;
+    public Vector3 rotateDirection;
+    public bool jumpButtonPressed;
+
+    //method that returns the analog stick X,Y values from -1 to 1 
+    void OnMove(InputValue value)
+    {
+        analogValue = value.Get<Vector2>();
+    }
+
+    //method that runs the code inside when the jump button is pressed
+    void OnJump()
+    {
+        jumpButtonPressed = true;
+    }
+
+    void GetDirection()
+    {
+        float horizontal = analogValue.x;
+        float vertical = analogValue.y;
+
+        //direction vector of the camera
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+
+        //set these to 0 since we don't want vertical values
+        camForward.y = 0;
+        camRight.y = 0;
+
+        //horizontal and vertical forces to be applied relative to the camera
+        Vector3 forwardRelative = vertical * camForward;
+        Vector3 rightRelative = horizontal * camRight;
+
+        rotateDirection = forwardRelative + rightRelative;
+    }
+
+    void RotateObject()
+    {
+        transform.rotation = Quaternion.LookRotation(rotateDirection);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "flying")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToFlying();
+
+        if (other.tag == "swimming")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToSwimming();
+
+        if (other.tag == "walking")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToWalking();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +77,10 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        GetDirection();
+        RotateObject();
         PressMode();
+        jumpButtonPressed = false;
     }
 
     void PressMode()
@@ -32,7 +89,7 @@ public class Jump : MonoBehaviour
         if (cooldown > 0)
             return;
         //Vector3 forceVector =  
-        if (Input.GetKey(KeyCode.Mouse0) && IsGrounded()) {
+        if (jumpButtonPressed && IsGrounded()) {
             rb.velocity = GetJumpVelocity();
             cooldown = MaxCooldown;
         }

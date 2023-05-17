@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Walk : MonoBehaviour
 {
@@ -27,7 +28,42 @@ public class Walk : MonoBehaviour
 	public Vector3 checkPoint;
 	private bool slide = false;
 
-	void  Start (){
+	//Gamepad values
+    public Vector2 analogValue;
+    public Vector3 rotateDirection;
+
+    //method that returns the analog stick X,Y values from -1 to 1 
+    void OnMove(InputValue value)
+    {
+        analogValue = value.Get<Vector2>();
+    }
+
+    void GetDirection()
+    {
+        float horizontal = analogValue.x;
+        float vertical = analogValue.y;
+
+        //direction vector of the camera
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camRight = Camera.main.transform.right;
+
+        //set these to 0 since we don't want vertical values
+        camForward.y = 0;
+        camRight.y = 0;
+
+        //horizontal and vertical forces to be applied relative to the camera
+        Vector3 forwardRelative = vertical * camForward;
+        Vector3 rightRelative = horizontal * camRight;
+
+        rotateDirection = forwardRelative + rightRelative;
+    }
+
+    void RotateObject()
+    {
+        transform.rotation = Quaternion.LookRotation(rotateDirection);
+    }
+
+    void  Start (){
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
 	}
@@ -35,8 +71,19 @@ public class Walk : MonoBehaviour
 	bool IsGrounded (){
 		return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
 	}
-	
-	void Awake () {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "flying")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToFlying();
+
+        if (other.tag == "swimming")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToSwimming();
+
+        if (other.tag == "jumping")
+            transform.parent.gameObject.GetComponent<SwitchMovement>().SwitchToJumping();
+    }
+
+    void Awake () {
 		rb = GetComponent<Rigidbody>();
 		rb.freezeRotation = true;
 		rb.useGravity = false;
@@ -48,22 +95,22 @@ public class Walk : MonoBehaviour
 	void FixedUpdate () {
 		if (canMove)
 		{
-			if (moveDir.x != 0 || moveDir.z != 0)
-			{
-				Vector3 targetDir = moveDir; //Direction of the character
+			//if (moveDir.x != 0 || moveDir.z != 0)
+			//{
+			//	Vector3 targetDir = moveDir; //Direction of the character
 
-				targetDir.y = 0;
-				if (targetDir == Vector3.zero)
-					targetDir = transform.forward;
-				Quaternion tr = Quaternion.LookRotation(targetDir); //Rotation of the character to where it moves
-				Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tr, Time.deltaTime * rotateSpeed); //Rotate the character little by little
-				transform.rotation = targetRotation;
-			}
+			//	targetDir.y = 0;
+			//	if (targetDir == Vector3.zero)
+			//		targetDir = transform.forward;
+			//	Quaternion tr = Quaternion.LookRotation(targetDir); //Rotation of the character to where it moves
+			//	Quaternion targetRotation = Quaternion.Slerp(transform.rotation, tr, Time.deltaTime * rotateSpeed); //Rotate the character little by little
+			//	transform.rotation = targetRotation;
+			//}
 
 			if (IsGrounded())
 			{
 			 // Calculate how fast we should be moving
-				Vector3 targetVelocity = moveDir;
+				Vector3 targetVelocity = rotateDirection;
 				targetVelocity *= speed;
 
 				// Apply a force that attempts to reach our target velocity
@@ -123,7 +170,9 @@ public class Walk : MonoBehaviour
 
 	private void Update()
 	{
-		float h = Input.GetAxis("Horizontal");
+        GetDirection();
+        RotateObject();
+        float h = Input.GetAxis("Horizontal");
 		float v = Input.GetAxis("Vertical");
 
 		/*Vector3 v2 = v * cam.transform.forward; //Vertical axis to which I want to move with respect to the camera
@@ -143,7 +192,7 @@ public class Walk : MonoBehaviour
 				slide = false;
 			}
 		}
-        ManageInputs();
+        //ManageInputs();
 	}
 
     void ManageInputs()
