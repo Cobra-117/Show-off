@@ -46,7 +46,7 @@ public class TerrainBlock : MonoBehaviour
                 Debug.Log("entered walk");
             }
             if (hasBeenUsed == false) {
-                transform.parent.GetComponent<TerrainGenerator>().AddBlock();
+                transform.parent.GetComponent<TerrainGenerator>().AddBlock(Random.Range(0, 4));
                 //generate
                 hasBeenUsed = true;
 

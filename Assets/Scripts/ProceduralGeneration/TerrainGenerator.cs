@@ -15,8 +15,9 @@ public class TerrainGenerator : MonoBehaviour
     {
         blocksList = new List<GameObject>();
         Random.InitState(System.DateTime.Now.Millisecond);
-        for (int i = 0; i < 4; i++) {
-            AddBlock();
+        AddBlock(2);
+        for (int i = 0; i < 3; i++) {
+            AddBlock(Random.Range(0, 4));
         }
 
         //Generate();
@@ -28,12 +29,12 @@ public class TerrainGenerator : MonoBehaviour
         
     }
 
-    public void AddBlock()
+    public void AddBlock(int blockType)
     {
         Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
         0, 0);
 
-        GameObject block = GameObject.Instantiate(blocks[Random.Range(0, 4)]);
+        GameObject block = GameObject.Instantiate(blocks[blockType]);
         block.transform.position = coordinates;
         block.transform.parent = this.transform;
         blocksList.Add(block);
@@ -43,6 +44,7 @@ public class TerrainGenerator : MonoBehaviour
             blocksList.RemoveAt(0);
         }
     }
+
 
     void GenerateOld()
     {
