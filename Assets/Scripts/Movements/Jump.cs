@@ -102,14 +102,29 @@ public class Jump : MonoBehaviour
 
     Vector3 GetJumpVelocity()
     {
-        if (perfect == true) 
+        //if (perfect == true) 
+        //{
+        //    Debug.Log("Perfect");
+        //    return new Vector3(horForce, vertForce, 0);
+        //} else if (good == true) {
+        //    Debug.Log("Good");
+        //    return new Vector3(horForce/1.5f, vertForce/1.5f, 0);
+        //} else {
+        //    return new Vector3(0, 0, 0);
+        //}
+
+        if (perfect == true)
         {
             Debug.Log("Perfect");
-            return new Vector3(horForce, vertForce, 0);
-        } else if (good == true) {
+            return new Vector3(rotateDirection.x * horForce, vertForce, rotateDirection.z * horForce);
+        }
+        else if (good == true)
+        {
             Debug.Log("Good");
-            return new Vector3(horForce/1.5f, vertForce/1.5f, 0);
-        } else {
+            return new Vector3(rotateDirection.x * horForce / 1.5f, vertForce / 1.5f, rotateDirection.z * horForce);
+        }
+        else
+        {
             return new Vector3(0, 0, 0);
         }
     }
