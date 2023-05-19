@@ -89,5 +89,6 @@ public class SwimmingMovement : MonoBehaviour
     private void Update()
     {
         SwimmingMov();
+        GetComponent<Animator>().Play("Take 001");
     }
 }

@@ -91,6 +91,7 @@ public class Jump : MonoBehaviour
         //Vector3 forceVector =  
         if (jumpButtonPressed && IsGrounded()) {
             rb.velocity = GetJumpVelocity();
+            GetComponent<Animator>().Play("Take 001");
             cooldown = MaxCooldown;
         }
     }
