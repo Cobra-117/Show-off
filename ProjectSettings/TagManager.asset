@@ -3,16 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - floor
+  - water
+  - grass
+  - flying
+  - swimming
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PlayerTrigger
   - Water
   - UI
-  - 
-  - 
+  - MovementTrigger
+  - PlayerObject
   - 
   - 
   - 
