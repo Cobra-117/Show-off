@@ -14,6 +14,7 @@ public class pepeRoar : MonoBehaviour
     void Start()
     {
         InvokeRepeating("Roar", 5f, 2f);
+        rb = GetComponent<Rigidbody>();
     }
 
     void Roar()

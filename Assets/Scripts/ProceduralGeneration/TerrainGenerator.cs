@@ -15,9 +15,9 @@ public class TerrainGenerator : MonoBehaviour
     {
         blocksList = new List<GameObject>();
         Random.InitState(System.DateTime.Now.Millisecond);
-        AddBlock(2);
+        AddBlock(0);
         for (int i = 0; i < 3; i++) {
-            AddBlock(Random.Range(0, 4));
+            AddBlock(Random.Range(0, blocks.Length));
         }
 
         //Generate();
