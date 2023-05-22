@@ -33,7 +33,7 @@ public class TerrainGenerator : MonoBehaviour
     {
         Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
         0, 0);
-
+        Debug.Log("will add block of type" + blockType.ToString());
         GameObject block = GameObject.Instantiate(blocks[blockType]);
         block.transform.position = coordinates;
         block.transform.parent = this.transform;

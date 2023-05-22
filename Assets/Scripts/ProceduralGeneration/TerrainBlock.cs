@@ -53,7 +53,8 @@ public class TerrainBlock : MonoBehaviour
                 GetComponent<SwitchMovement>().SwitchToWalking();
             }
             if (hasBeenUsed == false) {
-                transform.parent.GetComponent<TerrainGenerator>().AddBlock(Random.Range(0, 4));
+                transform.parent.GetComponent<TerrainGenerator>().AddBlock(Random.Range(0, 
+                transform.parent.GetComponent<TerrainGenerator>().blocks.Length));
                 //generate
                 hasBeenUsed = true;
                 Debug.Log("adding blocks");
