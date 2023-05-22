@@ -9,6 +9,12 @@ TagManager:
   - grass
   - flying
   - swimming
+  - walking
+  - jumping
+  - flyingPlayer
+  - swimmingPlayer
+  - jumpingPlayer
+  - walkingPlayer
   layers:
   - Default
   - TransparentFX

@@ -42,6 +42,8 @@ public class SwitchMovement : MonoBehaviour
     public void SwitchToJumping()
     {
         jumpObject.SetActive(true);
+        jumpObject.transform.position = currentObject.transform.position;
+        currentObject = jumpObject;
         Debug.Log("Change to Jumping");
         SetOthersInactiveExcept(jumpObject);
     }
@@ -49,6 +51,8 @@ public class SwitchMovement : MonoBehaviour
     public void SwitchToWalking()
     {
         walkObject.SetActive(true);
+        walkObject.transform.position = currentObject.transform.position;
+        currentObject = walkObject;
         Debug.Log("Change to Walking");
         SetOthersInactiveExcept(walkObject);
     }

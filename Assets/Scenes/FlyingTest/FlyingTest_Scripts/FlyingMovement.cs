@@ -17,21 +17,32 @@ public class FlyingMovement : MonoBehaviour
     public bool jumpCooldown = false;
 
     //Capture analog stick values
-    void OnMove(InputValue value)
-    {
-        analogValue = value.Get<Vector2>();
-    }
+    //void OnMove(InputValue value)
+    //{
+    //    analogValue = value.Get<Vector2>();
+    //}
 
     //Jump a certain amount of height when the jump button is pressed
-    void OnJump()
+
+    public void OnButtonPress()
     {
         if (jumpCooldown == false)
         {
             player_rb.AddForce(0, verticalForce, 0, ForceMode.Impulse);
-            Invoke("ResetJumpCooldown", cooldownValue);
             jumpCooldown = true;
+            Invoke("ResetJumpCooldown", cooldownValue);
         }
     }
+
+    //void Jump()
+    //{
+    //    buttonPressed = GetComponentInParent<PlayerInputScript>().buttonPressed;
+    //    if (buttonPressed == true)
+    //    {
+    //        player_rb.AddForce(0, verticalForce, 0, ForceMode.Impulse);
+    //        //Invoke("ResetJumpCooldown", cooldownValue);
+    //    }
+    //}
 
     void ResetJumpCooldown()
     {
@@ -41,6 +52,8 @@ public class FlyingMovement : MonoBehaviour
     //Flying movement
     void FlyingMov()
     {
+        analogValue = GetComponentInParent<PlayerInputScript>().analogValue;
+        
         //horizontal and vertical forces to be applied
         float horizontal = analogValue.x * horizontalForce;
         float vertical = analogValue.y * horizontalForce;
@@ -80,26 +93,6 @@ public class FlyingMovement : MonoBehaviour
     private void Update()
     {
         FlyingMov();
+        //Jump();
     }
-
-    //void FixedUpdate()
-    //{
-        // GetKey (instead of GetKeyDown) combined with ForceMode.Impulse is weird
-        // (Note: GetKeyDown might not work perfectly in FixedUpdate...)
-        // Time.deltaTime inside FixedUpdate is fixed - but for ForceMode.Impulse I wouldn't use it
-        //if(Input.GetKey(KeyCode.Space))
-        //{
-        //    player_rb.AddForce(transform.forward * forwardFlyingForce * Time.deltaTime, ForceMode.Impulse);
-        //    player_rb.AddForce(0, ascendForce * Time.deltaTime, 0, ForceMode.Impulse);
-
-        //    if (Input.GetKey("w"))
-        //    {
-        //        player_rb.AddForce(transform.forward * forwardForce * Time.deltaTime, ForceMode.Acceleration);
-        //    }
-
-        //    if(Input.GetKey(KeyCode.LeftShift)) {
-        //        player_rb.AddForce(transform.forward * boostSpeed * Time.deltaTime, ForceMode.Impulse);
-        //    }
-        //}
-    //}
 }

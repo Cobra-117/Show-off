@@ -14,16 +14,16 @@ public class SwimmingMovement : MonoBehaviour
     public Vector2 analogValue;
 
     //Capture analog stick values
-    void OnMove(InputValue value)
-    {
-        analogValue = value.Get<Vector2>();
-    }
+    //void OnMove(InputValue value)
+    //{
+    //    analogValue = value.Get<Vector2>();
+    //}
 
-    //Diving Mechanic (WIP)
-    void OnDive()
-    {
-        player_rb.AddForce(0, -verticalForce, 0, ForceMode.Impulse);
-    }
+    ////Diving Mechanic (WIP)
+    //void OnDive()
+    //{
+    //    player_rb.AddForce(0, -verticalForce, 0, ForceMode.Impulse);
+    //}
 
     ////Move the player forward but only on water
     //void OnForward()
@@ -48,8 +48,15 @@ public class SwimmingMovement : MonoBehaviour
     //    }
     //}
 
+    public void OnButtonPress()
+    {
+        player_rb.AddForce(0, -verticalForce, 0, ForceMode.Impulse);
+    }
+
     void SwimmingMov()
     {
+        analogValue = GetComponentInParent<PlayerInputScript>().analogValue;
+
         //horizontal and vertical forces to be applied
         float horizontal = analogValue.x * horizontalForce;
         float vertical = analogValue.y * horizontalForce;
@@ -89,6 +96,6 @@ public class SwimmingMovement : MonoBehaviour
     private void Update()
     {
         SwimmingMov();
-        GetComponent<Animator>().Play("Take 001");
+        //GetComponent<Animator>().Play("Take 001");
     }
 }

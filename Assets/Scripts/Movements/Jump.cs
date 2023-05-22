@@ -19,19 +19,17 @@ public class Jump : MonoBehaviour
     public bool jumpButtonPressed;
 
     //method that returns the analog stick X,Y values from -1 to 1 
-    void OnMove(InputValue value)
-    {
-        analogValue = value.Get<Vector2>();
-    }
 
     //method that runs the code inside when the jump button is pressed
-    void OnJump()
+    public void OnButtonPress()
     {
         jumpButtonPressed = true;
     }
 
     void GetDirection()
     {
+        analogValue = GetComponentInParent<PlayerInputScript>().analogValue;
+        
         float horizontal = analogValue.x;
         float vertical = analogValue.y;
 
@@ -77,6 +75,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        analogValue = GetComponentInParent<PlayerInputScript>().analogValue;
         GetDirection();
         RotateObject();
         PressMode();

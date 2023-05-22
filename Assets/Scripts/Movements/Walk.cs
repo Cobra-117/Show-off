@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class Walk : MonoBehaviour
@@ -35,14 +36,21 @@ public class Walk : MonoBehaviour
 	Animator animator;
 
     //method that returns the analog stick X,Y values from -1 to 1 
-    void OnMove(InputValue value)
-    {
-        analogValue = value.Get<Vector2>();
-    }
+    //void OnMove(InputValue value)
+    //{
+    //    analogValue = value.Get<Vector2>();
+    //}
+
+	public void OnButtonPress()
+	{
+
+	}
 
     void GetDirection()
     {
-        float horizontal = analogValue.x;
+		analogValue = GetComponentInParent<PlayerInputScript>().analogValue;
+		
+		float horizontal = analogValue.x;
         float vertical = analogValue.y;
 
         //direction vector of the camera
@@ -68,7 +76,7 @@ public class Walk : MonoBehaviour
     void  Start (){
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
-		animator = GetComponent<Animator>();
+		//animator = GetComponent<Animator>();
 	}
 	
 	bool IsGrounded (){
@@ -115,7 +123,7 @@ public class Walk : MonoBehaviour
 			 // Calculate how fast we should be moving
 				Vector3 targetVelocity = rotateDirection;
 				targetVelocity *= speed;
-				animator.Play("Take 001");
+				//animator.Play("Take 001");
 
 				// Apply a force that attempts to reach our target velocity
 				Vector3 velocity = rb.velocity;
@@ -138,12 +146,13 @@ public class Walk : MonoBehaviour
 					rb.AddForce(moveDir * 0.15f, ForceMode.VelocityChange);
 					//Debug.Log(rb.velocity.magnitude);
 				}
+				//rb.velocity = new Vector3(rotateDirection.x, rb.velocity.y, rotateDirection.z);
 
-				// Jump
-				if (IsGrounded() && Input.GetButton("Jump"))
-				{
-					rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
-				}
+                // Jump
+    //            if (IsGrounded() && Input.GetButton("Jump"))
+				//{
+				//	rb.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
+				//}
 			}
 			else
 			{
