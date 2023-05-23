@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2161.3838, g: 2265.3965, b: 3288.543, a: 1}
+  m_IndirectSpecularColor: {r: 2160.8467, g: 2265.0723, b: 3288.4062, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1112,6 +1112,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 30564582883937530, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.35680553
+      objectReference: {fileID: 0}
+    - target: {fileID: 30564582883937530, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.7808318
+      objectReference: {fileID: 0}
+    - target: {fileID: 30564582883937530, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.4559613
+      objectReference: {fileID: 0}
+    - target: {fileID: 30564582883937530, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.009572908
+      objectReference: {fileID: 0}
+    - target: {fileID: 30564582883937530, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.38833547
+      objectReference: {fileID: 0}
+    - target: {fileID: 30564582883937530, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.035849422
+      objectReference: {fileID: 0}
     - target: {fileID: 30564582919779520, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
         type: 3}
       propertyPath: m_PlayerPrefab
@@ -1177,6 +1207,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468562363198438668, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4877042061339621184, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2, type: 3}
