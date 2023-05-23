@@ -27,6 +27,8 @@ public class SwitchMovement : MonoBehaviour
         //bc = currentObject.GetComponent<Collider>();
         Debug.Log("Change to flying");
         SetOthersInactiveExcept(flyingObject);
+        GameObject.FindGameObjectWithTag("MainCamera").
+        GetComponent<CameraFollowObj>().target = flyingObject;
     }
 
     public void SwitchToSwimming()
@@ -37,6 +39,8 @@ public class SwitchMovement : MonoBehaviour
         //bc = currentObject.GetComponent<Collider>();
         Debug.Log("Change to swimming");
         SetOthersInactiveExcept(swimmingObject);
+        GameObject.FindGameObjectWithTag("MainCamera").
+        GetComponent<CameraFollowObj>().target = swimmingObject;
     }
 
     public void SwitchToJumping()
@@ -46,6 +50,8 @@ public class SwitchMovement : MonoBehaviour
         currentObject = jumpObject;
         Debug.Log("Change to Jumping");
         SetOthersInactiveExcept(jumpObject);
+        GameObject.FindGameObjectWithTag("MainCamera").
+        GetComponent<CameraFollowObj>().target = jumpObject;
     }
 
     public void SwitchToWalking()
@@ -55,6 +61,8 @@ public class SwitchMovement : MonoBehaviour
         currentObject = walkObject;
         Debug.Log("Change to Walking");
         SetOthersInactiveExcept(walkObject);
+        GameObject.FindGameObjectWithTag("MainCamera").
+        GetComponent<CameraFollowObj>().target = walkObject;
     }
 
     void SetOthersInactiveExcept(GameObject active)
