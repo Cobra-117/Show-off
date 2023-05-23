@@ -16,13 +16,13 @@ public class PlayerInputScript : MonoBehaviour
     {
         currentObject = GetComponent<SwitchMovement>().currentObject;
 
-        if (currentObject.tag == "flyingPlayer")
+        if (currentObject.name.Equals("Flying"))
         {
             Debug.Log("jump");
             currentObject.GetComponent<FlyingMovement>().OnButtonPress();
         }
 
-        if (currentObject.tag == "swimmingPlayer")
+        if (currentObject.name.Equals("Swim"))
             currentObject.GetComponent<SwimmingMovement>().OnButtonPress();
 
         if (currentObject.name.Equals("Walk"))

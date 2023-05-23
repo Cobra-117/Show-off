@@ -24,8 +24,9 @@ public class bonkScript : MonoBehaviour
         {
             Rigidbody rb = player.GetComponent<Rigidbody>();
             rb.AddForce(-player.transform.up * bonkForce, ForceMode.Impulse);
-            player.GetComponent<PlayerInput>().DeactivateInput();
-            player.GetComponent<PlayerInput>().Invoke("ActivateInput", stunDuration);
+            PlayerInput input = player.GetComponentInParent<PlayerInput>();
+            input.DeactivateInput();
+            input.Invoke("ActivateInput", stunDuration);
             Debug.Log("Bonk");
         }
     }
