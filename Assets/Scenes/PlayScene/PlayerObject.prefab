@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 30564582977806032}
   m_Layer: 0
   m_Name: Perfect
-  m_TagString: Untagged
+  m_TagString: jumpingPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 30564583927970653}
   m_Layer: 0
   m_Name: Good
-  m_TagString: Untagged
+  m_TagString: jumpingPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 30564584244686782}
   m_Layer: 0
   m_Name: FlyingPlayer
-  m_TagString: Untagged
+  m_TagString: flyingPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 30564584949339739}
   m_Layer: 0
   m_Name: Frog
-  m_TagString: Untagged
+  m_TagString: jumpingPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -912,7 +912,7 @@ PrefabInstance:
     - target: {fileID: 4882515221925084095, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: flyingPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
@@ -1075,7 +1075,7 @@ PrefabInstance:
     - target: {fileID: 3480817710681539611, guid: 89840094da194e84f8bf08cf85497041,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: swimmingPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 4252957055326854817, guid: 89840094da194e84f8bf08cf85497041,
         type: 3}
@@ -1305,7 +1305,7 @@ PrefabInstance:
     - target: {fileID: 7855184323050835872, guid: 58f4352c8488e254ba3969dba865078a,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: jumpingPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58f4352c8488e254ba3969dba865078a, type: 3}
