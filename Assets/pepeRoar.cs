@@ -5,9 +5,9 @@ using UnityEngine;
 public class pepeRoar : MonoBehaviour
 {
     public Rigidbody rb;
-    public float verticalForce = 250f;
-    public float pushbackRadius = 8f;
-    public float pushbackForce = 5f;
+    public float verticalForce;
+    public float pushbackRadius;
+    public float pushbackForce;
     public ArrayList players = new ArrayList();
 
     // Start is called before the first frame update
