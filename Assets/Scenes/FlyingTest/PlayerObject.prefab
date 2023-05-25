@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 3797333098672347854}
   - component: {fileID: 3797333098672347848}
   - component: {fileID: 3797333098672347851}
+  - component: {fileID: 8588593820460710548}
   m_Layer: 0
   m_Name: Swim
   m_TagString: Player
@@ -285,9 +286,25 @@ MonoBehaviour:
   player_ob: {fileID: 3797333098672347850}
   verticalForce: 10
   horizontalFlyingForce: 5
-  horizontalForce: 5
+  speed: 0
   rotation: 3
   analogValue: {x: 0, y: 0}
+--- !u!114 &8588593820460710548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797333098672347850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd7a22ce0128d3488ce635017e21b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 3797333098672347854}
+  slowDownScale: 0.3
+  collideWith: water
+  slowDown: 0
 --- !u!1 &3797333099474225290
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +479,7 @@ GameObject:
   - component: {fileID: 3797333100433790069}
   - component: {fileID: 3797333100433790068}
   - component: {fileID: 3797333100433790071}
+  - component: {fileID: 1408928837584211937}
   m_Layer: 0
   m_Name: Flying
   m_TagString: Player
@@ -578,11 +596,27 @@ MonoBehaviour:
   player_rb: {fileID: 3797333100433790068}
   player_ob: {fileID: 3797333100433790065}
   verticalForce: 8
-  horizontalForce: 5
+  speed: 5
   rotation: 3
   analogValue: {x: 0, y: 0}
   cooldownValue: 0.5
   jumpCooldown: 0
+--- !u!114 &1408928837584211937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797333100433790065}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd7a22ce0128d3488ce635017e21b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 3797333100433790068}
+  slowDownScale: 0.3
+  collideWith: water
+  slowDown: 0
 --- !u!1 &3797333100504990462
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class FlyingMovement : MonoBehaviour
     public Rigidbody player_rb;
     public GameObject player_ob;
     public float verticalForce = 100f;
-    public float horizontalForce = 5f;
+    public float speed = 5f;
     public float rotation = 3f;
     public Vector2 analogValue;
     public float cooldownValue = 1f;
@@ -55,8 +55,8 @@ public class FlyingMovement : MonoBehaviour
         analogValue = GetComponentInParent<PlayerInputScript>().analogValue;
         
         //horizontal and vertical forces to be applied
-        float horizontal = analogValue.x * horizontalForce;
-        float vertical = analogValue.y * horizontalForce;
+        float horizontal = analogValue.x * speed;
+        float vertical = analogValue.y * speed;
 
         //direction vector of the camera
         Vector3 camForward = Camera.main.transform.forward;
