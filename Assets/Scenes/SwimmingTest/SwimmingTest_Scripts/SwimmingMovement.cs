@@ -7,9 +7,9 @@ public class SwimmingMovement : MonoBehaviour
     public Rigidbody player_rb;
     public GameObject player_ob;
 
-    public float verticalForce = 300;
-    public float horizontalFlyingForce = 50;
-    public float horizontalForce = 500;
+    public float verticalForce;
+    public float horizontalFlyingForce;
+    public float speed;
     public float rotation = 3;
     public Vector2 analogValue;
 
@@ -58,8 +58,8 @@ public class SwimmingMovement : MonoBehaviour
         analogValue = GetComponentInParent<PlayerInputScript>().analogValue;
 
         //horizontal and vertical forces to be applied
-        float horizontal = analogValue.x * horizontalForce;
-        float vertical = analogValue.y * horizontalForce;
+        float horizontal = analogValue.x * speed;
+        float vertical = analogValue.y * speed;
 
         //direction vector of the camera
         Vector3 camForward = Camera.main.transform.forward;
