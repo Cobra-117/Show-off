@@ -1427,7 +1427,7 @@ MonoBehaviour:
   player_rb: {fileID: 1484741307}
   player_ob: {fileID: 1484741305}
   verticalForce: 5
-  horizontalForce: 5
+  speed: 5
   rotation: 3
   analogValue: {x: 0, y: 0}
   cooldownValue: 0.3
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   player_rb: {fileID: 1862341599}
   player_ob: {fileID: 1862341596}
   verticalForce: 10
-  horizontalForce: 5
+  speed: 5
   rotation: 3
   analogValue: {x: 0, y: 0}
   cooldownValue: 0.3
@@ -2160,6 +2160,7 @@ GameObject:
   - component: {fileID: 1865638710}
   - component: {fileID: 1865638709}
   - component: {fileID: 1865638708}
+  - component: {fileID: 1865638712}
   m_Layer: 0
   m_Name: Cube
   m_TagString: water
@@ -2245,6 +2246,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1865638712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865638707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c263b0cc22e7d204fba9ce264fef4b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowDownScale: 0.3
 --- !u!1 &1928793134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,7 +2620,7 @@ MonoBehaviour:
   player_ob: {fileID: 2096944883}
   verticalForce: 10
   horizontalFlyingForce: 5
-  horizontalForce: 5
+  speed: 0
   rotation: 3
   analogValue: {x: 0, y: 0}
 --- !u!114 &2096944885
