@@ -32,6 +32,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2880854175950610773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a0d6dba6195b38a4d881c2ad37730981,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495250843137346531}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8245959924194438152}
+  m_Layer: 0
+  m_Name: 'SpikeWall_Spikes_01 (2) (Missing Prefab with guid: a0d6dba6195b38a4d881c2ad37730981)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8245959924194438152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a0d6dba6195b38a4d881c2ad37730981,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495250843137346531}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2880854175950610773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8495250841950939359}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6040215352037540602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a0d6dba6195b38a4d881c2ad37730981,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495250843618645316}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8245959923713143471}
+  m_Layer: 0
+  m_Name: 'SpikeWall_Spikes_01 (4) (Missing Prefab with guid: a0d6dba6195b38a4d881c2ad37730981)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8245959923713143471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a0d6dba6195b38a4d881c2ad37730981,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495250843618645316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040215352037540602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8495250841950939359}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7258514923608882219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a0d6dba6195b38a4d881c2ad37730981,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495250842919368818}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8245959924378935193}
+  m_Layer: 0
+  m_Name: 'SpikeWall_Spikes_01 (3) (Missing Prefab with guid: a0d6dba6195b38a4d881c2ad37730981)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8245959924378935193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a0d6dba6195b38a4d881c2ad37730981,
+    type: 3}
+  m_PrefabInstance: {fileID: 8495250842919368818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7258514923608882219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8495250841950939359}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8495250841950939358
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,6 +140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8495250841950939359}
+  - component: {fileID: 1814484800468620756}
   m_Layer: 0
   m_Name: Dispearing walls
   m_TagString: Untagged
@@ -77,6 +177,20 @@ Transform:
   m_Father: {fileID: 8245959923373767140}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1814484800468620756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8495250841950939358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbd7494ac8df844c8b05c394207f7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTime: 2
+  countdown: 0
 --- !u!1 &8495250842365677404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,12 +3559,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0d6dba6195b38a4d881c2ad37730981, type: 3}
---- !u!4 &8245959924378935193 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a0d6dba6195b38a4d881c2ad37730981,
-    type: 3}
-  m_PrefabInstance: {fileID: 8495250842919368818}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8495250842982212022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4210,12 +4318,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0d6dba6195b38a4d881c2ad37730981, type: 3}
---- !u!4 &8245959924194438152 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a0d6dba6195b38a4d881c2ad37730981,
-    type: 3}
-  m_PrefabInstance: {fileID: 8495250843137346531}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8495250843167861865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5605,12 +5707,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0d6dba6195b38a4d881c2ad37730981, type: 3}
---- !u!4 &8245959923713143471 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a0d6dba6195b38a4d881c2ad37730981,
-    type: 3}
-  m_PrefabInstance: {fileID: 8495250843618645316}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8495250843653432342
 PrefabInstance:
   m_ObjectHideFlags: 0
