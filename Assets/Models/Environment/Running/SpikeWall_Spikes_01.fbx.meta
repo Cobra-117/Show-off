@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 5080aac9dd5d10d43aef8f7ef2688540
+=======
+guid: a0d6dba6195b38a4d881c2ad37730981
+>>>>>>> Blockouts
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
