@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 30564582919779526}
   - component: {fileID: 30564582919779522}
   - component: {fileID: 30564582919779521}
-  - component: {fileID: 30564582919779520}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -104,50 +103,6 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerFlying
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &30564582919779520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 30564582919779525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_NotificationBehavior: 0
-  m_MaxPlayerCount: -1
-  m_AllowJoining: 1
-  m_JoinBehavior: 0
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 30564582919779525}
-  m_SplitScreen: 0
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: -1
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!1 &30564582977806038
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,7 +571,7 @@ MonoBehaviour:
   player_ob: {fileID: 30564584237235761}
   verticalForce: 10
   horizontalFlyingForce: 5
-  horizontalForce: 5
+  speed: 0
   rotation: 3
   analogValue: {x: 0, y: 0}
 --- !u!1 &30564584244686780
@@ -749,7 +704,7 @@ MonoBehaviour:
   player_rb: {fileID: 30564584244686783}
   player_ob: {fileID: 30564584244686780}
   verticalForce: 10
-  horizontalForce: 5
+  speed: 5
   rotation: 3
   analogValue: {x: 0, y: 0}
   cooldownValue: 0.3
@@ -1202,11 +1157,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177b3334f8ed4f941bb855156b3ff140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_rb: {fileID: 30564584237235757}
-  player_ob: {fileID: 30564584237235761}
+  player_rb: {fileID: 30564583239629069}
+  player_ob: {fileID: 3468562363198438668}
   verticalForce: 10
   horizontalFlyingForce: 5
-  horizontalForce: 5
+  speed: 5
   rotation: 3
   analogValue: {x: 0, y: 0}
 --- !u!114 &30564583239629075
@@ -1221,7 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd69ca02a621ba45af18b8231fcd321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 30564584237235757}
+  rb: {fileID: 30564583239629069}
   heightBeforeSubmerged: 0.5
   displacement: 3
 --- !u!4 &4280987808963438518 stripped

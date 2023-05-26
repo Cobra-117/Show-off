@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1376292854470778887, guid: 95bf85ddd07216d42b124ed9e6d6545f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1376292855301712503, guid: 95bf85ddd07216d42b124ed9e6d6545f,
         type: 3}
       propertyPath: m_IsActive
@@ -26,6 +31,11 @@ PrefabInstance:
         type: 3}
       propertyPath: pushbackRadius
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987107135558925436, guid: 95bf85ddd07216d42b124ed9e6d6545f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2987107135558925437, guid: 95bf85ddd07216d42b124ed9e6d6545f,
         type: 3}
