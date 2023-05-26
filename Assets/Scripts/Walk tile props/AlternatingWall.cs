@@ -33,14 +33,17 @@ public class AlternatingWall : MonoBehaviour
     void SwitchWalls()
     {
         for (int i = 0; i < walls.Count; i++) {
-            walls[i].SetActive(true);
+            if (Random.Range(0, 2) == 0)
+                walls[i].SetActive(true);
+            else
+                walls[i].SetActive(false);
         }
-        int r1 = Random.Range(0, walls.Count);
+        /*int r1 = Random.Range(0, walls.Count);
         int r2 = r1;
         while (r1 == r2) {
             r2 = Random.Range(0, walls.Count);
         }
         walls[r1].SetActive(false);
-        walls[r2].SetActive(false);
+        walls[r2].SetActive(false);*/
     }
 }
