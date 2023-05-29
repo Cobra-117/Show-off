@@ -80,6 +80,7 @@ public class Walk : MonoBehaviour
 	}
 	
 	bool IsGrounded (){
+		return true;
 		return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
 	}
     private void OnTriggerEnter(Collider other)
