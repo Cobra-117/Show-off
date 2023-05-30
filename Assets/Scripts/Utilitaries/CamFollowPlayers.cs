@@ -19,6 +19,7 @@ public class CamFollowPlayers : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        // inefficient!
         GameObject[] playersobj = GameObject.FindGameObjectsWithTag("Player");
         List<GameObject> activePlayers = new List<GameObject>();
 
@@ -26,12 +27,16 @@ public class CamFollowPlayers : MonoBehaviour
             if (playersobj[i].activeInHierarchy)
                 activePlayers.Add(playersobj[i]);
         }
+        if (activePlayers.Count == 0)
+            return;
+        /*get the middle point between all players*/
         float middlePoint = GetMiddlePoint(activePlayers);
         Vector3 newPos = new Vector3(middlePoint, transform.position.y, transform.position.z);
+        /*Make the moving smoother*/
         transform.position = Vector3.SmoothDamp(transform.position,
         newPos, ref velocity,.5f);
+        /*Zoom in or out*/
         ManageZoom(activePlayers);
-
     }
 
     float GetMiddlePoint(List<GameObject> activePlayers)
@@ -50,6 +55,7 @@ public class CamFollowPlayers : MonoBehaviour
         float greatestDistance = GetGreatestDistance(activePlayers);
         float newZoom = Mathf.Lerp(maxZoom, minZoom, greatestDistance /zoomLimiter);
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
+        // maybe move instead
     }
 
     float GetGreatestDistance(List<GameObject> activePlayers)
