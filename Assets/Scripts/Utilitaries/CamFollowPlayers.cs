@@ -26,10 +26,13 @@ public class CamFollowPlayers : MonoBehaviour
             if (playersobj[i].activeInHierarchy)
                 activePlayers.Add(playersobj[i]);
         }
+        /*get the middle point between all players*/
         float middlePoint = GetMiddlePoint(activePlayers);
         Vector3 newPos = new Vector3(middlePoint, transform.position.y, transform.position.z);
+        /*Make the moving smoother*/
         transform.position = Vector3.SmoothDamp(transform.position,
         newPos, ref velocity,.5f);
+        /*Zoom in or out*/
         ManageZoom(activePlayers);
 
     }
