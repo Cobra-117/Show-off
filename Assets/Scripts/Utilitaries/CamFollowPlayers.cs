@@ -19,6 +19,7 @@ public class CamFollowPlayers : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        // inefficient!
         GameObject[] playersobj = GameObject.FindGameObjectsWithTag("Player");
         List<GameObject> activePlayers = new List<GameObject>();
 
@@ -54,6 +55,7 @@ public class CamFollowPlayers : MonoBehaviour
         float greatestDistance = GetGreatestDistance(activePlayers);
         float newZoom = Mathf.Lerp(maxZoom, minZoom, greatestDistance /zoomLimiter);
         cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newZoom, Time.deltaTime);
+        // maybe move instead
     }
 
     float GetGreatestDistance(List<GameObject> activePlayers)

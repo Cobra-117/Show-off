@@ -1006,6 +1006,7 @@ GameObject:
   - component: {fileID: 2688751989091384198}
   - component: {fileID: 3289612721739655171}
   - component: {fileID: 4212558888423540501}
+  - component: {fileID: 2534770148662289546}
   m_Layer: 0
   m_Name: Log_Low (4)
   m_TagString: Untagged
@@ -1104,8 +1105,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a2d6054645c1f469e334e17c50c915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 10
+  force: 2
   stunTime: 0.5
+--- !u!65 &2534770148662289546
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490266674632923731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.158955, y: 19.604864, z: 4.266154}
+  m_Center: {x: 0.047272537, y: 0.31187692, z: 0.02412329}
 --- !u!1 &4490266674640683075
 GameObject:
   m_ObjectHideFlags: 0
