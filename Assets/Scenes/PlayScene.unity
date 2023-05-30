@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
-  m_IndirectSpecularColor: {r: 2161.8057, g: 2265.7383, b: 3288.8867, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 2159.3408, g: 2263.7656, b: 3287.371, a: 1}
->>>>>>> 7ce05e67aef20c8bbe5889e3159cb4d1c80844bc
+  m_IndirectSpecularColor: {r: 2161.3838, g: 2265.3848, b: 3288.5078, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1410,7 +1406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728511626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8, y: 20, z: 0}
+  m_LocalPosition: {x: -10, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1547,7 +1543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &989093832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1632,7 +1628,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff1edd08b7bea64cb851247ca3ab85f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLocations: []
+  spawnLocations:
+  - {fileID: 728511627}
+  - {fileID: 1223080226}
+  - {fileID: 1681725163}
+  - {fileID: 2109015052}
 --- !u!1001 &1028000260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1829,7 +1829,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223080225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 20, z: 0}
+  m_LocalPosition: {x: -10.1, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2617,7 +2617,7 @@ PrefabInstance:
     - target: {fileID: 30564582919779525, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 30564582919779527, guid: e5a4c4e7c7afc7043a0a44ed683bf0b2,
         type: 3}
