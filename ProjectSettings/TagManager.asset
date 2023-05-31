@@ -14,6 +14,8 @@ TagManager:
   - flyingPlayer
   - swimmingPlayer
   - jumpingPlayer
+  - checkpoint
+  - death
   layers:
   - Default
   - TransparentFX
