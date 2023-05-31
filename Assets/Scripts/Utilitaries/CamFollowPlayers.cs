@@ -26,6 +26,8 @@ public class CamFollowPlayers : MonoBehaviour
             if (playersobj[i].activeInHierarchy)
                 activePlayers.Add(playersobj[i]);
         }
+        if (activePlayers.Count == 0)
+            return;
         float middlePoint = GetMiddlePoint(activePlayers);
         Vector3 newPos = new Vector3(middlePoint, transform.position.y, transform.position.z);
         transform.position = Vector3.SmoothDamp(transform.position,
