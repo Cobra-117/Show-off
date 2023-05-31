@@ -76,7 +76,7 @@ public class Walk : MonoBehaviour
     void  Start (){
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
-		//animator = GetComponent<Animator>();
+		animator = GetComponent<Animator>();
 	}
 	
 	bool IsGrounded (){
@@ -125,6 +125,7 @@ public class Walk : MonoBehaviour
 				Vector3 targetVelocity = rotateDirection;
 				targetVelocity *= speed;
 				//animator.Play("Take 001");
+				//Debug.Log("Fix animation");
 
 				// Apply a force that attempts to reach our target velocity
 				Vector3 velocity = rb.velocity;
