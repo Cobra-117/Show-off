@@ -12,7 +12,11 @@ public class Missile : MonoBehaviour
 
     void Update()
     {
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(target), 5 * Time.deltaTime);
+        //transform.LookAt(target);
         transform.Translate(new Vector3(speed*Time.deltaTime, 0, 0));
+        //transform.Translate(new Vector3(speed*Time.deltaTime, 0, -speed*Time.deltaTime));
+        //transform.position = Vector3.MoveTowards(transform.position, target, speed*Time.deltaTime);
     }
 
     void OnCollisionEnter(Collision collision)
