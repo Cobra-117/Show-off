@@ -44,6 +44,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 3f0185d70d9bb7549a2481c7b3981f2d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Model_NormalTexture:
+        m_Texture: {fileID: 2800000, guid: c01912aa7eb6ac64f999183440c138b3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Refraction_Map:
         m_Texture: {fileID: 2800000, guid: d0b34622f18edf948af8481efd5fb989, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -123,7 +127,7 @@ Material:
     - _Matrix_ScrollSpeed: {r: 0.15, g: 0.15, b: 0, a: 0}
     - _Matrix_TillingValue: {r: 1, g: 1, b: 0, a: 0}
     - _Negative_Background_Colour: {r: 0, g: 0, b: 0, a: 0}
-    - _Negative_Foreground_Colour: {r: 0.19502787, g: 0.6415094, b: 0.11196155, a: 0}
+    - _Negative_Foreground_Colour: {r: 0.045492638, g: 0.2924528, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
     - _Tint_Colour: {r: 0.6745098, g: 0.6784314, b: 0.6745098, a: 0}
