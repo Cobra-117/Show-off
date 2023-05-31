@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2158.4834, g: 2263.125, b: 3286.6094, a: 1}
+  m_IndirectSpecularColor: {r: 2160.373, g: 2264.0508, b: 3286.586, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1400,7 +1400,7 @@ MonoBehaviour:
   blockSize: {x: 8, y: 0}
   blocks:
   - {fileID: 977477906323147531, guid: b6519a637affca84aa12a2873e202fa0, type: 3}
-  - {fileID: 4490266675803921787, guid: 724ecfc9a1093da4380869cdbb2258a2, type: 3}
+  - {fileID: 4490266675803921787, guid: 9f0360a5d2881b546a8989cdac7eed37, type: 3}
   simultaneousBlocks: 7
 --- !u!4 &723469500
 Transform:
