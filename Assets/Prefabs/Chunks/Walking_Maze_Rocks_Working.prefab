@@ -5252,17 +5252,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 25a4c6a900d5ba543929bad9a63bb010,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.48524344
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 25a4c6a900d5ba543929bad9a63bb010,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5140136
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 25a4c6a900d5ba543929bad9a63bb010,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.053872462
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 25a4c6a900d5ba543929bad9a63bb010,
         type: 3}
