@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VictoryCondition : MonoBehaviour
 {
@@ -18,9 +19,9 @@ public class VictoryCondition : MonoBehaviour
             if (playersobj[i].activeInHierarchy)
                 activePlayers.Add(playersobj[i]);
         }
-        if (activePlayers.Count != 0)
+        if (activePlayers.Count >= 2)
             hasGameStarted = true;
         if (activePlayers.Count == 0 && hasGameStarted == true)
-            return;
+            SceneManager.LoadScene("WinningScene");
     }
 }
