@@ -8,10 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Refraction
-  m_Shader: {fileID: -6465566751694194690, guid: ecc9efbabd28b0d488aaabfba8c90ad5,
+  m_Shader: {fileID: -6465566751694194690, guid: 2c8e587978e870449bbfe25d8a18c18e,
     type: 3}
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
+  - _ENABLE_FOG_ON_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords:
   - _NORMALMAP_TANGENT_SPACE
@@ -146,7 +147,7 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
-    - _Alpha: 0.25
+    - _Alpha: 0.5
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
     - _AlphaCutoffPostpass: 0.5
@@ -183,7 +184,7 @@ Material:
     - _EmissiveIntensity: 1
     - _EmissiveIntensityUnit: 0
     - _EnableBlendModePreserveSpecularLighting: 0
-    - _EnableFogOnTransparent: 0
+    - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
     - _FoamAmount: 0
@@ -241,7 +242,7 @@ Material:
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
-    - _Strength: 0.08
+    - _Strength: 0.5
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
     - _SurfaceType: 1
@@ -281,7 +282,7 @@ Material:
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _MainNormalTilingSize: {r: 1, g: 1, b: 0, a: 0}
-    - _Offset: {r: 0.05, g: 0.05, b: 0, a: 0}
+    - _Offset: {r: 0, g: 0.01, b: 0, a: 0}
     - _SecondaryNormalTilingSize: {r: 1, g: 1, b: 0, a: 0}
     - _ShallowColour: {r: 0.27941436, g: 0.6970284, b: 0.8584906, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
