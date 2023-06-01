@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a15ddc559e056db45896994e03333735
+guid: dd5b4bc97c7c5d7408d5a54027faa235
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: LilyPad_Mat
-    second: {fileID: 2100000, guid: a9de9073a1972ce42a2aae3178ef5fe5, type: 2}
+      name: lambert1
+    second: {fileID: 2100000, guid: 751f075a5919cab4b942194683fb49f0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 75
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -93,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 75
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
