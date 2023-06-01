@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 494096707993162161, guid: b6519a637affca84aa12a2873e202fa0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.239
       objectReference: {fileID: 0}
     - target: {fileID: 494096707993162161, guid: b6519a637affca84aa12a2873e202fa0,
         type: 3}
@@ -1012,7 +1012,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5200
+  m_ColorTemperature: 4800
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 2.75506e-40, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
