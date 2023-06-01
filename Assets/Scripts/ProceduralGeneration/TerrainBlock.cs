@@ -55,9 +55,38 @@ public class TerrainBlock : MonoBehaviour
             if (hasBeenUsed == false) {
                 transform.parent.GetComponent<TerrainGenerator>().AddBlock(Random.Range(0, 
                 transform.parent.GetComponent<TerrainGenerator>().blocks.Length));
+                //generate
                 hasBeenUsed = true;
                 Debug.Log("adding blocks");
             }
+        }
+    }
+
+    public void RemoveWall(int direction)
+    {
+        string wallName;
+        switch (direction)
+        {
+            case 0:
+                wallName = "North Wall";
+                break;
+            case 1:
+                wallName = "East Wall";
+                break;
+            case 2:
+                wallName = "South Wall";
+                break;
+            case 3:
+                wallName = "West Wall";
+                break;
+            default:
+                Debug.LogWarning("Your direction can't be superior to 3. 0 = north, 1 = east, 2 = south, 3 = west");
+                return;
+        }
+        Debug.Log("removed " + direction.ToString());
+        for (int i = 0; i < transform.childCount; i++) {
+            if (transform.GetChild(i).gameObject.name == wallName)
+                transform.GetChild(i).gameObject.SetActive(false);
         }
     }
 }

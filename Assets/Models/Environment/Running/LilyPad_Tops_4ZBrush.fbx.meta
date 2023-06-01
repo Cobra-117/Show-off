@@ -3,7 +3,12 @@ guid: 1486e058ba468324bb3cf3479fd18dda
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LilyPad_Mat
+    second: {fileID: 2100000, guid: a9de9073a1972ce42a2aae3178ef5fe5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.75
+    globalScale: 75
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
