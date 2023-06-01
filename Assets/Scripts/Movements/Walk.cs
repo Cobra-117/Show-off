@@ -124,8 +124,9 @@ public class Walk : MonoBehaviour
 			 // Calculate how fast we should be moving
 				Vector3 targetVelocity = rotateDirection;
 				targetVelocity *= speed;
-				//animator.Play("Take 001");
+				animator.Play("Take 001");
 				//Debug.Log("Fix animation");
+				//if (animator.)
 
 				// Apply a force that attempts to reach our target velocity
 				Vector3 velocity = rb.velocity;
