@@ -7,6 +7,9 @@ using UnityEngine.InputSystem;
 
 public class TextEditor : MonoBehaviour
 {
+    public int playerID;
+    public Vector3 startPosition;
+    public char[] name = new char[10];
     public TextMeshProUGUI Char1;
     public TextMeshProUGUI Char2;
     public TextMeshProUGUI Char3;
@@ -15,14 +18,14 @@ public class TextEditor : MonoBehaviour
     public ArrayList chars = new ArrayList();
 
     char[] alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
-    public char[] name = new char[10];
-
+    
     public int alphaPointer = 0;
     public int namePointer = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        transform.position = startPosition;
         Char1.text = alphabets[0].ToString();
         Char2.text = alphabets[0].ToString();
         Char3.text = alphabets[0].ToString();
@@ -40,8 +43,8 @@ public class TextEditor : MonoBehaviour
         {
             namePointer--;
             currentChar = (TextMeshProUGUI)chars[namePointer];
-            alphaPointer = 0;
-            Debug.Log("Left select");
+            alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
+            Debug.Log("Left select" + alphaPointer);
         }
     }
 
@@ -51,8 +54,8 @@ public class TextEditor : MonoBehaviour
         {
             namePointer++;
             currentChar = (TextMeshProUGUI)chars[namePointer];
-            alphaPointer = 0;
-            Debug.Log("Right select");
+            alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
+            Debug.Log("Right select" + alphaPointer);
         }
     }
 
@@ -61,7 +64,7 @@ public class TextEditor : MonoBehaviour
         if(alphaPointer < alphabets.Length - 1)
         {
             alphaPointer++;
-            
+            currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
             currentChar.text = alphabets[alphaPointer].ToString();
             Debug.Log("Up select");
         }
@@ -72,7 +75,7 @@ public class TextEditor : MonoBehaviour
         if (alphaPointer > 0)
         {
             alphaPointer--;
-
+            currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
             currentChar.text = alphabets[alphaPointer].ToString();
             Debug.Log("Down select");
         }
