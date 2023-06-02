@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class CorruptedDataWall : MonoBehaviour
 {
+    public enum Axis 
+    {
+        X,Y,Z
+    }
     public float speed;
+    public Axis axis;
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(speed *  Time.deltaTime, 0, 0));
+        if (axis == Axis.X)
+            transform.Translate(new Vector3(speed *  Time.deltaTime, 0, 0));
+        else if (axis == Axis.Y)
+            transform.Translate(new Vector3(0, speed *  Time.deltaTime, 0));
+        else if (axis == Axis.Z)
+            transform.Translate(new Vector3(0, 0, speed *  Time.deltaTime));
     }
 
     void OnCollisionEnter(Collision collision)
