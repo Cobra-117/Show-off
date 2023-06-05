@@ -80,6 +80,7 @@ public class Walk : MonoBehaviour
 		// get the distance to ground
 		distToGround = GetComponent<Collider>().bounds.extents.y;
 		animator = GetComponent<Animator>();
+		cineMachineCam = GameObject.FindGameObjectWithTag("cmCam");
 	}
 	
 	bool IsGrounded (){
