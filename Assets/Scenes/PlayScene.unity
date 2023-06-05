@@ -1438,7 +1438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78382504a26a7724b8ef6b5e5c73fdf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockSize: {x: 8, y: 0}
+  blockSize: {x: 80, y: 0}
   blocks:
   - {fileID: 977477906323147531, guid: b6519a637affca84aa12a2873e202fa0, type: 3}
   - {fileID: 4490266675803921787, guid: 9f0360a5d2881b546a8989cdac7eed37, type: 3}
