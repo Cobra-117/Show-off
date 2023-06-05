@@ -321,7 +321,7 @@ Transform:
   m_GameObject: {fileID: 977477906323147531}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7048447452774784046}
@@ -2833,7 +2833,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0e88cd76b6cbc474d8e7310b5653432f, type: 2}
+      objectReference: {fileID: 2100000, guid: 64e4adddcfbc93a459dafe1fc533db70, type: 2}
     - target: {fileID: -1314001648733037027, guid: 25a4c6a900d5ba543929bad9a63bb010,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2863,6 +2863,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572683484597976625, guid: 25a4c6a900d5ba543929bad9a63bb010,
+        type: 3}
+      propertyPath: m_TagString
+      value: death
       objectReference: {fileID: 0}
     - target: {fileID: 6572683484597976625, guid: 25a4c6a900d5ba543929bad9a63bb010,
         type: 3}

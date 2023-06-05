@@ -176,7 +176,7 @@ Material:
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
-    - _Depth: 0.01
+    - _Depth: -2.24
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalScale: 1
@@ -257,7 +257,7 @@ Material:
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
-    - _Strength: 0.45
+    - _Strength: 0.31
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
     - _SurfaceType: 1
