@@ -16,6 +16,7 @@ TagManager:
   - jumpingPlayer
   - checkpoint
   - death
+  - playerController
   layers:
   - Default
   - TransparentFX

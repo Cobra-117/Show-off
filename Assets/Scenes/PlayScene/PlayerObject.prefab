@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerID: 0
   startPosition: {x: 0, y: 0, z: 0}
-  checkpoint: {fileID: 0}
+  checkpoint: {x: 0, y: 0, z: 0}
 --- !u!1 &30564582977806038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02728855e8754a84cbac70e74035193c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoint: {fileID: 0}
 --- !u!4 &5252722492521917946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,

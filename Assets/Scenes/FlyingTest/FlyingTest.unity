@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398568650}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
@@ -1448,6 +1448,9 @@ MonoBehaviour:
   spawnLocations:
   - {fileID: 294318340}
   - {fileID: 1423781641}
+  players: []
+  fishModel: {fileID: 5738869512625121093, guid: ba6cd03716e221646a1f9d05d6c1341a,
+    type: 3}
 --- !u!1 &1423781640
 GameObject:
   m_ObjectHideFlags: 0
