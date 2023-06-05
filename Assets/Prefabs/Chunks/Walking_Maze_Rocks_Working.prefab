@@ -2833,7 +2833,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0e88cd76b6cbc474d8e7310b5653432f, type: 2}
+      objectReference: {fileID: 2100000, guid: 64e4adddcfbc93a459dafe1fc533db70, type: 2}
     - target: {fileID: -1314001648733037027, guid: 25a4c6a900d5ba543929bad9a63bb010,
         type: 3}
       propertyPath: m_StaticEditorFlags
