@@ -16,7 +16,11 @@ TagManager:
   - jumpingPlayer
   - checkpoint
   - death
+<<<<<<< HEAD
   - playerController
+=======
+  - cmCam
+>>>>>>> 2ffb81bc4f51ffc220f23fdb53f7efab5a037978
   layers:
   - Default
   - TransparentFX
