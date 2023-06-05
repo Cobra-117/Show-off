@@ -34,6 +34,7 @@ public class Walk : MonoBehaviour
     public Vector3 rotateDirection;
 
 	Animator animator;
+	public GameObject cineMachineCam;
 
     //method that returns the analog stick X,Y values from -1 to 1 
     //void OnMove(InputValue value)
@@ -54,8 +55,10 @@ public class Walk : MonoBehaviour
         float vertical = analogValue.y;
 
         //direction vector of the camera
-        Vector3 camForward = Camera.main.transform.forward;
-        Vector3 camRight = Camera.main.transform.right;
+        //Vector3 camForward = Camera.main.transform.forward;
+        //Vector3 camRight = Camera.main.transform.right;
+		Vector3 camForward = cineMachineCam.transform.forward;
+		Vector3 camRight = cineMachineCam.transform.right;
 
         //set these to 0 since we don't want vertical values
         camForward.y = 0;
