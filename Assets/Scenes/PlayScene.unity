@@ -924,6 +924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9a79ca27be423428c45e285e7ef009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetGroup: {fileID: 0}
 --- !u!114 &568915054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,6 +1448,7 @@ MonoBehaviour:
   blocks:
   - {fileID: 977477906323147531, guid: b6519a637affca84aa12a2873e202fa0, type: 3}
   - {fileID: 4490266675803921787, guid: 9f0360a5d2881b546a8989cdac7eed37, type: 3}
+  - {fileID: 4506234489554820006, guid: 7b034a48e61f0a34f8803eec17748f43, type: 3}
   simultaneousBlocks: 7
 --- !u!4 &723469500
 Transform:
@@ -1612,9 +1614,9 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 982606581}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 982606581}
   m_Lens:
-    FieldOfView: 32
+    FieldOfView: 160.53
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000

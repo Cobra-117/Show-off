@@ -16,6 +16,7 @@ TagManager:
   - jumpingPlayer
   - checkpoint
   - death
+  - cmCam
   layers:
   - Default
   - TransparentFX
