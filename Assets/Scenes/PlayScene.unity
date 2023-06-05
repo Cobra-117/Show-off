@@ -686,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &397037087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,6 +1313,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wave_LP_Hard_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 66d379d26e2a3d44bb5d8f48930e3d38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66d379d26e2a3d44bb5d8f48930e3d38, type: 3}
 --- !u!1 &648025994
@@ -1438,7 +1443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78382504a26a7724b8ef6b5e5c73fdf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockSize: {x: 80, y: 0}
+  blockSize: {x: 40, y: 0}
   blocks:
   - {fileID: 977477906323147531, guid: b6519a637affca84aa12a2873e202fa0, type: 3}
   - {fileID: 4490266675803921787, guid: 9f0360a5d2881b546a8989cdac7eed37, type: 3}
