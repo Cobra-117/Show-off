@@ -4,27 +4,24 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - floor
-  - water
-  - grass
-  - flying
-  - swimming
-  - walking
-  - jumping
-  - flyingPlayer
-  - swimmingPlayer
+  - cmCam
   - jumpingPlayer
-  - checkpoint
+  - playerController
   - death
+  - checkpoint
+  - TargGroup
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - PlayerTrigger
+  - 
   - Water
   - UI
   - MovementTrigger
   - PlayerObject
+  - Platform
+  - 
+  - 
   - 
   - 
   - 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
@@ -7,8 +8,6 @@ using UnityEngine.InputSystem;
 
 public class TextEditor : MonoBehaviour
 {
-    public int playerID;
-    public Vector3 startPosition;
     public char[] name = new char[10];
     public TextMeshProUGUI Char1;
     public TextMeshProUGUI Char2;
@@ -16,16 +15,24 @@ public class TextEditor : MonoBehaviour
     public TextMeshProUGUI displayName;
     public TextMeshProUGUI currentChar;
     public ArrayList chars = new ArrayList();
+    GameObject playerReady;
 
     char[] alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
     
     public int alphaPointer = 0;
     public int namePointer = 0;
 
+    string readyPlayers;
+    string currentControllers;
+
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = startPosition;
+        SceneManagerScript.controllerCount++;
+        playerReady = GameObject.Find("Players ready:");
+        UpdatePlayerCounts();
+        playerReady.GetComponent<TextMeshProUGUI>().text = "Players ready: " + readyPlayers + "/" + currentControllers;
+        
         Char1.text = alphabets[0].ToString();
         Char2.text = alphabets[0].ToString();
         Char3.text = alphabets[0].ToString();
@@ -37,49 +44,55 @@ public class TextEditor : MonoBehaviour
         currentChar = (TextMeshProUGUI)chars[namePointer];
     }
 
-    void OnLeftSelect()
+    void UpdatePlayerCounts()
     {
-        if(namePointer > 0)
-        {
-            namePointer--;
-            currentChar = (TextMeshProUGUI)chars[namePointer];
-            alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
-            Debug.Log("Left select" + alphaPointer);
-        }
+        readyPlayers = SceneManagerScript.playerInfo.Count.ToString();
+        currentControllers = SceneManagerScript.controllerCount.ToString();
     }
 
-    void OnRightSelect()
-    {
-        if (namePointer < chars.Count - 1)
-        {
-            namePointer++;
-            currentChar = (TextMeshProUGUI)chars[namePointer];
-            alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
-            Debug.Log("Right select" + alphaPointer);
-        }
-    }
+    //void OnLeftSelect()
+    //{
+    //    if(namePointer > 0)
+    //    {
+    //        namePointer--;
+    //        currentChar = (TextMeshProUGUI)chars[namePointer];
+    //        alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
+    //        Debug.Log("Left select" + alphaPointer);
+    //    }
+    //}
 
-    void OnUpSelect()
-    {
-        if(alphaPointer < alphabets.Length - 1)
-        {
-            alphaPointer++;
-            currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
-            currentChar.text = alphabets[alphaPointer].ToString();
-            Debug.Log("Up select");
-        }
-    }
+    //void OnRightSelect()
+    //{
+    //    if (namePointer < chars.Count - 1)
+    //    {
+    //        namePointer++;
+    //        currentChar = (TextMeshProUGUI)chars[namePointer];
+    //        alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
+    //        Debug.Log("Right select" + alphaPointer);
+    //    }
+    //}
 
-    void OnDownSelect()
-    {
-        if (alphaPointer > 0)
-        {
-            alphaPointer--;
-            currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
-            currentChar.text = alphabets[alphaPointer].ToString();
-            Debug.Log("Down select");
-        }
-    }
+    //void OnUpSelect()
+    //{
+    //    if(alphaPointer < alphabets.Length - 1)
+    //    {
+    //        alphaPointer++;
+    //        currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
+    //        currentChar.text = alphabets[alphaPointer].ToString();
+    //        Debug.Log("Up select");
+    //    }
+    //}
+
+    //void OnDownSelect()
+    //{
+    //    if (alphaPointer > 0)
+    //    {
+    //        alphaPointer--;
+    //        currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
+    //        currentChar.text = alphabets[alphaPointer].ToString();
+    //        Debug.Log("Down select");
+    //    }
+    //}
 
     void OnEnter()
     {
@@ -91,12 +104,20 @@ public class TextEditor : MonoBehaviour
             t = (TextMeshProUGUI)chars[i];
             name[i] = t.text[0];
         }
-        displayName.text = new string(name);
-    }
+        //displayName.text = new string(name);
+        displayName.text = "Player " + GetComponent<PlayerDetails>().playerID + " Ready";
 
-    // Update is called once per frame
-    void Update()
-    {
+        if (!SceneManagerScript.playerInfo.Contains(this.gameObject))
+        SceneManagerScript.playerInfo.Add(this.gameObject);
 
+        //readyPlayers = SceneManagerScript.playerInfo.Count.ToString();
+        //currentControllers = SceneManagerScript.controllerCount.ToString();
+
+        UpdatePlayerCounts();
+        playerReady.GetComponent<TextMeshProUGUI>().text = "Players ready: " + readyPlayers + "/" + currentControllers;
+
+        Debug.Log("Player count: " + SceneManagerScript.controllerCount);
+        Debug.Log("Ready players: " + SceneManagerScript.playerInfo.Count);
     }
 }
+
