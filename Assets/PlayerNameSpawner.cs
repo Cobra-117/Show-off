@@ -11,9 +11,10 @@ public class PlayerNameSpawner : MonoBehaviour
     {
         Debug.Log("Player " + playerInput.playerIndex + 1 + " joined");
 
-        playerInput.gameObject.transform.SetParent(this.transform);
+        playerInput.gameObject.transform.SetParent(transform.Find("Players UI"));
         playerInput.gameObject.GetComponent<PlayerDetails>().playerID = playerInput.playerIndex + 1;
-        playerInput.gameObject.GetComponent<PlayerDetails>().startPosition = spawnLocations[playerInput.playerIndex].position;
+        playerInput.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+        //playerInput.gameObject.GetComponent<PlayerDetails>().startPosition = spawnLocations[playerInput.playerIndex].position;
         //SceneManagerScript.controllerCount++;
     }
 }
