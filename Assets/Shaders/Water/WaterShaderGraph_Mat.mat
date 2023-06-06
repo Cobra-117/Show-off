@@ -176,7 +176,7 @@ Material:
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.5
-    - _Depth: -2.24
+    - _Depth: 0.69
     - _DepthOffsetEnable: 0
     - _DetailAlbedoScale: 1
     - _DetailNormalScale: 1
@@ -257,7 +257,7 @@ Material:
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
-    - _Strength: 0.31
+    - _Strength: 0.25
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
     - _SurfaceType: 1
@@ -297,7 +297,7 @@ Material:
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _MainNormalTilingSize: {r: 10, g: 10, b: 0, a: 0}
     - _SecondaryNormalTilingSize: {r: 2, g: 2, b: 0, a: 0}
-    - _ShallowColour: {r: 0.04605731, g: 0.6509434, b: 0.3009702, a: 0.8235294}
+    - _ShallowColour: {r: 0.022027414, g: 0.4245283, b: 0.14300606, a: 0.8235294}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}

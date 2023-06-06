@@ -17,6 +17,9 @@ TagManager:
   - 
   - Water
   - UI
+  - MovementTrigger
+  - PlayerObject
+  - Platform
   - 
   - 
   - 
