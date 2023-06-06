@@ -9,6 +9,8 @@ public class UpDownWalls : MonoBehaviour
     public float speed;
     public bool goingUp;
     public float cooldown = 0.5f;
+
+    float curWaitingTime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +20,15 @@ public class UpDownWalls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        curWaitingTime -= Time.deltaTime;
+        if (curWaitingTime > 0)
+            return;
         if (goingUp == true) {
             if (transform.localPosition.y < maxHeight) {
                 transform.Translate(new Vector3(0, speed*Time.deltaTime, 0));
             } else {
                 goingUp = false;
-                //StartCoroutine(CooldownCor());
+                curWaitingTime = cooldown;
             }
         }
         else {
@@ -31,7 +36,7 @@ public class UpDownWalls : MonoBehaviour
                 transform.Translate(new Vector3(0, -speed*Time.deltaTime, 0));
             } else {
                 goingUp = true;
-                //StartCoroutine(CooldownCor());
+                curWaitingTime = cooldown;
             }
         }
     }
