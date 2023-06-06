@@ -23,7 +23,7 @@ public class UpDownWalls : MonoBehaviour
                 transform.Translate(new Vector3(0, speed*Time.deltaTime, 0));
             } else {
                 goingUp = false;
-                StartCoroutine(CooldownCor());
+                //StartCoroutine(CooldownCor());
             }
         }
         else {
@@ -31,7 +31,7 @@ public class UpDownWalls : MonoBehaviour
                 transform.Translate(new Vector3(0, -speed*Time.deltaTime, 0));
             } else {
                 goingUp = true;
-                StartCoroutine(CooldownCor());
+                //StartCoroutine(CooldownCor());
             }
         }
     }
