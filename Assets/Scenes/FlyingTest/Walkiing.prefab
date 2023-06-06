@@ -30,17 +30,17 @@ PrefabInstance:
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
@@ -127,7 +127,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &3972260767913980184
 CapsuleCollider:
@@ -176,9 +176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4c19a1fa35e7f40a56f15a720eb02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 5
   airVelocity: 1
-  gravity: 4
+  gravity: 40
   maxVelocityChange: 10
   jumpHeight: 2
   maxFallSpeed: 20
