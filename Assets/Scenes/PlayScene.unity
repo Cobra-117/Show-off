@@ -1449,6 +1449,7 @@ MonoBehaviour:
   - {fileID: 977477906323147531, guid: b6519a637affca84aa12a2873e202fa0, type: 3}
   - {fileID: 4490266675803921787, guid: 9f0360a5d2881b546a8989cdac7eed37, type: 3}
   - {fileID: 4506234489554820006, guid: 7b034a48e61f0a34f8803eec17748f43, type: 3}
+  - {fileID: 6703488784526442000, guid: b308acdddf9153e45927a9b7d9b8bb36, type: 3}
   simultaneousBlocks: 7
 --- !u!4 &723469500
 Transform:
@@ -1730,7 +1731,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989093831}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
@@ -1812,6 +1813,9 @@ MonoBehaviour:
   - {fileID: 1497989224}
   - {fileID: 2039404401}
   - {fileID: 995975150}
+  players: []
+  fishModel: {fileID: 5738869512625121093, guid: ba6cd03716e221646a1f9d05d6c1341a,
+    type: 3}
 --- !u!114 &989093835
 MonoBehaviour:
   m_ObjectHideFlags: 0

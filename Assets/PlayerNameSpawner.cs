@@ -9,10 +9,11 @@ public class PlayerNameSpawner : MonoBehaviour
 
     void OnPlayerJoined(PlayerInput playerInput)
     {
-        Debug.Log("Player " + playerInput.playerIndex + " joined");
+        Debug.Log("Player " + playerInput.playerIndex + 1 + " joined");
 
         playerInput.gameObject.transform.SetParent(this.transform);
-        playerInput.gameObject.GetComponent<TextEditor>().playerID = playerInput.playerIndex;
-        playerInput.gameObject.GetComponent<TextEditor>().startPosition = spawnLocations[playerInput.playerIndex].position;
+        playerInput.gameObject.GetComponent<PlayerDetails>().playerID = playerInput.playerIndex + 1;
+        playerInput.gameObject.GetComponent<PlayerDetails>().startPosition = spawnLocations[playerInput.playerIndex].position;
+        //SceneManagerScript.controllerCount++;
     }
 }
