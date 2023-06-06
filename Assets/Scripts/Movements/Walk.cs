@@ -69,7 +69,7 @@ public class Walk : MonoBehaviour
 		//Vector3 rightRelative = horizontal * camRight;
 
 		//rotateDirection = forwardRelative + rightRelative;
-		rotateDirection = new Vector3(horizontal, 0, vertical);
+		rotateDirection = new Vector3(vertical, 0, -horizontal);
 		
     }
 
