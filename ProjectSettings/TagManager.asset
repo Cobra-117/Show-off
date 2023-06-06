@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - cmCam
+  - jumpingPlayer
+  - playerController
+  - death
+  - checkpoint
+  - TargGroup
   layers:
   - Default
   - TransparentFX
