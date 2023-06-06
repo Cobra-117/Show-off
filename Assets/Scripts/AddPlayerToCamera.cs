@@ -9,8 +9,13 @@ public class AddPlayerToCamera : MonoBehaviour
     void Start()
     {
         cMCamera = GameObject.FindGameObjectWithTag("TargGroup");
+        Cinemachine.CinemachineTargetGroup targetGroup =
+        cMCamera.GetComponent<Cinemachine.CinemachineTargetGroup>();
+        //cMCamera.GetComponent<Cine>
         for (int i = 0; i < transform.childCount;i ++) {
-            
+            if (gameObject.activeInHierarchy && tag == "Player") {
+                targetGroup.AddMember(transform, 1, 0);
+            }
         }
     }
 
