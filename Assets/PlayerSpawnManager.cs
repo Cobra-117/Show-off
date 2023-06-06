@@ -6,12 +6,23 @@ using UnityEngine.InputSystem;
 public class PlayerSpawnManager : MonoBehaviour
 {
     public Transform[] spawnLocations;
+    public GameObject[] players;
+    public GameObject fishModel;
 
-    void OnPlayerJoined(PlayerInput playerInput)
+    private void Start()
     {
-        Debug.Log("Player " + playerInput.playerIndex + " joined");
+        players = GameObject.FindGameObjectsWithTag("playerController");
+        for(int i=0; i< players.Length; i++)
+        {
+            GameObject prefab = Instantiate(fishModel);
+            prefab.transform.parent = players[i].gameObject.transform;
+            prefab.transform.position = spawnLocations[i].position;
+        }
 
-        playerInput.gameObject.GetComponent<PlayerDetails>().playerID = playerInput.playerIndex;
-        playerInput.gameObject.GetComponent<PlayerDetails>().startPosition = spawnLocations[playerInput.playerIndex].position;
+        //foreach (GameObject player in players)
+        //{
+        //    GameObject prefab = Instantiate(fishModel);
+        //    prefab.transform.parent = player.transform;
+        //}
     }
 }

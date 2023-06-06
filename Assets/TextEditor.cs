@@ -7,8 +7,6 @@ using UnityEngine.InputSystem;
 
 public class TextEditor : MonoBehaviour
 {
-    public int playerID;
-    public Vector3 startPosition;
     public char[] name = new char[10];
     public TextMeshProUGUI Char1;
     public TextMeshProUGUI Char2;
@@ -25,7 +23,7 @@ public class TextEditor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = startPosition;
+        SceneManagerScript.controllerCount++;
         Char1.text = alphabets[0].ToString();
         Char2.text = alphabets[0].ToString();
         Char3.text = alphabets[0].ToString();
@@ -91,12 +89,15 @@ public class TextEditor : MonoBehaviour
             t = (TextMeshProUGUI)chars[i];
             name[i] = t.text[0];
         }
-        displayName.text = new string(name);
-    }
+        //displayName.text = new string(name);
+        displayName.text = "Player " + GetComponent<PlayerDetails>().playerID + " Ready";
 
-    // Update is called once per frame
-    void Update()
-    {
+        if (!SceneManagerScript.playerInfo.Contains(this.gameObject))
+        SceneManagerScript.playerInfo.Add(this.gameObject);
 
+
+        Debug.Log("Player count: " + SceneManagerScript.controllerCount);
+        Debug.Log("Ready players: " + SceneManagerScript.playerInfo.Count);
     }
 }
+
