@@ -481,6 +481,7 @@ GameObject:
   - component: {fileID: 129288482}
   - component: {fileID: 129288484}
   - component: {fileID: 129288485}
+  - component: {fileID: 129288486}
   m_Layer: 5
   m_Name: PlayerInfo
   m_TagString: playerController
@@ -593,6 +594,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analogValue: {x: 0, y: 0, z: 0}
   buttonPressed: 0
+--- !u!114 &129288486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129288480}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac049796732f834cab4a6b5f9b13907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingObject: {fileID: 0}
+  swimmingObject: {fileID: 0}
+  jumpObject: {fileID: 0}
+  walkObject: {fileID: 0}
+  currentObject: {fileID: 0}
 --- !u!1 &129702875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,6 +2710,14 @@ MonoBehaviour:
       - m_Name: 
         m_Id: a3ba9636-eddf-40a1-9159-46bad5f54322
         m_Path: <Gamepad>/start
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Join
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 6453be06-7df2-460c-9611-d53c8aae3552
+        m_Path: <Keyboard>/space
         m_Interactions: 
         m_Processors: 
         m_Groups: 

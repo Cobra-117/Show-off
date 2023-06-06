@@ -30,17 +30,17 @@ PrefabInstance:
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5226987110786425093, guid: f60335637e456ac439c2f335d7e9b774,
         type: 3}
@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4c19a1fa35e7f40a56f15a720eb02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  airVelocity: 7
+  speed: 0.5
+  airVelocity: 1
   gravity: 4
   maxVelocityChange: 10
   jumpHeight: 2
@@ -186,6 +186,7 @@ MonoBehaviour:
   checkPoint: {x: 0, y: 0, z: 0}
   analogValue: {x: 0, y: 0}
   rotateDirection: {x: 0, y: 0, z: 0}
+  cineMachineCam: {fileID: 0}
 --- !u!114 &4439169854048923427
 MonoBehaviour:
   m_ObjectHideFlags: 0
