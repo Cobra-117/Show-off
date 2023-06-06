@@ -54,21 +54,23 @@ public class Walk : MonoBehaviour
 		float horizontal = analogValue.x;
         float vertical = analogValue.y;
 
-        //direction vector of the camera
-        //Vector3 camForward = Camera.main.transform.forward;
-        //Vector3 camRight = Camera.main.transform.right;
-		Vector3 camForward = cineMachineCam.transform.forward;
-		Vector3 camRight = cineMachineCam.transform.right;
+		//direction vector of the camera
+		//Vector3 camForward = Camera.main.transform.forward;
+		//Vector3 camRight = Camera.main.transform.right;
+		//Vector3 camForward = cineMachineCam.transform.forward;
+		//Vector3 camRight = cineMachineCam.transform.right;
 
-        //set these to 0 since we don't want vertical values
-        camForward.y = 0;
-        camRight.y = 0;
+		//set these to 0 since we don't want vertical values
+		//camForward.y = 0;
+		//camRight.y = 0;
 
-        //horizontal and vertical forces to be applied relative to the camera
-        Vector3 forwardRelative = vertical * camForward;
-        Vector3 rightRelative = horizontal * camRight;
+		//horizontal and vertical forces to be applied relative to the camera
+		//Vector3 forwardRelative = vertical * camForward;
+		//Vector3 rightRelative = horizontal * camRight;
 
-        rotateDirection = forwardRelative + rightRelative;
+		//rotateDirection = forwardRelative + rightRelative;
+		rotateDirection = new Vector3(horizontal, 0, vertical);
+		
     }
 
     void RotateObject()

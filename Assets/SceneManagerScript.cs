@@ -35,7 +35,7 @@ public class SceneManagerScript : MonoBehaviour
         if(controllerCount == playerInfo.Count && playerInfo.Count > 0)
         {
             RetainObjects();
-            SceneManager.LoadScene("FlyingTest");
+            SceneManager.LoadScene("PlayScene");
         }
         
         //if(controllerCount == playerInfo.Count && controllerCount > 0 && playerInfo.Count > 0)

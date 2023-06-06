@@ -15,7 +15,7 @@ public class PlayerSpawnManager : MonoBehaviour
         for(int i=0; i< players.Length; i++)
         {
             GameObject prefab = Instantiate(fishModel);
-            prefab.transform.parent = players[i].gameObject.transform;
+            prefab.transform.parent = players[i].transform;
             prefab.transform.position = spawnLocations[i].position;
         }
 
