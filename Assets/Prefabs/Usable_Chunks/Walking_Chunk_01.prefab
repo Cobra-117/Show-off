@@ -2292,7 +2292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a2d6054645c1f469e334e17c50c915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2
+  force: 10
   stunTime: 0.5
 --- !u!114 &5146874177431045281
 MonoBehaviour:
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a2d6054645c1f469e334e17c50c915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2
+  force: 10
   stunTime: 0.5
 --- !u!1001 &2521563775383736657
 PrefabInstance:
@@ -29394,7 +29394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a2d6054645c1f469e334e17c50c915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2
+  force: 10
   stunTime: 0.5
 --- !u!114 &7446155087493555548
 MonoBehaviour:
@@ -30402,7 +30402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a2d6054645c1f469e334e17c50c915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2
+  force: 10
   stunTime: 0.5
 --- !u!4 &9201592219218169858 stripped
 Transform:
@@ -31042,7 +31042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a2d6054645c1f469e334e17c50c915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 2
+  force: 10
   stunTime: 0.5
 --- !u!114 &6282566185696916213
 MonoBehaviour:

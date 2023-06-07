@@ -499,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393058850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.3226604, y: 14.779099, z: -1.7409894}
+  m_LocalPosition: {x: -20.92266, y: 17.6491, z: 0.2590106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -547,7 +547,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1976f25194cf2604a864313ef4e138ac, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 45578c5a6c62df14dbc24cef126f27de, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.475
   m_Pitch: 1
@@ -686,7 +686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &397037087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de6bbca9e9c13c846844a75779e81aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 1.5
   axis: 0
 --- !u!65 &397037088
 BoxCollider:
@@ -772,7 +772,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397037086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.9, y: 1.56, z: 3.88}
+  m_LocalPosition: {x: -41.59, y: 1.56, z: 3.88}
   m_LocalScale: {x: 10, y: 10, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1700,7 +1700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965037437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3226604, y: 14.779099, z: -1.7409894}
+  m_LocalPosition: {x: -20.92266, y: 17.6491, z: 0.2590106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3039,10 +3039,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: -3.5, y: 12.98, z: 0}
+  ShoulderOffset: {x: -17.1, y: 15.85, z: 0}
   VerticalArmLength: 0.4
   CameraSide: 1
-  CameraDistance: 2
+  CameraDistance: 0
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 0
