@@ -9219,6 +9219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerInfo
       objectReference: {fileID: 0}
+    - target: {fileID: 3597978403701809086, guid: e732fd4569776414ab723da5737daaa8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3597978403701809087, guid: e732fd4569776414ab723da5737daaa8,
         type: 3}
       propertyPath: m_Pivot.x
