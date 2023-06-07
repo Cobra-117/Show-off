@@ -186,6 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6703488784526442001}
   - component: {fileID: 937981469517971284}
+  - component: {fileID: 8489344984970432757}
   m_Layer: 0
   m_Name: Walking_LongMaze
   m_TagString: Untagged
@@ -225,6 +226,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 19.023058, y: 22.967482, z: 20.185455}
   m_Center: {x: 0.9844792, y: 10.983734, z: -9.592729}
+--- !u!114 &8489344984970432757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703488784526442000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887618138aa4ee64e8332c2261ed89f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockType: 3
 --- !u!1 &6703488784607312639
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +435,7 @@ MonoBehaviour:
   minHeight: -4.3
   speed: 1.2
   goingUp: 1
+  cooldown: 0.5
 --- !u!1001 &4370931445988055962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -533,6 +548,7 @@ MonoBehaviour:
   minHeight: -4.3
   speed: 1.2
   goingUp: 1
+  cooldown: 0.5
 --- !u!1001 &6651201449079031060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -644,6 +660,7 @@ MonoBehaviour:
   minHeight: -4.3
   speed: 1.2
   goingUp: 1
+  cooldown: 0.5
 --- !u!4 &8277704075291211355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363519893086565199, guid: 2ec9bad3c02f6234b809b7459bab5638,
@@ -3795,6 +3812,7 @@ MonoBehaviour:
   minHeight: -4.3
   speed: 1.2
   goingUp: 1
+  cooldown: 0.5
 --- !u!4 &8314374523256395281 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363519893086565199, guid: 2ec9bad3c02f6234b809b7459bab5638,
