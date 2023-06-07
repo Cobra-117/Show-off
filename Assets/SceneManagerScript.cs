@@ -8,13 +8,15 @@ public class SceneManagerScript : MonoBehaviour
 {
     public static int controllerCount;
     //public static ArrayList playerInfo = new ArrayList();
-    public static List<GameObject> playerInfo = new(); 
+    public static List<GameObject> playerInfo = new();
+    bool useTestScene;
 
 
     // Start is called before the first frame update
     void Start()
     {
-       controllerCount = 0;
+        useTestScene = false;
+        controllerCount = 0;
     }
 
     void RetainObjects()
@@ -32,10 +34,26 @@ public class SceneManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            useTestScene = true;
+            Debug.Log("Use flyingtest scene");
+        }
+        
         if(controllerCount == playerInfo.Count && playerInfo.Count > 0)
         {
             RetainObjects();
-            SceneManager.LoadScene("PlayScene");
+
+            if(useTestScene)
+            {
+                SceneManager.LoadScene("FlyingTest");
+            }
+
+            else
+            {
+                SceneManager.LoadScene("PlayScene");
+            }
+            
         }
         
         //if(controllerCount == playerInfo.Count && controllerCount > 0 && playerInfo.Count > 0)
