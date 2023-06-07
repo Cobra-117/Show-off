@@ -12,10 +12,12 @@ public class CorruptedDataWall : MonoBehaviour
 
     public float OffsetToFirstPlayer = 15;
     public Axis axis;
+    public Cinemachine.CinemachineTargetGroup targetGroup;
     // Update is called once per frame
     
     void Start() 
     {
+        
     }
 
     void Update()
@@ -71,6 +73,7 @@ public class CorruptedDataWall : MonoBehaviour
         if (collision.gameObject.tag == "Player") {
             Debug.Log("wave touched player");
             collision.gameObject.transform.parent.gameObject.SetActive(false);
+            targetGroup.RemoveMember(collision.gameObject.transform);
         }
     }
 }

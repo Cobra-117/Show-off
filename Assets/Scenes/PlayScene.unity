@@ -799,6 +799,7 @@ MonoBehaviour:
   speed: 1.5
   OffsetToFirstPlayer: 15
   axis: 0
+  targetGroup: {fileID: 982606580}
 --- !u!65 &397037088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2678,6 +2679,7 @@ MonoBehaviour:
   speed: 0.5
   OffsetToFirstPlayer: 15
   axis: 1
+  targetGroup: {fileID: 0}
 --- !u!65 &1415466893
 BoxCollider:
   m_ObjectHideFlags: 0
