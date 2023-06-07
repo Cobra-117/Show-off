@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/UI/UI Scenes/Lobby.unity
+    guid: d4ca208aea5e1417f88f4e432688470e
+  - enabled: 0
     path: Assets/Scenes/TestUI.unity
     guid: 4db4af7528d35934a8604ed2ca35d2e7
   - enabled: 0
@@ -17,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinningScene.unity
     guid: dec9dfb001dc7be41a86157f2d291a5d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FlyingTest/FlyingTest.unity
     guid: 0bdf1e853eb614046b5a5c2165144d3e
   m_configObjects: {}
