@@ -2387,6 +2387,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8693576169431162672}
     m_Modifications:
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
+      propertyPath: cooldown
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6810628174774943815, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
       propertyPath: m_RootOrder
@@ -14637,6 +14642,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8693576169431162672}
     m_Modifications:
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
+      propertyPath: goingUp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
+      propertyPath: cooldown
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6810628174774943815, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
       propertyPath: m_RootOrder
@@ -16182,6 +16197,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8693576169431162672}
     m_Modifications:
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
+      propertyPath: goingUp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
+      propertyPath: cooldown
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6810628174774943815, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
       propertyPath: m_RootOrder
@@ -22007,6 +22032,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8693576169431162672}
     m_Modifications:
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
+      propertyPath: cooldown
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6810628174774943815, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
       propertyPath: m_RootOrder
