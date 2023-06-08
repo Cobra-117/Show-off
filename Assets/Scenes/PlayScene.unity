@@ -721,7 +721,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &397037087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
   speed: 1.5
   OffsetToFirstPlayer: 15
   axis: 0
-  targetGroup: {fileID: 982606580}
+  targetGroup: {fileID: 0}
 --- !u!65 &397037088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &623989686
 Transform:
   m_ObjectHideFlags: 0
@@ -2335,8 +2335,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 61d09e1aa776d4cd2b8de4e610d35e1d, type: 3}
   fishModel: {fileID: 5738869512625121093, guid: ba6cd03716e221646a1f9d05d6c1341a,
     type: 3}
-  iconContainer: {fileID: 179385888}
-  offsetFromPlayer: {x: 0, y: 1, z: 0}
+  iconContainer: {fileID: 430227477}
+  offsetFromPlayer: {x: 0, y: 0, z: 0}
 --- !u!114 &989093835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2373,7 +2373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995975149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16, y: 5, z: 1}
+  m_LocalPosition: {x: -17, y: 5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2410,7 +2410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150215394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16, y: 5, z: 0}
+  m_LocalPosition: {x: -17, y: 5, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2988,48 +2988,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 30564583161794876}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1415466891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 66d379d26e2a3d44bb5d8f48930e3d38,
-    type: 3}
-  m_PrefabInstance: {fileID: 632899241}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1415466892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415466891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de6bbca9e9c13c846844a75779e81aa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  OffsetToFirstPlayer: 15
-  axis: 1
-  targetGroup: {fileID: 0}
---- !u!65 &1415466893
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415466891}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 21.068937, y: 11.769672, z: 9.817625}
-  m_Center: {x: -0.114377975, y: 2.0441236, z: -4.585683}
---- !u!4 &1415466896 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 66d379d26e2a3d44bb5d8f48930e3d38,
-    type: 3}
-  m_PrefabInstance: {fileID: 632899241}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1433127912
 --- !u!1 &1354743459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,6 +3106,7 @@ MonoBehaviour:
   speed: 0.5
   OffsetToFirstPlayer: 15
   axis: 1
+  targetGroup: {fileID: 0}
 --- !u!65 &1415466893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3446,7 +3405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497989223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16, y: 5, z: 0.5}
+  m_LocalPosition: {x: -17, y: 5, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4252,7 +4211,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039404400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16, y: 5, z: -0.5}
+  m_LocalPosition: {x: -17, y: 5, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
