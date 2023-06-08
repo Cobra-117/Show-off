@@ -10,6 +10,7 @@ TagManager:
   - death
   - checkpoint
   - TargGroup
+  - LobbyMenu
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,6 @@ TagManager:
   - MovementTrigger
   - PlayerObject
   - Platform
-  - 
-  - 
-  - 
   - 
   - 
   - 
