@@ -147,7 +147,7 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AlbedoAffectEmissive: 0
-    - _Alpha: 0.5
+    - _Alpha: -0.81
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
     - _AlphaCutoffPostpass: 0.5
@@ -242,7 +242,7 @@ Material:
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
-    - _Strength: 0.5
+    - _Strength: -10.6
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
     - _SurfaceType: 1
@@ -273,7 +273,7 @@ Material:
     - _DeepColour: {r: 0.10746706, g: 0.42892405, b: 0.6509434, a: 0}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _Emission: {r: 0, g: 0, b: 0, a: 0}
+    - _Emission: {r: 0.14051093, g: 0.3301887, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
@@ -287,8 +287,8 @@ Material:
     - _ShallowColour: {r: 0.27941436, g: 0.6970284, b: 0.8584906, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Tint_Color: {r: 0.00582, g: 0.01, b: 0.008327999, a: 0.16862746}
+    - _Tiling: {r: 7.43, g: 1, b: 0, a: 0}
+    - _Tint_Color: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 0.23529412}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}

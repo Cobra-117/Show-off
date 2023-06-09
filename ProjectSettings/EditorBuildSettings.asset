@@ -16,6 +16,9 @@ EditorBuildSettings:
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
   - enabled: 1
     path: Assets/Scenes/PlayScene.unity
+    guid: 4ab09812fd3aed84b8ef0c4a06aa4ac0
+  - enabled: 0
+    path: Assets/Scenes/PlayScene_empty.unity
     guid: 8734e5075454e97478adb6b00a1d005b
   - enabled: 1
     path: Assets/Scenes/WinningScene.unity
