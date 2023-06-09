@@ -15,15 +15,15 @@ EditorBuildSettings:
     path: Assets/Scenes/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
   - enabled: 1
+    path: Assets/Scenes/PlayScene.unity
+    guid: 4ab09812fd3aed84b8ef0c4a06aa4ac0
+  - enabled: 0
     path: Assets/Scenes/PlayScene_empty.unity
     guid: 8734e5075454e97478adb6b00a1d005b
   - enabled: 1
     path: Assets/Scenes/WinningScene.unity
     guid: dec9dfb001dc7be41a86157f2d291a5d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FlyingTest/FlyingTest.unity
     guid: 0bdf1e853eb614046b5a5c2165144d3e
-  - enabled: 1
-    path: Assets/Scenes/PlayScene.unity
-    guid: 4ab09812fd3aed84b8ef0c4a06aa4ac0
   m_configObjects: {}

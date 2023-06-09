@@ -1794,7 +1794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &723469499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,7 +1946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &764448918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1961,8 +1961,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockSize: {x: 40, y: 0}
   blocks:
-  - {fileID: 1041434254590355038, guid: cd65123a8ab908d4289709d4e73511d5, type: 3}
+  - {fileID: 7417528517657595649, guid: 1ab5af70a38ccb24391f386e800e8428, type: 3}
   - {fileID: 2205971593593291324, guid: eb9dd9a95f7f701408484e2534e066ad, type: 3}
+  - {fileID: 6052975366335176601, guid: da0d2e1a63f7b5143908548a65a24922, type: 3}
+  - {fileID: 7634449040597257741, guid: 4b32df23e7ea6e348bd78540f62c4438, type: 3}
   simultaneousBlocks: 7
 --- !u!4 &764448919
 Transform:
