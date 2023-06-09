@@ -9,6 +9,13 @@ public class Bouncy : MonoBehaviour
 	public float stunTime = 0.5f;
 	private Vector3 hitDir;
 
+	AudioSource audioSource;
+
+	void Start()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
 	void OnCollisionEnter(Collision collision)
 	{
 		foreach (ContactPoint contact in collision.contacts)
@@ -16,6 +23,7 @@ public class Bouncy : MonoBehaviour
 			Debug.DrawRay(contact.point, contact.normal, Color.white);
 			if (collision.gameObject.tag == "Player")
 			{
+				audioSource.Play();
 				hitDir = contact.normal;
 				collision.gameObject.GetComponent<Walk>().HitPlayer(-hitDir * force, stunTime);
 				return;
