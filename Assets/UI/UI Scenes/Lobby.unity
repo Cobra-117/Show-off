@@ -7806,17 +7806,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1e337a82d9661499a759c8038e0b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLocations: []
   colors:
   - {fileID: 21300000, guid: feeae4903f00a40e7870e5c1b001547e, type: 3}
   - {fileID: 21300000, guid: 67f02fd7588a843db8a21a6996cffb17, type: 3}
   - {fileID: 21300000, guid: 36e8eb5db44094d2c8669d5517006a9d, type: 3}
   - {fileID: 21300000, guid: 7d9d81e73ad6c437caa64f7f6be7f900, type: 3}
   icons:
-  - {fileID: 21300000, guid: 19360f973d3e8421a852eb3ee925763c, type: 3}
-  - {fileID: 21300000, guid: 860bdbe2b329a44b19fbfd54b585c8b8, type: 3}
-  - {fileID: 21300000, guid: b9cdf862c9ae843b698164a509370b34, type: 3}
-  - {fileID: 21300000, guid: 61d09e1aa776d4cd2b8de4e610d35e1d, type: 3}
+  - {fileID: 21300000, guid: 5d60fa0ba2605483ea4ed9caefb2f605, type: 3}
+  - {fileID: 21300000, guid: 816d6c70ec7d84018b728cc0b010abd4, type: 3}
+  - {fileID: 21300000, guid: d96a715dc4fab43db93c5a723c64c8f7, type: 3}
+  - {fileID: 21300000, guid: 37c08757ba134467dbb866fc804777f1, type: 3}
 --- !u!114 &1626739369
 MonoBehaviour:
   m_ObjectHideFlags: 0

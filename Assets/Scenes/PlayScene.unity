@@ -875,8 +875,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435631785}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.015}
-  m_LocalScale: {x: 0.015295003, y: 0.015295003, z: 0.015295003}
+  m_LocalPosition: {x: 0.004, y: 0.0058, z: -0.2}
+  m_LocalScale: {x: 0.089488044, y: 0.089488044, z: 0.089488044}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 430227478}
@@ -935,12 +935,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 19360f973d3e8421a852eb3ee925763c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5d60fa0ba2605483ea4ed9caefb2f605, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.41, y: 7.41}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2331,10 +2331,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 36e8eb5db44094d2c8669d5517006a9d, type: 3}
   - {fileID: 21300000, guid: 7d9d81e73ad6c437caa64f7f6be7f900, type: 3}
   icons:
-  - {fileID: 21300000, guid: 19360f973d3e8421a852eb3ee925763c, type: 3}
-  - {fileID: 21300000, guid: 860bdbe2b329a44b19fbfd54b585c8b8, type: 3}
-  - {fileID: 21300000, guid: b9cdf862c9ae843b698164a509370b34, type: 3}
-  - {fileID: 21300000, guid: 61d09e1aa776d4cd2b8de4e610d35e1d, type: 3}
+  - {fileID: 21300000, guid: 5d60fa0ba2605483ea4ed9caefb2f605, type: 3}
+  - {fileID: 21300000, guid: 816d6c70ec7d84018b728cc0b010abd4, type: 3}
+  - {fileID: 21300000, guid: d96a715dc4fab43db93c5a723c64c8f7, type: 3}
+  - {fileID: 21300000, guid: 37c08757ba134467dbb866fc804777f1, type: 3}
   fishModel: {fileID: 5738869512625121093, guid: ba6cd03716e221646a1f9d05d6c1341a,
     type: 3}
   iconContainer: {fileID: 430227477}
