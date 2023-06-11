@@ -18,6 +18,7 @@ public class TextEditor : MonoBehaviour
     //public ArrayList chars = new ArrayList();
     GameObject playerReady;
     Transform playerIcon;
+    Transform readyIcon;
     GameObject menu;
 
     char[] alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
@@ -44,7 +45,7 @@ public class TextEditor : MonoBehaviour
         Transform borderAndIcon = transform.Find("Border + Icon");
         Transform iconContainer = borderAndIcon.transform.Find("IconContainer");
         playerIcon = iconContainer.transform.Find("Icon 1");
-
+        readyIcon = transform.Find("Button");
         //Char1.text = alphabets[0].ToString();
         //Char2.text = alphabets[0].ToString();
         //Char3.text = alphabets[0].ToString();
@@ -126,7 +127,7 @@ public class TextEditor : MonoBehaviour
         ready = true;
 
         GetComponent<PlayerDetails>().playerIcon = iconPointer;
-     
+        readyIcon.GetComponent<Image>().sprite = menu.GetComponent<PlayerNameSpawner>().readyIcons[1];
         //TextMeshProUGUI t;
         //Debug.Log("Enter select");
         //for(int i=0; i< chars.Count; i++)

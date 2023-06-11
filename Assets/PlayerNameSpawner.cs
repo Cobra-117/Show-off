@@ -10,6 +10,7 @@ public class PlayerNameSpawner : MonoBehaviour
     //public Transform[] spawnLocations;
     public List<Sprite> colors = new();
     public List<Sprite> icons = new();
+    public List<Sprite> readyIcons = new();
 
     private void Start()
     {

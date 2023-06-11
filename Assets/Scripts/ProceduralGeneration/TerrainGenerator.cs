@@ -6,17 +6,22 @@ public class TerrainGenerator : MonoBehaviour
 {
     public Vector2 blockSize;
     public GameObject[] blocks;
+    public GameObject Water;
     public int simultaneousBlocks = 7;
 
     int nbrOfBlocks;
     List<GameObject> blocksList;
+    List<GameObject> waterList;
     // Start is called before the first frame update
     void Start()
     {
         blocksList = new List<GameObject>();
+        waterList = new List<GameObject>();
         Random.InitState(System.DateTime.Now.Millisecond);
+        AddWater();
         AddBlock(0);
         for (int i = 0; i < 3; i++) {
+            AddWater();
             AddBlock(Random.Range(0, blocks.Length));
         }
 
@@ -42,6 +47,21 @@ public class TerrainGenerator : MonoBehaviour
         if (blocksList.Count > simultaneousBlocks) {
             Destroy(blocksList[0]);
             blocksList.RemoveAt(0);
+        }
+    }
+
+    public void AddWater()
+    {
+        Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
+        0, 0);
+        GameObject water = GameObject.Instantiate(Water);
+        water.transform.position = coordinates;
+        water.transform.parent = this.transform;
+        waterList.Add(water);
+        //nbrOfBlocks += 1;
+        if (blocksList.Count > simultaneousBlocks) {
+            Destroy(waterList[0]);
+            waterList.RemoveAt(0);
         }
     }
 
