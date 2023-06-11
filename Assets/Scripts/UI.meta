@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/UI.meta
 guid: 70900e9b0bbe1684ca3de1ae3b7068eb
 folderAsset: yes
 DefaultImporter:
+========
+guid: c5ba7728fdf13e94eb34600a520e9d6d
+PrefabImporter:
+>>>>>>>> 3a0d43707cb8e0d7a49450148255ceace0e2ce6b:Assets/Prefabs/Chunks/Victory_Chunk.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
