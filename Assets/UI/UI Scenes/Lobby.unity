@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -8039,6 +8039,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 816d6c70ec7d84018b728cc0b010abd4, type: 3}
   - {fileID: 21300000, guid: d96a715dc4fab43db93c5a723c64c8f7, type: 3}
   - {fileID: 21300000, guid: 37c08757ba134467dbb866fc804777f1, type: 3}
+  readyIcons:
+  - {fileID: 21300000, guid: c17be4a86bac249e6b8596e6daf325a1, type: 3}
+  - {fileID: 21300000, guid: 808135b84cfc04422837e2e9708e9519, type: 3}
 --- !u!114 &1626739369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9452,6 +9455,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3597978403701809076, guid: e732fd4569776414ab723da5737daaa8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3597978403701809082, guid: e732fd4569776414ab723da5737daaa8,
         type: 3}
       propertyPath: m_Enabled
@@ -9575,12 +9583,12 @@ PrefabInstance:
     - target: {fileID: 3597978403701809087, guid: e732fd4569776414ab723da5737daaa8,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -9.441498
+      value: -82.566345
       objectReference: {fileID: 0}
     - target: {fileID: 3597978403701809087, guid: e732fd4569776414ab723da5737daaa8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -19.242432
+      value: -83.4494
       objectReference: {fileID: 0}
     - target: {fileID: 3597978403701809087, guid: e732fd4569776414ab723da5737daaa8,
         type: 3}
@@ -9626,6 +9634,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597978404931941462, guid: e732fd4569776414ab723da5737daaa8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 18a28bd3ea6e9425e9dd05b202c13876,
+        type: 3}
+    - target: {fileID: 3597978404931941462, guid: e732fd4569776414ab723da5737daaa8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3597978405453234740, guid: e732fd4569776414ab723da5737daaa8,
         type: 3}
