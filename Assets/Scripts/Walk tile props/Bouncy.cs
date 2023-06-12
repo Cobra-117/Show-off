@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bouncy : MonoBehaviour
 {
-	public float force = 10f; //Force 10000f
+	public float force = 8f; //Force 10000f
 	public float stunTime = 0.5f;
 	private Vector3 hitDir;
 

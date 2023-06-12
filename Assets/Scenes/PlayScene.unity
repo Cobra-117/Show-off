@@ -2826,7 +2826,7 @@ SpriteRenderer:
   m_Size: {x: 7.41, y: 7.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &451524037
@@ -3555,7 +3555,7 @@ SpriteRenderer:
   m_Size: {x: 7.41, y: 7.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &582117264
@@ -4449,10 +4449,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockSize: {x: 40, y: 0}
   blocks:
-  - {fileID: 7417528517657595649, guid: 1ab5af70a38ccb24391f386e800e8428, type: 3}
+  - {fileID: 2697239089257800537, guid: 536361c3ad6a02c4e96fab8bad8b5b7e, type: 3}
   - {fileID: 2205971593593291324, guid: eb9dd9a95f7f701408484e2534e066ad, type: 3}
   - {fileID: 6052975366335176601, guid: da0d2e1a63f7b5143908548a65a24922, type: 3}
   - {fileID: 7634449040597257741, guid: 4b32df23e7ea6e348bd78540f62c4438, type: 3}
+  - {fileID: 2697239089257800537, guid: aaa4a2e49ef81c24ca6963d53a4afda7, type: 3}
   Water: {fileID: 1459882829}
   decorationGenerator: {fileID: 1790441660}
   simultaneousBlocks: 8
@@ -5345,7 +5346,7 @@ SpriteRenderer:
   m_Size: {x: 7.41, y: 7.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &982606579
@@ -7106,7 +7107,7 @@ SpriteRenderer:
   m_Size: {x: 7.41, y: 7.41}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1370918136
