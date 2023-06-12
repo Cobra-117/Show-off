@@ -10519,6 +10519,7 @@ MonoBehaviour:
   players: []
   playerScore: {fileID: 1745425491}
   iconContainer: {fileID: 430227477}
+  playerInCanvas: []
 --- !u!1 &2146957453
 GameObject:
   m_ObjectHideFlags: 0

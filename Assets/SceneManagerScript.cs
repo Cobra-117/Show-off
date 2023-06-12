@@ -51,7 +51,8 @@ public class SceneManagerScript : MonoBehaviour
 
             else
             {
-                SceneManager.LoadScene("PlayScene");
+                //should be playscene
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             }
             
         }
