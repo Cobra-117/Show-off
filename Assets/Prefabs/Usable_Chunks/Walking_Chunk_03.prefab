@@ -1713,6 +1713,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6052975367775902348}
     m_Modifications:
+    - target: {fileID: 892544450650679281, guid: 23bce555a18d78a499822ed9c22cccb8,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 2.3392792
+      objectReference: {fileID: 0}
+    - target: {fileID: 892544450650679281, guid: 23bce555a18d78a499822ed9c22cccb8,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.057217937
+      objectReference: {fileID: 0}
+    - target: {fileID: 892544450650679281, guid: 23bce555a18d78a499822ed9c22cccb8,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.15674178
+      objectReference: {fileID: 0}
     - target: {fileID: 1711905648566185423, guid: 23bce555a18d78a499822ed9c22cccb8,
         type: 3}
       propertyPath: m_Name
