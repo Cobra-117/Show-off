@@ -17,7 +17,7 @@ public class PlayerScoreManager : MonoBehaviour
     void Start()
     {
         players = GameObject.FindGameObjectsWithTag("playerController");
-        playerScoreCount = new int[players.Length];
+        //playerScoreCount = new int[players.Length];
         playerInCanvas = new GameObject[players.Length];
 
         for (int i = 0; i < players.Length; i++)
@@ -47,9 +47,10 @@ public class PlayerScoreManager : MonoBehaviour
         {
             if (players[i].activeInHierarchy)
             {
-                playerScoreCount[i] += 1;
+                players[i].GetComponent<PlayerDetails>().playerScore += 1;
+                //playerScoreCount[i] += 1;
                 Transform scoreText = playerInCanvas[i].transform.Find("Score");
-                scoreText.GetComponent<TextMeshProUGUI>().text = playerScoreCount[i].ToString();
+                scoreText.GetComponent<TextMeshProUGUI>().text = players[i].GetComponent<PlayerDetails>().playerID + " " + players[i].GetComponent<PlayerDetails>().playerScore.ToString();
                 
             }
         }

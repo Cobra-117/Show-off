@@ -5,23 +5,40 @@ using UnityEngine;
 
 public class ShowPlayerScores : MonoBehaviour
 {
+    public List<GameObject> players;
     public int[] playerID;
+    public int[] playerScores;
     
     // Start is called before the first frame update
     void Start()
     {
-        playerID = new int[PlayerScoreManager.playerScoreCount.Length];
-        for(int i=0; i<playerID.Length; i++)
+        GameObject[] objects = FindObjectsOfType<GameObject>(true);
+        foreach (GameObject ob in objects)
         {
-            playerID[i] = i + 1;
+            if(ob.tag.Equals("playerController"))
+            {
+                ob.SetActive(true);
+                players.Add(ob);
+            }
         }
 
-        BubbleSort(PlayerScoreManager.playerScoreCount, playerID);
-        Transform text = transform.Find("Scoreboard");
-        for (int i = 0; i < PlayerScoreManager.playerScoreCount.Length; i++)
+
+        //players = GameObject.FindGameObjectsWithTag("playerController");
+        playerID = new int[players.Count];
+        playerScores = new int[players.Count];
+
+        foreach(GameObject player in players)
         {
-            Debug.Log("Player " + playerID[i] + "score is: " + PlayerScoreManager.playerScoreCount[i]);
-            text.GetComponent<TextMeshProUGUI>().text += new string("Player " + playerID[i] + " score is: " + PlayerScoreManager.playerScoreCount[i] + "\n");
+            playerID[player.GetComponent<PlayerDetails>().playerID-1] = player.GetComponent<PlayerDetails>().playerID;
+            playerScores[player.GetComponent<PlayerDetails>().playerID-1] = player.GetComponent<PlayerDetails>().playerScore;
+        }
+
+        BubbleSort(playerScores, playerID);
+        Transform text = transform.Find("Scoreboard");
+        for (int i = 0; i < players.Count; i++)
+        {
+            Debug.Log("Player " + playerID[i] + "score is: " + playerScores);
+            text.GetComponent<TextMeshProUGUI>().text += new string("Player " + playerID[i] + " score is: " + playerScores[i] + "\n");
         }
     }
 

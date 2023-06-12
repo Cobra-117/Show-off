@@ -9,6 +9,7 @@ public class PlayerDetails : MonoBehaviour
     public Vector3 checkpoint;
     public int playerColor;
     public int playerIcon;
+    public int playerScore;
     public ArrayList checkpoints = new ArrayList();
 
     // Start is called before the first frame update
