@@ -2305,7 +2305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &397037087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10467,8 +10467,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
+  playerScoreCount: 
   playerScore: {fileID: 1745425491}
   iconContainer: {fileID: 430227477}
+  playerInCanvas: []
 --- !u!1 &2146957453
 GameObject:
   m_ObjectHideFlags: 0
