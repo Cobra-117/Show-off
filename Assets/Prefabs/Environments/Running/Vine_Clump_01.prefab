@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 6706146921286845846}
   - component: {fileID: 8860254275737039196}
   - component: {fileID: 3905417120768783260}
+  - component: {fileID: 1646412465109988033}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7691829912259185203
 Transform:
@@ -97,3 +98,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &1646412465109988033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7058563529130807433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3

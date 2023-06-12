@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 7417528517285155085}
   - component: {fileID: 7417528517285155084}
   - component: {fileID: 7417528517285155091}
+  - component: {fileID: 2726029563596345393}
   m_Layer: 0
   m_Name: Rock6_Low
   m_TagString: Untagged
@@ -324,6 +325,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7053836765159199653, guid: 5e2a692e0b8b2504687318d58400fcd4, type: 3}
+--- !u!114 &2726029563596345393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517285155089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517285710955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,12 +1405,13 @@ GameObject:
   - component: {fileID: 7417528517343921991}
   - component: {fileID: 7417528517343921990}
   - component: {fileID: 7417528517343921989}
+  - component: {fileID: 2167722930425688563}
   m_Layer: 0
   m_Name: Rock1_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517343921988
 Transform:
@@ -1476,6 +1492,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5784162064684295946, guid: b17c00f91c8a2f24d96f12df68be8e06, type: 3}
+--- !u!114 &2167722930425688563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517343921995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517353073865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,6 +2067,9 @@ GameObject:
   - component: {fileID: 4469066148365016411}
   - component: {fileID: 7417528517398386009}
   - component: {fileID: 7417528517398386008}
+  - component: {fileID: 2004620286417222883}
+  - component: {fileID: 1407475818096685269}
+  - component: {fileID: 7759766751333998905}
   m_Layer: 8
   m_Name: Platform_Flat_01
   m_TagString: Untagged
@@ -2232,6 +2265,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2004620286417222883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517398386014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
+--- !u!114 &1407475818096685269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517398386014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
+--- !u!114 &7759766751333998905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517398386014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517407612723
 GameObject:
   m_ObjectHideFlags: 0
@@ -3369,6 +3444,7 @@ GameObject:
   - component: {fileID: 7417528517476553274}
   - component: {fileID: 7417528517476553273}
   - component: {fileID: 7417528517476553272}
+  - component: {fileID: 8576795654807513306}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
@@ -3455,6 +3531,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3180952334448413891, guid: ec6609807300aea4f960931463f63666, type: 3}
+--- !u!114 &8576795654807513306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517476553278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517511653479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4380,12 +4470,13 @@ GameObject:
   - component: {fileID: 7417528517578538391}
   - component: {fileID: 7417528517578538390}
   - component: {fileID: 7417528517578538389}
+  - component: {fileID: 3465410971860524587}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517578538388
 Transform:
@@ -4465,6 +4556,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &3465410971860524587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517578538395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517581361129
 GameObject:
   m_ObjectHideFlags: 0
@@ -4560,12 +4665,13 @@ GameObject:
   - component: {fileID: 7417528517585171569}
   - component: {fileID: 7417528517585171568}
   - component: {fileID: 7417528517585171575}
+  - component: {fileID: 6817328531323954232}
   m_Layer: 0
   m_Name: Rock8_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517585171574
 Transform:
@@ -4646,6 +4752,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1699915588554104255, guid: c8e56707949523f48b49b2855c2efd94, type: 3}
+--- !u!114 &6817328531323954232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517585171573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517586190331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4741,12 +4861,14 @@ GameObject:
   - component: {fileID: 7417528517587386911}
   - component: {fileID: 7417528517587386910}
   - component: {fileID: 7417528517587386909}
+  - component: {fileID: 4397966233373017521}
+  - component: {fileID: 2770772566084262886}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517587386908
 Transform:
@@ -4826,6 +4948,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &4397966233373017521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517587386915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
+--- !u!114 &2770772566084262886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517587386915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517587536584
 GameObject:
   m_ObjectHideFlags: 0
@@ -5086,12 +5236,13 @@ GameObject:
   - component: {fileID: 7417528517608061128}
   - component: {fileID: 7417528517608061130}
   - component: {fileID: 7417528517608061129}
+  - component: {fileID: 7685291240653391593}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517608061128
 Transform:
@@ -5158,6 +5309,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7685291240653391593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517608061135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517609097346
 GameObject:
   m_ObjectHideFlags: 0
@@ -5985,12 +6150,13 @@ GameObject:
   - component: {fileID: 7417528517673366926}
   - component: {fileID: 7417528517673366925}
   - component: {fileID: 7417528517673366924}
+  - component: {fileID: 7071287631821470284}
   m_Layer: 0
   m_Name: Rock6_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517673366931
 Transform:
@@ -6071,6 +6237,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7053836765159199653, guid: 5e2a692e0b8b2504687318d58400fcd4, type: 3}
+--- !u!114 &7071287631821470284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517673366930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517684836857
 GameObject:
   m_ObjectHideFlags: 0
@@ -6331,6 +6511,7 @@ GameObject:
   - component: {fileID: 7417528517689970761}
   - component: {fileID: 7417528517689970763}
   - component: {fileID: 7417528517689970762}
+  - component: {fileID: 6771559483136997923}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
@@ -6403,6 +6584,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6771559483136997923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517689970760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517717061721
 GameObject:
   m_ObjectHideFlags: 0
@@ -6945,12 +7140,13 @@ GameObject:
   - component: {fileID: 7417528517760128857}
   - component: {fileID: 7417528517760128856}
   - component: {fileID: 7417528517760128863}
+  - component: {fileID: 1678019378493980159}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517760128862
 Transform:
@@ -7030,6 +7226,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &1678019378493980159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517760128861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517771809455
 GameObject:
   m_ObjectHideFlags: 0
@@ -8135,12 +8345,13 @@ GameObject:
   - component: {fileID: 7417528517860959201}
   - component: {fileID: 7417528517860959203}
   - component: {fileID: 7417528517860959202}
+  - component: {fileID: 1922277906134226275}
   m_Layer: 0
   m_Name: Rock6_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517860959201
 Transform:
@@ -8207,6 +8418,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1922277906134226275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517860959200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517875754269
 GameObject:
   m_ObjectHideFlags: 0
@@ -8684,12 +8909,13 @@ GameObject:
   - component: {fileID: 7417528517916701430}
   - component: {fileID: 7417528517916701429}
   - component: {fileID: 7417528517916701428}
+  - component: {fileID: 3306195887160131717}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528517916701435
 Transform:
@@ -8769,6 +8995,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &3306195887160131717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528517916701434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528517918745066
 GameObject:
   m_ObjectHideFlags: 0
@@ -10109,12 +10349,13 @@ GameObject:
   - component: {fileID: 7417528518071886202}
   - component: {fileID: 7417528518071886201}
   - component: {fileID: 7417528518071886200}
+  - component: {fileID: 2737244788470065620}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518071886207
 Transform:
@@ -10194,6 +10435,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &2737244788470065620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518071886206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518071890260
 GameObject:
   m_ObjectHideFlags: 0
@@ -10621,12 +10876,13 @@ GameObject:
   - component: {fileID: 7417528518107216182}
   - component: {fileID: 7417528518107216181}
   - component: {fileID: 7417528518107216180}
+  - component: {fileID: 6032920021672400833}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518107216187
 Transform:
@@ -10707,6 +10963,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
+--- !u!114 &6032920021672400833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518107216186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518117127544
 GameObject:
   m_ObjectHideFlags: 0
@@ -10719,12 +10989,13 @@ GameObject:
   - component: {fileID: 7417528518117127540}
   - component: {fileID: 7417528518117127547}
   - component: {fileID: 7417528518117127546}
+  - component: {fileID: 5989333596178856320}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518117127545
 Transform:
@@ -10805,6 +11076,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
+--- !u!114 &5989333596178856320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518117127544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518128142615
 GameObject:
   m_ObjectHideFlags: 0
@@ -10900,12 +11185,13 @@ GameObject:
   - component: {fileID: 7417528518142575160}
   - component: {fileID: 7417528518142575167}
   - component: {fileID: 7417528518142575166}
+  - component: {fileID: 5757142892992363347}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518142575165
 Transform:
@@ -10985,6 +11271,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &5757142892992363347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518142575164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518146164705
 GameObject:
   m_ObjectHideFlags: 0
@@ -11080,6 +11380,7 @@ GameObject:
   - component: {fileID: 7417528518146241426}
   - component: {fileID: 7417528518146241425}
   - component: {fileID: 7417528518146241424}
+  - component: {fileID: 1524585113332600994}
   m_Layer: 0
   m_Name: Rock8_Low
   m_TagString: Untagged
@@ -11166,6 +11467,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1699915588554104255, guid: c8e56707949523f48b49b2855c2efd94, type: 3}
+--- !u!114 &1524585113332600994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518146241430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518147264984
 GameObject:
   m_ObjectHideFlags: 0
@@ -11427,12 +11742,13 @@ GameObject:
   - component: {fileID: 7417528518154777015}
   - component: {fileID: 7417528518154777014}
   - component: {fileID: 7417528518154777013}
+  - component: {fileID: 769259281325362578}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518154777012
 Transform:
@@ -11512,6 +11828,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &769259281325362578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518154777019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518155036801
 GameObject:
   m_ObjectHideFlags: 0
@@ -11939,12 +12269,13 @@ GameObject:
   - component: {fileID: 7417528518191728814}
   - component: {fileID: 7417528518191728813}
   - component: {fileID: 7417528518191728812}
+  - component: {fileID: 4441208844309201912}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518191728819
 Transform:
@@ -12024,6 +12355,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &4441208844309201912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518191728818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518195163509
 GameObject:
   m_ObjectHideFlags: 0
@@ -12202,12 +12547,13 @@ GameObject:
   - component: {fileID: 7417528518208437160}
   - component: {fileID: 7417528518208437167}
   - component: {fileID: 7417528518208437166}
+  - component: {fileID: 967070611842629820}
   m_Layer: 0
   m_Name: Rock3_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518208437165
 Transform:
@@ -12288,6 +12634,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4749237076896657380, guid: b8a867881116fd448855122beb02cbe1, type: 3}
+--- !u!114 &967070611842629820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518208437164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518209482935
 GameObject:
   m_ObjectHideFlags: 0
@@ -12715,6 +13075,7 @@ GameObject:
   - component: {fileID: 7417528518222454734}
   - component: {fileID: 7417528518222454733}
   - component: {fileID: 7417528518222454732}
+  - component: {fileID: 1255939658087504619}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
@@ -12801,6 +13162,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
+--- !u!114 &1255939658087504619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518222454738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518252964310
 GameObject:
   m_ObjectHideFlags: 0
@@ -13145,6 +13520,7 @@ GameObject:
   - component: {fileID: 7417528518272082379}
   - component: {fileID: 7417528518272082378}
   - component: {fileID: 7417528518272082377}
+  - component: {fileID: 3896952291067461969}
   m_Layer: 0
   m_Name: Rock3_Low
   m_TagString: Untagged
@@ -13231,6 +13607,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4749237076896657380, guid: b8a867881116fd448855122beb02cbe1, type: 3}
+--- !u!114 &3896952291067461969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518272082383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518272126068
 GameObject:
   m_ObjectHideFlags: 0
@@ -14715,13 +15105,14 @@ GameObject:
   - component: {fileID: 7417528518380772279}
   - component: {fileID: 7417528518380772274}
   - component: {fileID: 7417528518380772273}
+  - component: {fileID: 5984348995029231597}
   - component: {fileID: 7417528518380772272}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518380772279
 Transform:
@@ -14788,6 +15179,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5984348995029231597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518380772278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!65 &7417528518380772272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14978,6 +15383,7 @@ GameObject:
   - component: {fileID: 7417528518384291285}
   - component: {fileID: 7417528518384291287}
   - component: {fileID: 7417528518384291286}
+  - component: {fileID: 971933213649028053}
   m_Layer: 0
   m_Name: Rock4_Low
   m_TagString: Untagged
@@ -15050,6 +15456,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &971933213649028053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518384291284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518389573887
 GameObject:
   m_ObjectHideFlags: 0
@@ -15477,12 +15897,13 @@ GameObject:
   - component: {fileID: 7417528518436778036}
   - component: {fileID: 7417528518436778043}
   - component: {fileID: 7417528518436778042}
+  - component: {fileID: 7027828610218805385}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518436778041
 Transform:
@@ -15563,6 +15984,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3180952334448413891, guid: ec6609807300aea4f960931463f63666, type: 3}
+--- !u!114 &7027828610218805385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518436778040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518445615364
 GameObject:
   m_ObjectHideFlags: 0
@@ -16130,12 +16565,13 @@ GameObject:
   - component: {fileID: 7417528518467318960}
   - component: {fileID: 7417528518467318962}
   - component: {fileID: 7417528518467318961}
+  - component: {fileID: 8030310029840065986}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518467318960
 Transform:
@@ -16202,6 +16638,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8030310029840065986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518467318967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518470484673
 GameObject:
   m_ObjectHideFlags: 0
@@ -17542,6 +17992,7 @@ GameObject:
   - component: {fileID: 7417528518557660367}
   - component: {fileID: 7417528518557660366}
   - component: {fileID: 7417528518557660365}
+  - component: {fileID: 6735116027520994110}
   m_Layer: 0
   m_Name: Rock3_Low
   m_TagString: Untagged
@@ -17628,6 +18079,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4749237076896657380, guid: b8a867881116fd448855122beb02cbe1, type: 3}
+--- !u!114 &6735116027520994110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518557660371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518562322839
 GameObject:
   m_ObjectHideFlags: 0
@@ -18055,12 +18520,13 @@ GameObject:
   - component: {fileID: 7417528518584877425}
   - component: {fileID: 7417528518584877424}
   - component: {fileID: 7417528518584877431}
+  - component: {fileID: 2446475914523349780}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518584877430
 Transform:
@@ -18140,6 +18606,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &2446475914523349780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518584877429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518589301720
 GameObject:
   m_ObjectHideFlags: 0
@@ -19054,6 +19534,7 @@ GameObject:
   - component: {fileID: 7417528518630187210}
   - component: {fileID: 7417528518630187209}
   - component: {fileID: 7417528518630187208}
+  - component: {fileID: 1292333651030761960}
   m_Layer: 0
   m_Name: Rock4_Low
   m_TagString: Untagged
@@ -19140,6 +19621,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4744567114021889831, guid: 2a16faabf5746534098f8fa87df89778, type: 3}
+--- !u!114 &1292333651030761960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518630187214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518635495417
 GameObject:
   m_ObjectHideFlags: 0
@@ -19982,6 +20477,7 @@ GameObject:
   - component: {fileID: 7417528518707454330}
   - component: {fileID: 7417528518707454329}
   - component: {fileID: 7417528518707454328}
+  - component: {fileID: 1108076635596964744}
   m_Layer: 0
   m_Name: Rock3_Low
   m_TagString: Untagged
@@ -20068,6 +20564,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4749237076896657380, guid: b8a867881116fd448855122beb02cbe1, type: 3}
+--- !u!114 &1108076635596964744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518707454334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518714421921
 GameObject:
   m_ObjectHideFlags: 0
@@ -20209,12 +20719,13 @@ GameObject:
   - component: {fileID: 7417528518719460871}
   - component: {fileID: 7417528518719460870}
   - component: {fileID: 7417528518719460869}
+  - component: {fileID: 3412167952530081010}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518719460868
 Transform:
@@ -20294,6 +20805,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &3412167952530081010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518719460875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518729319986
 GameObject:
   m_ObjectHideFlags: 0
@@ -20306,12 +20831,13 @@ GameObject:
   - component: {fileID: 7417528518729319982}
   - component: {fileID: 7417528518729319981}
   - component: {fileID: 7417528518729319980}
+  - component: {fileID: 3521969879577410765}
   m_Layer: 0
   m_Name: Rock1_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518729319987
 Transform:
@@ -20392,6 +20918,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5784162064684295946, guid: b17c00f91c8a2f24d96f12df68be8e06, type: 3}
+--- !u!114 &3521969879577410765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518729319986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518735366402
 GameObject:
   m_ObjectHideFlags: 0
@@ -20667,12 +21207,13 @@ GameObject:
   - component: {fileID: 7417528518749573692}
   - component: {fileID: 7417528518749573699}
   - component: {fileID: 7417528518749573698}
+  - component: {fileID: 960493031301222515}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518749573697
 Transform:
@@ -20752,6 +21293,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &960493031301222515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518749573696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518754893706
 GameObject:
   m_ObjectHideFlags: 0
@@ -22076,12 +22631,13 @@ GameObject:
   - component: {fileID: 7417528518873326303}
   - component: {fileID: 7417528518873326302}
   - component: {fileID: 7417528518873326301}
+  - component: {fileID: 8635562861208011713}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518873326300
 Transform:
@@ -22161,6 +22717,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
+--- !u!114 &8635562861208011713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518873326307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518878856488
 GameObject:
   m_ObjectHideFlags: 0
@@ -22505,12 +23075,13 @@ GameObject:
   - component: {fileID: 7417528518895615455}
   - component: {fileID: 7417528518895615454}
   - component: {fileID: 7417528518895615453}
+  - component: {fileID: 6306829227201874899}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528518895615452
 Transform:
@@ -22591,6 +23162,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
+--- !u!114 &6306829227201874899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518895615459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518896863381
 GameObject:
   m_ObjectHideFlags: 0
@@ -23184,6 +23769,7 @@ GameObject:
   - component: {fileID: 7417528518938201786}
   - component: {fileID: 7417528518938201785}
   - component: {fileID: 7417528518938201784}
+  - component: {fileID: 7662708368848725601}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
@@ -23270,6 +23856,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3180952334448413891, guid: ec6609807300aea4f960931463f63666, type: 3}
+--- !u!114 &7662708368848725601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528518938201790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528518947477737
 GameObject:
   m_ObjectHideFlags: 0
@@ -24405,12 +25005,13 @@ GameObject:
   - component: {fileID: 7417528519051910327}
   - component: {fileID: 7417528519051910326}
   - component: {fileID: 7417528519051910325}
+  - component: {fileID: 2384268467998087425}
   m_Layer: 0
   m_Name: Rock3_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528519051910324
 Transform:
@@ -24491,6 +25092,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4749237076896657380, guid: b8a867881116fd448855122beb02cbe1, type: 3}
+--- !u!114 &2384268467998087425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528519051910331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528519062845692
 GameObject:
   m_ObjectHideFlags: 0
@@ -26163,12 +26778,13 @@ GameObject:
   - component: {fileID: 7417528519181307452}
   - component: {fileID: 7417528519181307459}
   - component: {fileID: 7417528519181307458}
+  - component: {fileID: 6605343768714124320}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528519181307457
 Transform:
@@ -26249,6 +26865,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3180952334448413891, guid: ec6609807300aea4f960931463f63666, type: 3}
+--- !u!114 &6605343768714124320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528519181307456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528519183525796
 GameObject:
   m_ObjectHideFlags: 0
@@ -26261,12 +26891,13 @@ GameObject:
   - component: {fileID: 7417528519183525792}
   - component: {fileID: 7417528519183525799}
   - component: {fileID: 7417528519183525798}
+  - component: {fileID: 4682678391093407657}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528519183525797
 Transform:
@@ -26347,6 +26978,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3180952334448413891, guid: ec6609807300aea4f960931463f63666, type: 3}
+--- !u!114 &4682678391093407657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528519183525796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528519187020108
 GameObject:
   m_ObjectHideFlags: 0
@@ -26973,12 +27618,13 @@ GameObject:
   - component: {fileID: 7417528519210903559}
   - component: {fileID: 7417528519210903558}
   - component: {fileID: 7417528519210903557}
+  - component: {fileID: 9110809497644818080}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528519210903556
 Transform:
@@ -27059,6 +27705,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
+--- !u!114 &9110809497644818080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528519210903563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528519214319824
 GameObject:
   m_ObjectHideFlags: 0
@@ -27378,12 +28038,13 @@ GameObject:
   - component: {fileID: 7417528519219836352}
   - component: {fileID: 7417528519219836359}
   - component: {fileID: 7417528519219836358}
+  - component: {fileID: 3177745450845361661}
   m_Layer: 0
   m_Name: Rock1_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528519219836357
 Transform:
@@ -27464,6 +28125,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5784162064684295946, guid: b17c00f91c8a2f24d96f12df68be8e06, type: 3}
+--- !u!114 &3177745450845361661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528519219836356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528519221574340
 GameObject:
   m_ObjectHideFlags: 0
@@ -27476,12 +28151,13 @@ GameObject:
   - component: {fileID: 7417528519221574336}
   - component: {fileID: 7417528519221574343}
   - component: {fileID: 7417528519221574342}
+  - component: {fileID: 1086483982773059553}
   m_Layer: 0
   m_Name: Rock4_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7417528519221574341
 Transform:
@@ -27562,6 +28238,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4744567114021889831, guid: 2a16faabf5746534098f8fa87df89778, type: 3}
+--- !u!114 &1086483982773059553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528519221574340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528519221777922
 GameObject:
   m_ObjectHideFlags: 0
@@ -29082,6 +29772,7 @@ GameObject:
   - component: {fileID: 7417528519344403174}
   - component: {fileID: 7417528519344403168}
   - component: {fileID: 7417528519344403175}
+  - component: {fileID: 4531119736567169250}
   m_Layer: 0
   m_Name: Grass_Tall_02
   m_TagString: Untagged
@@ -29154,6 +29845,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4531119736567169250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528519344403173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528519347780823
 GameObject:
   m_ObjectHideFlags: 0
@@ -29415,6 +30120,7 @@ GameObject:
   - component: {fileID: 7417528519365411489}
   - component: {fileID: 7417528519365411488}
   - component: {fileID: 7417528519365411495}
+  - component: {fileID: 936279690353049996}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
@@ -29501,6 +30207,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
+--- !u!114 &936279690353049996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417528519365411493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
 --- !u!1 &7417528519371459978
 GameObject:
   m_ObjectHideFlags: 0

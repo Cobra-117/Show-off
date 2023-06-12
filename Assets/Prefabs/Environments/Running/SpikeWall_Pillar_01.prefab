@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 471316347420119137}
   - component: {fileID: 6176399726418881688}
   - component: {fileID: 4515916120931762511}
+  - component: {fileID: 4725804862632822905}
   m_Layer: 0
   m_Name: SpikeWall_Pillar_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8922041012373727831
 Transform:
@@ -98,3 +99,17 @@ CapsuleCollider:
   m_Height: 3.9092553
   m_Direction: 1
   m_Center: {x: -0.010489404, y: 1.9188484, z: 0}
+--- !u!114 &4725804862632822905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5587327625901529156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3

@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 4813921754594464439}
   - component: {fileID: 8458226026192821522}
   - component: {fileID: 5946247428918159832}
+  - component: {fileID: 2680512152098756503}
   m_Layer: 0
   m_Name: Rock4_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4813921754594464439
 Transform:
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2680512152098756503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297830717916481549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
