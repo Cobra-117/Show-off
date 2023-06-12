@@ -10516,7 +10516,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  playerScoreCount: 
   playerScore: {fileID: 1745425491}
   iconContainer: {fileID: 430227477}
   playerInCanvas: []

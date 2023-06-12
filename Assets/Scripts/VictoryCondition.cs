@@ -10,6 +10,12 @@ public class VictoryCondition : MonoBehaviour
     {
 
     }
+
+    void DelayLoad()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     void Update()
     {
         GameObject[] playersobj = GameObject.FindGameObjectsWithTag("Player");
@@ -21,7 +27,7 @@ public class VictoryCondition : MonoBehaviour
         }
         if (activePlayers.Count >= 2)
             hasGameStarted = true;
-        //if (activePlayers.Count == 1 && hasGameStarted == true)
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        if (activePlayers.Count == 1 && hasGameStarted == true)
+            Invoke("DelayLoad", 1);
     }
 }

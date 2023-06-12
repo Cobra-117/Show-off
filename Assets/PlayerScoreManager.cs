@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 public class PlayerScoreManager : MonoBehaviour
 {
     public GameObject[] players;
-    public int[] playerScoreCount;
+    public static int[] playerScoreCount;
     public GameObject playerScore;
     public GameObject iconContainer;
     public GameObject[] playerInCanvas;
