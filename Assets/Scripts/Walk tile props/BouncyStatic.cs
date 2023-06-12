@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bouncy : MonoBehaviour
-{
-	public float force = 10f; //Force 10000f
-	public float stunTime = 0.5f;
+public class BouncyStatic : MonoBehaviour
+{ 
+	public float force = 4f; //Force 10000f
+	public float stunTime = 0.3f;
 	private Vector3 hitDir;
-
-	AudioSource audioSource;
 
 	void Start()
 	{
-		audioSource = GetComponent<AudioSource>();
 	}
 
 	void OnCollisionEnter(Collision collision)
@@ -22,7 +19,6 @@ public class Bouncy : MonoBehaviour
 			Debug.DrawRay(contact.point, contact.normal, Color.white);
 			if (collision.gameObject.tag == "Player")
 			{
-				audioSource.Play();
 				hitDir = contact.normal;
 				collision.gameObject.GetComponent<Walk>().HitPlayer(-hitDir * force, stunTime);
 				return;
