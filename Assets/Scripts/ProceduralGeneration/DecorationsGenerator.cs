@@ -17,6 +17,8 @@ public class DecorationsGenerator : MonoBehaviour
 
     public void AddBlock()
     {
+        if (blocksList == null)
+            blocksList = new List<GameObject>();
         Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
         0, 0);
         GameObject block = GameObject.Instantiate(blockObj);
