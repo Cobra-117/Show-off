@@ -821,7 +821,7 @@ RectTransform:
   - {fileID: 813731014}
   - {fileID: 2129826384}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -998,7 +998,7 @@ Transform:
   - {fileID: 438826296}
   - {fileID: 430227478}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &213509059
 GameObject:
@@ -4300,6 +4300,7 @@ MonoBehaviour:
   - {fileID: 4506234489554820006, guid: 7b034a48e61f0a34f8803eec17748f43, type: 3}
   - {fileID: 6703488784526442000, guid: b308acdddf9153e45927a9b7d9b8bb36, type: 3}
   Water: {fileID: 0}
+  decorationGenerator: {fileID: 0}
   simultaneousBlocks: 7
 --- !u!4 &723469500
 Transform:
@@ -4453,6 +4454,7 @@ MonoBehaviour:
   - {fileID: 6052975366335176601, guid: da0d2e1a63f7b5143908548a65a24922, type: 3}
   - {fileID: 7634449040597257741, guid: 4b32df23e7ea6e348bd78540f62c4438, type: 3}
   Water: {fileID: 1459882829}
+  decorationGenerator: {fileID: 1790441660}
   simultaneousBlocks: 8
 --- !u!4 &764448919
 Transform:
@@ -8716,7 +8718,7 @@ RectTransform:
   - {fileID: 666654907}
   - {fileID: 904872637}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -9144,7 +9146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1790441659}
-  - component: {fileID: 1790441658}
+  - component: {fileID: 1790441660}
   m_Layer: 0
   m_Name: Background Generator (1)
   m_TagString: Untagged
@@ -9152,23 +9154,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1790441658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790441657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78382504a26a7724b8ef6b5e5c73fdf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockSize: {x: 80, y: 0}
-  blocks:
-  - {fileID: 3579175495029367347, guid: 4452677384f2a094daba535d95c54786, type: 3}
-  Water: {fileID: 0}
-  simultaneousBlocks: 4
 --- !u!4 &1790441659
 Transform:
   m_ObjectHideFlags: 0
@@ -9182,8 +9167,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1790441660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790441657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26eb0da92f061244a8538037fb4e3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockSize: {x: 80, y: 0}
+  blockObj: {fileID: 3579175495029367347, guid: 4452677384f2a094daba535d95c54786,
+    type: 3}
+  simultaneousBlocks: 4
 --- !u!1 &1841052951
 GameObject:
   m_ObjectHideFlags: 0
