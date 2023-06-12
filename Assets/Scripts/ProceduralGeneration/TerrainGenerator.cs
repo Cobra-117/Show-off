@@ -52,6 +52,7 @@ public class TerrainGenerator : MonoBehaviour
 
     public void AddWater()
     {
+        return;
         Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
         0, 0);
         GameObject water = GameObject.Instantiate(Water);

@@ -21,7 +21,7 @@ public class VictoryCondition : MonoBehaviour
         }
         if (activePlayers.Count >= 2)
             hasGameStarted = true;
-        if (activePlayers.Count == 1 && hasGameStarted == true)
-            SceneManager.LoadScene("WinningScene");
+        //if (activePlayers.Count == 1 && hasGameStarted == true)
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
