@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Bouncy : MonoBehaviour
 {
-    
 	public float force = 10f; //Force 10000f
 	public float stunTime = 0.5f;
 	private Vector3 hitDir;
@@ -29,14 +28,5 @@ public class Bouncy : MonoBehaviour
 				return;
 			}
 		}
-		/*if (collision.relativeVelocity.magnitude > 2)
-		{
-			if (collision.gameObject.tag == "Player")
-			{
-				//Debug.Log("Hit");
-				collision.gameObject.GetComponent<CharacterControls>().HitPlayer(-hitDir*force, stunTime);
-			}
-			//audioSource.Play();
-		}*/
 	}
 }

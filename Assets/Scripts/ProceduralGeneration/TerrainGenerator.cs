@@ -7,21 +7,24 @@ public class TerrainGenerator : MonoBehaviour
     public Vector2 blockSize;
     public GameObject[] blocks;
     public GameObject Water;
+    public DecorationsGenerator decorationGenerator;
     public int simultaneousBlocks = 7;
 
     int nbrOfBlocks;
     List<GameObject> blocksList;
     List<GameObject> waterList;
+    bool shouldAddDecoration  = true;
     // Start is called before the first frame update
     void Start()
     {
         blocksList = new List<GameObject>();
         waterList = new List<GameObject>();
         Random.InitState(System.DateTime.Now.Millisecond);
-        AddWater();
+        decorationGenerator.AddBlock();
+        //AddWater();
         AddBlock(0);
         for (int i = 0; i < 3; i++) {
-            AddWater();
+            //AddWater();
             AddBlock(Random.Range(0, blocks.Length));
         }
 
@@ -36,6 +39,8 @@ public class TerrainGenerator : MonoBehaviour
 
     public void AddBlock(int blockType)
     {
+        if (nbrOfBlocks %2 != 0)
+            decorationGenerator.AddBlock();
         Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
         0, 0);
         Debug.Log("will add block of type" + blockType.ToString());
@@ -52,6 +57,7 @@ public class TerrainGenerator : MonoBehaviour
 
     public void AddWater()
     {
+        return;
         Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
         0, 0);
         GameObject water = GameObject.Instantiate(Water);
