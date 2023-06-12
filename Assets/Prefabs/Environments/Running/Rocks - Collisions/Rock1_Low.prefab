@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 4931598943527639316}
   - component: {fileID: 7175492415623065054}
   - component: {fileID: 4567813107164940591}
+  - component: {fileID: 2424578091110534589}
   m_Layer: 0
   m_Name: Rock1_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8349485181650278065
 Transform:
@@ -98,3 +99,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5784162064684295946, guid: b17c00f91c8a2f24d96f12df68be8e06, type: 3}
+--- !u!114 &2424578091110534589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8688714878222289931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3

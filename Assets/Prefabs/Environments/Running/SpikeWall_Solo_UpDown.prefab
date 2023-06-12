@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2584838048327236209}
   - component: {fileID: 8134549765640586888}
   - component: {fileID: 147010301404185932}
+  - component: {fileID: 4266462196753784984}
   m_Layer: 0
   m_Name: SpikeWall_Solo_UpDown
   m_TagString: Untagged
@@ -100,3 +101,18 @@ MonoBehaviour:
   minHeight: -3.5
   speed: 1.2
   goingUp: 1
+  cooldown: 0.5
+--- !u!114 &4266462196753784984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7556881730987930196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  stunTime: 0.3
