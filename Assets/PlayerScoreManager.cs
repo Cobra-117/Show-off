@@ -50,7 +50,7 @@ public class PlayerScoreManager : MonoBehaviour
                 players[i].GetComponent<PlayerDetails>().playerScore += 1;
                 //playerScoreCount[i] += 1;
                 Transform scoreText = playerInCanvas[i].transform.Find("Score");
-                scoreText.GetComponent<TextMeshProUGUI>().text = players[i].GetComponent<PlayerDetails>().playerID + " " + players[i].GetComponent<PlayerDetails>().playerScore.ToString();
+                scoreText.GetComponent<TextMeshProUGUI>().text = "P" + players[i].GetComponent<PlayerDetails>().playerID + " - " + players[i].GetComponent<PlayerDetails>().playerScore.ToString();
                 
             }
         }
