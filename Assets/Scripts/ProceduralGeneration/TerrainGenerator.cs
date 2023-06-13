@@ -9,6 +9,7 @@ public class TerrainGenerator : MonoBehaviour
     public GameObject Water;
     public DecorationsGenerator decorationGenerator;
     public int simultaneousBlocks = 7;
+    public CorruptedDataWall dataWave;
 
     int nbrOfBlocks;
     List<GameObject> blocksList;
@@ -47,6 +48,7 @@ public class TerrainGenerator : MonoBehaviour
         GameObject block = GameObject.Instantiate(blocks[blockType]);
         block.transform.position = coordinates;
         block.transform.parent = this.transform;
+        block.GetComponent<TerrainBlock>().dataWave = dataWave;
         blocksList.Add(block);
         nbrOfBlocks += 1;
         if (blocksList.Count > simultaneousBlocks) {
