@@ -74,10 +74,15 @@ public class CorruptedDataWall : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") {
             Debug.Log("wave touched player");
-            collision.gameObject.transform.parent.gameObject.SetActive(false);
+            Component[] components = gameObject.GetComponents(typeof(Component));
+            foreach(Component component in components) {
+                Debug.Log(component.ToString());
+            }
             targetGroup.RemoveMember(collision.gameObject.transform);
+            collision.gameObject.transform.parent.gameObject.SetActive(false);
             //targetGroup.m_Targets
             audioSource.Play();
+            Debug.Log("Player removed");
         }
     }
 }
