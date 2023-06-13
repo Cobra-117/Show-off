@@ -76,6 +76,7 @@ public class CorruptedDataWall : MonoBehaviour
             Debug.Log("wave touched player");
             collision.gameObject.transform.parent.gameObject.SetActive(false);
             targetGroup.RemoveMember(collision.gameObject.transform);
+            //targetGroup.m_Targets
             audioSource.Play();
         }
     }
