@@ -2321,8 +2321,8 @@ MonoBehaviour:
   speed: 1.5
   OffsetToFirstPlayer: 15
   axis: 0
-  audioSource: {fileID: 0}
-  targetGroup: {fileID: 0}
+  audioSource: {fileID: 397037092}
+  targetGroup: {fileID: 982606580}
 --- !u!65 &397037088
 BoxCollider:
   m_ObjectHideFlags: 0
