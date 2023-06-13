@@ -8,7 +8,10 @@ public class ShowPlayerScores : MonoBehaviour
     public List<GameObject> players;
     public int[] playerID;
     public int[] playerScores;
-    
+    public Transform firstPlacePosition;
+    public Transform secondPlacePosition;
+    public Transform thirdPlacePosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +43,36 @@ public class ShowPlayerScores : MonoBehaviour
             Debug.Log("Player " + playerID[i] + "score is: " + playerScores);
             text.GetComponent<TextMeshProUGUI>().text += new string("Player " + playerID[i] + " score is: " + playerScores[i] + "\n");
         }
+
+        foreach(GameObject player in players)
+        {
+            if(player.GetComponent<PlayerDetails>().playerID == playerID[0])
+            {
+                Debug.Log("First place positioned");
+                player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+                Transform firstPlace = player.transform.Find("Walkiing(Clone)");
+                firstPlace.transform.position = firstPlacePosition.position;
+                Debug.Log(firstPlace.transform.position + " " + firstPlacePosition.position);
+            }
+
+            if(player.GetComponent<PlayerDetails>().playerID == playerID[1])
+            {
+                Debug.Log("Second place positioned");
+                player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+                Transform secondPlace = player.transform.Find("Walkiing(Clone)");
+                secondPlace.transform.position = secondPlacePosition.position;
+                Debug.Log(secondPlace.transform.position + " " + secondPlacePosition.position);
+            } 
+
+            if(player.GetComponent<PlayerDetails>().playerID == playerID[2])
+            {
+                Debug.Log("Third place positioned");
+                player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+                Transform thirdPlace = player.transform.Find("Walkiing(Clone)");
+                thirdPlace.transform.position = thirdPlacePosition.position;
+            }
+        }
+
     }
 
     void BubbleSort(int[] scores, int[] playerID)
