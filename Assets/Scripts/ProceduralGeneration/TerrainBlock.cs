@@ -13,6 +13,7 @@ public class TerrainBlock : MonoBehaviour
     }
 
     public BlockType blockType;
+    public CorruptedDataWall dataWave;
     bool hasBeenUsed = false;
     // Start is called before the first frame update
     void Start()
@@ -62,6 +63,7 @@ public class TerrainBlock : MonoBehaviour
                 transform.parent.GetComponent<TerrainGenerator>().blocks.Length));
                 //generate
                 hasBeenUsed = true;
+                dataWave.UpdateChunk();
                 Debug.Log("adding blocks");
             }
         }

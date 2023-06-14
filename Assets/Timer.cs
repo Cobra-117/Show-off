@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    public float timer;
+    public static float timer;
+    public static int second;
     
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        int second = (int)(timer % 60);
+        second = (int)(timer % 60);
         GetComponent<TextMeshProUGUI>().text = "Time: \n" + second;
     }
 }

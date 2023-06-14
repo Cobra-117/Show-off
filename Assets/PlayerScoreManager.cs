@@ -13,6 +13,7 @@ public class PlayerScoreManager : MonoBehaviour
     public GameObject playerScore;
     public GameObject iconContainer;
     public GameObject[] playerInCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,11 +44,14 @@ public class PlayerScoreManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //int second = (int)(timer % 60);
         for (int i = 0; i < players.Length; i++)
         {
             if (players[i].activeInHierarchy)
             {
-                players[i].GetComponent<PlayerDetails>().playerScore += 1;
+                int second = Timer.second;
+                players[i].GetComponent<PlayerDetails>().playerScore += second;
+                //Debug.Log("THE TIME FOR PLAYER IS " + players[i].GetComponent<PlayerDetails>().playerScore);
                 //playerScoreCount[i] += 1;
                 Transform scoreText = playerInCanvas[i].transform.Find("Score");
                 scoreText.GetComponent<TextMeshProUGUI>().text = "P" + players[i].GetComponent<PlayerDetails>().playerID + " - " + players[i].GetComponent<PlayerDetails>().playerScore.ToString();

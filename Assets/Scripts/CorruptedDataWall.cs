@@ -9,17 +9,23 @@ public class CorruptedDataWall : MonoBehaviour
         X,Y,Z
     }
     public float speed;
+    public float[] speedCurve;
 
+    int currentChunk = 0;
     public float OffsetToFirstPlayer = 15;
     public Axis axis;
 
     public AudioSource audioSource;
     public Cinemachine.CinemachineTargetGroup targetGroup;
+    
+    bool isFirstChunk = true;
     // Update is called once per frame
     
     void Start() 
     {
         audioSource = GetComponent<AudioSource>();
+        speed = speedCurve[0];
+        Debug.Log("start");
     }
 
     void Update()
@@ -70,14 +76,31 @@ public class CorruptedDataWall : MonoBehaviour
         return false;
     }
 
+    public void UpdateChunk()
+    {
+        if (isFirstChunk) {
+            isFirstChunk = false;
+            return;
+        }
+        currentChunk += 1;
+        if (currentChunk < speedCurve.Length) {
+            speed = speedCurve[currentChunk];
+        }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player") {
             Debug.Log("wave touched player");
-            collision.gameObject.transform.parent.gameObject.SetActive(false);
+            Component[] components = gameObject.GetComponents(typeof(Component));
+            foreach(Component component in components) {
+                Debug.Log(component.ToString());
+            }
             targetGroup.RemoveMember(collision.gameObject.transform);
+            collision.gameObject.transform.parent.gameObject.SetActive(false);
             //targetGroup.m_Targets
             audioSource.Play();
+            Debug.Log("Player removed");
         }
     }
 }

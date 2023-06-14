@@ -164,12 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365d07ad4adda3d48acd6d647f1e39a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 0000000000000000000000000000000000000000
-  Char1: {fileID: 3597978404676131003}
-  Char2: {fileID: 3597978403720628654}
-  Char3: {fileID: 3597978403798360236}
-  displayName: {fileID: 3597978405133505675}
-  currentChar: {fileID: 0}
   alphaPointer: 0
   namePointer: 0
   iconPointer: 0
@@ -219,6 +213,9 @@ MonoBehaviour:
   playerID: 0
   startPosition: {x: 0, y: 0, z: 0}
   checkpoint: {x: 0, y: 0, z: 0}
+  playerColor: 0
+  playerIcon: 0
+  playerScore: 0
 --- !u!114 &3597978403701809081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,7 +943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3597978404931941460
 RectTransform:
   m_ObjectHideFlags: 0

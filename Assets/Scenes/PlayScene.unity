@@ -2318,11 +2318,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de6bbca9e9c13c846844a75779e81aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 0
+  speedCurve:
+  - 0.8
+  - 2
+  - 3
   OffsetToFirstPlayer: 15
   axis: 0
-  audioSource: {fileID: 0}
-  targetGroup: {fileID: 0}
+  audioSource: {fileID: 397037092}
+  targetGroup: {fileID: 982606580}
 --- !u!65 &397037088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4302,6 +4306,7 @@ MonoBehaviour:
   Water: {fileID: 0}
   decorationGenerator: {fileID: 0}
   simultaneousBlocks: 7
+  dataWave: {fileID: 0}
 --- !u!4 &723469500
 Transform:
   m_ObjectHideFlags: 0
@@ -4457,6 +4462,7 @@ MonoBehaviour:
   Water: {fileID: 1459882829}
   decorationGenerator: {fileID: 1790441660}
   simultaneousBlocks: 8
+  dataWave: {fileID: 397037087}
 --- !u!4 &764448919
 Transform:
   m_ObjectHideFlags: 0
@@ -7208,7 +7214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de6bbca9e9c13c846844a75779e81aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0
+  speedCurve: []
   OffsetToFirstPlayer: 15
   axis: 1
   audioSource: {fileID: 0}
