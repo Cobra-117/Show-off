@@ -99,7 +99,7 @@ public class CorruptedDataWall : MonoBehaviour
             collision.transform.GetComponentInParent<PlayerInputScript>().analogValue = Vector3.zero;
             collision.rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
             targetGroup.RemoveMember(collision.gameObject.transform);
-            collision.gameObject.transform.parent.gameObject.GetComponent<AddPlayerToCamera>().hasInit = false;
+            //collision.gameObject.transform.parent.gameObject.GetComponent<AddPlayerToCamera>().hasInit = false;
             collision.gameObject.transform.parent.gameObject.SetActive(false);
             //targetGroup.m_Targets
             audioSource.Play();
