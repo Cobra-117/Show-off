@@ -2320,8 +2320,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   speedCurve:
-  - 0.8
+  - 1
+  - 1.5
   - 2
+  - 2.5
   - 3
   OffsetToFirstPlayer: 15
   axis: 0
