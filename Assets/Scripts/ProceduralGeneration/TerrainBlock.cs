@@ -64,6 +64,11 @@ public class TerrainBlock : MonoBehaviour
                 //generate
                 hasBeenUsed = true;
                 dataWave.UpdateChunk();
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                foreach (GameObject player in players)
+                {
+                    player.GetComponent<Walk>().UpdateChunk();
+                }
                 Debug.Log("adding blocks");
             }
         }
