@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Walk : MonoBehaviour
 {
-	
+	public float[] speedCurve;
 	public float speed = 10.0f;
 	public float airVelocity = 8f;
 	public float gravity = 10.0f;
@@ -28,6 +28,8 @@ public class Walk : MonoBehaviour
 
 	public Vector3 checkPoint;
 	private bool slide = false;
+	int currentChunk = 0;
+	bool isFirstChunk = true;
 
 	//Gamepad values
     public Vector2 analogValue;
@@ -83,6 +85,7 @@ public class Walk : MonoBehaviour
 		distToGround = GetComponent<Collider>().bounds.extents.y;
 		animator = GetComponent<Animator>();
 		cineMachineCam = GameObject.FindGameObjectWithTag("cmCam");
+		speed = speedCurve[0];
 	}
 	
 	bool IsGrounded (){
@@ -278,4 +281,16 @@ public class Walk : MonoBehaviour
 			canMove = true;
 		}
 	}
+
+	public void UpdateChunk()
+    {
+        if (isFirstChunk) {
+            isFirstChunk = false;
+            return;
+        }
+        currentChunk += 1;
+        if (currentChunk < speedCurve.Length) {
+            speed = speedCurve[currentChunk];
+        }
+    }
 }
