@@ -42,7 +42,7 @@ public class ShowPlayerScores : MonoBehaviour
         for (int i = 0; i < players.Count; i++)
         {
             Debug.Log("Player " + playerID[i] + "score is: " + playerScores);
-            text.GetComponent<TextMeshProUGUI>().text += new string("Player " + playerID[i] + " score is: " + playerScores[i] + "\n");
+            text.GetComponent<TextMeshProUGUI>().text += new string("Player " + playerID[i] + " score is: " + playerScores[i].ToString("#,#") + "\n");
         }
 
         foreach(GameObject player in players)
