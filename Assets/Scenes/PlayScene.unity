@@ -5555,6 +5555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77418c2f3aa709b46bbaf704fd278487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countdown: 0
 --- !u!1 &995975149
 GameObject:
   m_ObjectHideFlags: 0
@@ -8949,7 +8950,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc40dbbf405134c499cfbaee995b2121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
 --- !u!1 &1749011782
 GameObject:
   m_ObjectHideFlags: 0
