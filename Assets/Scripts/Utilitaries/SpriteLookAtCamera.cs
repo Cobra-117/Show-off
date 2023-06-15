@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SpriteLookAtCamera : MonoBehaviour
 {
-    private Camera mainCamera;
+    private GameObject mainCamera;
 
     private void Start()
     {
         // Assuming you want the main camera to be the target
-        mainCamera = Camera.main;
+        mainCamera = GameObject.FindGameObjectWithTag("cmCam");
     }
 
     private void Update()
