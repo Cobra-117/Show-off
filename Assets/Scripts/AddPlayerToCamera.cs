@@ -7,7 +7,7 @@ public class AddPlayerToCamera : MonoBehaviour
 {
     GameObject cMCamera;
     Cinemachine.CinemachineTargetGroup targetGroup;
-    bool hasInit = false;
+    public bool hasInit = false;
     bool isPlayscene = false;
     // Start is called before the first frame update
     void Start()
@@ -47,6 +47,7 @@ public class AddPlayerToCamera : MonoBehaviour
         //cMCamera.GetComponent<Cine>
         Debug.Log("child count: " + transform.childCount.ToString());
         isPlayscene = true;
+        hasInit = false;
     }
 
 }
