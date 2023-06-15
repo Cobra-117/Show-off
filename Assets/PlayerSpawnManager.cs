@@ -34,6 +34,7 @@ public class PlayerSpawnManager : MonoBehaviour
             icon.GetComponent<SpriteRenderer>().sprite = icons[players[i].GetComponent<PlayerDetails>().playerIcon];
 
             iconPrefab.transform.parent = prefab.transform;
+            iconPrefab.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
             iconPrefab.transform.position = prefab.transform.position + offsetFromPlayer;
 
             //players[i].transform.Find("Border + Icon");

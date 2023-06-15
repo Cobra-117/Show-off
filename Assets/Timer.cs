@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        second = (int)(timer % 60);
+        second = (int)(timer);
         GetComponent<TextMeshProUGUI>().text = "Time: \n" + second;
     }
 }

@@ -96,6 +96,8 @@ public class CorruptedDataWall : MonoBehaviour
             foreach(Component component in components) {
                 Debug.Log(component.ToString());
             }
+            collision.transform.GetComponentInParent<PlayerInputScript>().analogValue = Vector3.zero;
+            collision.rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
             targetGroup.RemoveMember(collision.gameObject.transform);
             collision.gameObject.transform.parent.gameObject.SetActive(false);
             //targetGroup.m_Targets

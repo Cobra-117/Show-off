@@ -54,7 +54,7 @@ public class PlayerScoreManager : MonoBehaviour
                 //Debug.Log("THE TIME FOR PLAYER IS " + players[i].GetComponent<PlayerDetails>().playerScore);
                 //playerScoreCount[i] += 1;
                 Transform scoreText = playerInCanvas[i].transform.Find("Score");
-                scoreText.GetComponent<TextMeshProUGUI>().text = "P" + players[i].GetComponent<PlayerDetails>().playerID + " - " + players[i].GetComponent<PlayerDetails>().playerScore.ToString();
+                scoreText.GetComponent<TextMeshProUGUI>().text = "P" + players[i].GetComponent<PlayerDetails>().playerID + " - " + players[i].GetComponent<PlayerDetails>().playerScore.ToString("#,#");
                 
             }
         }
