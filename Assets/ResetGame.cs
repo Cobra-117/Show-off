@@ -21,9 +21,9 @@ public class ResetGame : MonoBehaviour
     {
         countdown -= Time.deltaTime;
         int second = (int)(countdown % 60);
-        timer.text = "Time till restart:\n" + second + " seconds";
+        timer.text = "Time till restart:\n" + second + " seconds\n Or restart with 'r'";
         
-        if (countdown == 0)
+        if (countdown == 0 || Input.GetKeyDown(KeyCode.R))
         {
             GameObject[] players = GameObject.FindGameObjectsWithTag("playerController");
             foreach (GameObject p in players)
