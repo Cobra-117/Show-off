@@ -23,7 +23,7 @@ public class TerrainGenerator : MonoBehaviour
         Random.InitState(System.DateTime.Now.Millisecond);
         decorationGenerator.AddBlock();
         //AddWater();
-        AddBlock(0);
+        AddBlock(0, false);
         for (int i = 0; i < 3; i++) {
             //AddWater();
             AddBlock(Random.Range(0, blocks.Length));
@@ -38,7 +38,7 @@ public class TerrainGenerator : MonoBehaviour
         
     }
 
-    public void AddBlock(int blockType)
+    public void AddBlock(int blockType, bool randomRotation = true)
     {
         if (nbrOfBlocks %2 != 0)
             decorationGenerator.AddBlock();
@@ -48,7 +48,7 @@ public class TerrainGenerator : MonoBehaviour
         GameObject block = GameObject.Instantiate(blocks[blockType]);
         block.transform.position = coordinates;
         block.transform.parent = this.transform;
-        if (Random.Range(0, 2) == 0)
+        if (randomRotation == true && Random.Range(0, 2) == 0)
             block.transform.eulerAngles=  new Vector3(0, -90, 0);
         block.GetComponent<TerrainBlock>().dataWave = dataWave;
         blocksList.Add(block);
