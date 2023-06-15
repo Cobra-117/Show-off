@@ -48,6 +48,8 @@ public class TerrainGenerator : MonoBehaviour
         GameObject block = GameObject.Instantiate(blocks[blockType]);
         block.transform.position = coordinates;
         block.transform.parent = this.transform;
+        if (Random.Range(0, 2) == 0)
+            block.transform.eulerAngles=  new Vector3(0, -90, 0);
         block.GetComponent<TerrainBlock>().dataWave = dataWave;
         blocksList.Add(block);
         nbrOfBlocks += 1;
