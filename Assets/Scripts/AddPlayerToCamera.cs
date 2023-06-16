@@ -45,9 +45,10 @@ public class AddPlayerToCamera : MonoBehaviour
         targetGroup =
         cMCamera.GetComponent<Cinemachine.CinemachineTargetGroup>();
         //cMCamera.GetComponent<Cine>
-        Debug.Log("child count: " + transform.childCount.ToString());
+        //Debug.Log("child count: " + transform.childCount.ToString());
         isPlayscene = true;
         hasInit = false;
+        Debug.Log("set has init to false");
     }
 
 }
