@@ -24,7 +24,7 @@ public class SceneManagerScript : MonoBehaviour
         foreach (GameObject obj in playerInfo)
         {
             obj.transform.parent = null;
-            obj.GetComponent<TextEditor>().enabled = false;
+            obj.GetComponent<IconPicker>().enabled = false;
             obj.GetComponent<PlayerInput>().SwitchCurrentActionMap("playerFlying");
             obj.GetComponent<PlayerInputScript>().enabled = true;
             DontDestroyOnLoad(obj);

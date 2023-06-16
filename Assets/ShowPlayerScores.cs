@@ -25,6 +25,7 @@ public class ShowPlayerScores : MonoBehaviour
             if(ob.tag.Equals("playerController"))
             {
                 ob.SetActive(true);
+                ob.GetComponent<PlayerInputScript>().enabled = false;
                 players.Add(ob);
             }
         }
@@ -54,6 +55,7 @@ public class ShowPlayerScores : MonoBehaviour
 
             if (player.GetComponent<PlayerDetails>().playerID == playerID[0])
             {
+                player.AddComponent<NamePicker>();
                 Debug.Log("First placer is " + player.GetComponent<PlayerDetails>().playerID);
                 player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
                 Transform firstPlace = player.transform.Find("Walkiing(Clone)");
@@ -62,6 +64,7 @@ public class ShowPlayerScores : MonoBehaviour
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[1])
             {
+                player.AddComponent<NamePicker>();
                 Debug.Log("Second placer is " + player.GetComponent<PlayerDetails>().playerID);
                 player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
                 Transform secondPlace = player.transform.Find("Walkiing(Clone)");
@@ -70,6 +73,7 @@ public class ShowPlayerScores : MonoBehaviour
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[2])
             {
+                player.AddComponent<NamePicker>();
                 Debug.Log("Third placer is " + player.GetComponent<PlayerDetails>().playerID);
                 player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
                 Transform thirdPlace = player.transform.Find("Walkiing(Clone)");
