@@ -59,10 +59,10 @@ VisualEffect:
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: New Transform_angles
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0, y: 3.06, z: -47.3}
         m_Name: New Transform_position
         m_Overridden: 1
-      - m_Value: {x: 1, y: 1, z: 1}
+      - m_Value: {x: 2, y: 2, z: 2}
         m_Name: New Transform_scale
         m_Overridden: 1
     m_Vector4f:
@@ -167,6 +167,8 @@ GameObject:
   - component: {fileID: 560891652968582695}
   - component: {fileID: 3487884434276057474}
   - component: {fileID: 1694342059234915656}
+  - component: {fileID: 2051926887}
+  - component: {fileID: 2051926888}
   m_Layer: 0
   m_Name: Wave_prefab
   m_TagString: Untagged
@@ -183,7 +185,7 @@ Transform:
   m_GameObject: {fileID: 901704332215112861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 18602094314372366}
@@ -240,3 +242,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2051926887
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901704332215112861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21.068932, y: 11.769672, z: 100}
+  m_Center: {x: -0.114377975, y: 2.0441236, z: -49.03}
+--- !u!114 &2051926888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901704332215112861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6bbca9e9c13c846844a75779e81aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  speedCurve:
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  - 3
+  OffsetToFirstPlayer: 15
+  axis: 2
+  audioSource: {fileID: 0}
+  targetGroup: {fileID: 0}
