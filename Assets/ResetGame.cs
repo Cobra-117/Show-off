@@ -21,7 +21,8 @@ public class ResetGame : MonoBehaviour
     {
         countdown -= Time.deltaTime;
         int second = (int)(countdown % 60);
-        timer.text = "Time till restart:\n" + second + " seconds\n Or restart with 'r'";
+        if (timer != null )
+            timer.text = "Time till restart:\n" + second + " seconds\n Or restart with 'r'";
         
         if (countdown == 0 || Input.GetKeyDown(KeyCode.R))
         {
