@@ -12,10 +12,12 @@ public class ShowPlayerScores : MonoBehaviour
     public Transform firstPlacePosition;
     public Transform secondPlacePosition;
     public Transform thirdPlacePosition;
+    public List<PlayerInformation> pInfo;
 
     // Start is called before the first frame update
     void Start()
     {
+        pInfo = new();
         GameObject[] objects = FindObjectsOfType<GameObject>(true);
         foreach (GameObject ob in objects)
         {
