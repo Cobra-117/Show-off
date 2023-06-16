@@ -31,6 +31,8 @@ public class CorruptedDataWall : MonoBehaviour
     void Update()
     {
         GameObject firstPlayer = GetFirstPlayer();
+        if (firstPlayer == null)
+            return;
         Debug.Log("Player pos:" + firstPlayer.transform.position.x.ToString());
         Debug.Log("Wave pos: " + transform.position.x.ToString());
         if (axis == Axis.X) {
@@ -57,8 +59,10 @@ public class CorruptedDataWall : MonoBehaviour
     }
 
     GameObject GetFirstPlayer()
-    {
+    { 
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        if (players.Length == 0)
+            return null;
         Debug.Log("Nbr of player:" + players.Length);
         GameObject firtsPlayer = players[0];
 
