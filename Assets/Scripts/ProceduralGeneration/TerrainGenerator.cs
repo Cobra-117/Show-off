@@ -24,9 +24,10 @@ public class TerrainGenerator : MonoBehaviour
         decorationGenerator.AddBlock();
         //AddWater();
         AddBlock(0, false);
+        AddBlock(1, false);
         for (int i = 0; i < 3; i++) {
             //AddWater();
-            AddBlock(Random.Range(1, blocks.Length));
+            AddBlock(Random.Range(2, blocks.Length));
         }
 
         //Generate();
