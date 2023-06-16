@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpriteLookAtCamera : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class SpriteLookAtCamera : MonoBehaviour
         mainCamera = GameObject.FindGameObjectWithTag("cmCam");
     }
 
-    private void Update()
+    private void LookAtCam()
     {
         // Calculate the direction from the object to the camera
         Vector3 directionToCamera = mainCamera.transform.position - transform.position;
@@ -22,5 +23,11 @@ public class SpriteLookAtCamera : MonoBehaviour
 
         // Apply the rotation to the object
         transform.rotation = rotationToCamera;
+    }
+
+    private void Update()
+    {
+        if(mainCamera)
+        LookAtCam();
     }
 }
