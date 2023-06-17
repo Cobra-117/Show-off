@@ -380,8 +380,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202793490}
-  m_LocalRotation: {x: 0.018202117, y: -0.025002679, z: 0.00045531956, w: 0.99952155}
-  m_LocalPosition: {x: 0.26612043, y: 11.913923, z: -25.895964}
+  m_LocalRotation: {x: 0.01823055, y: -0.0009404056, z: 0.000017146967, w: 0.9998334}
+  m_LocalPosition: {x: 0.01, y: 11.913923, z: -25.895964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1339,7 +1339,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922699734}
-  m_LocalRotation: {x: 0.018202117, y: -0.025002679, z: 0.00045531956, w: 0.99952155}
+  m_LocalRotation: {x: 0.01823055, y: -0.0009404056, z: 0.000017146967, w: 0.9998334}
   m_LocalPosition: {x: -30.232464, y: 25.31313, z: -28.461924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1442,7 +1442,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: f73e0213f23ac5f45b04e5135d91db6f, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -2694,7 +2694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424366363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26612043, y: 11.19, z: -21.658577}
+  m_LocalPosition: {x: 0.01, y: 11.19, z: -21.658577}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3391,7 +3391,7 @@ VisualEffect:
           m_NumColorKeys: 3
           m_NumAlphaKeys: 2
         m_Name: Gradient balls
-        m_Overridden: 0
+        m_Overridden: 1
     m_NamedObject:
       m_Array: []
     m_Bool:
