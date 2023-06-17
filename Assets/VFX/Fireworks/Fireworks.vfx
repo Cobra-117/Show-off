@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":11.98431396484375,"g":11.98431396484375,"b":11.98431396484375,"a":1.0},"time":0.01765468902885914},{"color":{"r":0.0,"g":4.5176472663879398,"b":47.937255859375,"a":1.0},"time":0.06176852062344551},{"color":{"r":2.0,"g":0.01776784285902977,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.01765468902885914},{"alpha":0.800000011920929,"time":0.9029373526573181}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":11.98431396484375,"g":11.98431396484375,"b":11.98431396484375,"a":1.0},"time":0.01765468902885914},{"color":{"r":0.0,"g":4.5176472663879398,"b":47.937255859375,"a":1.0},"time":0.06176852062344551},{"color":{"r":2.0,"g":0.01776784285902977,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.01765468902885914},{"alpha":0.800000011920929,"time":0.9088273644447327}],"gradientMode":0}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -6232,7 +6232,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":11.98431396484375,"g":11.98431396484375,"b":11.98431396484375,"a":1.0},"time":0.01765468902885914},{"color":{"r":0.0,"g":4.5176472663879398,"b":47.937255859375,"a":1.0},"time":0.06176852062344551},{"color":{"r":2.0,"g":0.01776784285902977,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.01765468902885914},{"alpha":0.800000011920929,"time":0.9029373526573181}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":11.98431396484375,"g":11.98431396484375,"b":11.98431396484375,"a":1.0},"time":0.01765468902885914},{"color":{"r":0.0,"g":4.5176472663879398,"b":47.937255859375,"a":1.0},"time":0.06176852062344551},{"color":{"r":2.0,"g":0.01776784285902977,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.01765468902885914},{"alpha":0.800000011920929,"time":0.9088273644447327}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: o
