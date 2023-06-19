@@ -5,6 +5,29 @@ using System.Xml.Serialization;
 using System.IO;
 using UnityEngine.Rendering;
 using UnityEditor;
+using System;
+
+public class PlayerInformation : IComparable   //(when implementing IComparable, Sort will use your CompareTo method for sorting)
+{
+    public int playerID;
+    public int playerScore;
+    public string playerName;
+
+    public PlayerInformation(int ID, int score, string name)
+    {
+        this.playerID = ID;
+        this.playerScore = score;
+        this.playerName = name;
+    }
+
+    public int CompareTo(object other)
+    {
+        if (other is PlayerInformation)
+            return this.playerScore.CompareTo(((PlayerInformation)other).playerScore); // returns -1, 0 or 1, like any comparer
+
+        return 0; // I guess
+    }
+}
 
 public class ScoreboardXML : MonoBehaviour
 {
@@ -17,19 +40,7 @@ public class ScoreboardXML : MonoBehaviour
         public List<PlayerInformation> players = new();
     }
 
-    public class PlayerInformation
-    {
-        public int playerID;
-        public int playerScore;
-        public string playerName;
 
-        public PlayerInformation(int ID, int score, string name)
-        {
-            this.playerID = ID;
-            this.playerScore = score;
-            this.playerName = name;
-        }
-    }
 
     private void Awake()
     {
@@ -62,12 +73,23 @@ public class ScoreboardXML : MonoBehaviour
         return leaderboard.players;
     }
 
+    int ComparePlayers(PlayerInformation left, PlayerInformation right)
+    {
+        return left.playerScore.CompareTo(right.playerScore); // returns -1, 0 or 1, like any comparer
+    }
+
     public List<PlayerInformation> SortScore(List<PlayerInformation> players)
     {
         if(players.Count<=1)
         {
             return players;
         }
+        players.Sort(); // Uses the IComparable interface
+        //players.Sort( ComparePlayers );
+        // more fancy, with lambda:
+        //players.Sort((left, right) => {return left.playerScore.CompareTo(right.playerScore); });
+
+        return players;
 
         var left = new List<PlayerInformation>();
         var right = new List<PlayerInformation>();
