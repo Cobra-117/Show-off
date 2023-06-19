@@ -42,6 +42,8 @@ public class ShowPlayerScores : MonoBehaviour
         }
 
         BubbleSort(playerScores, playerID);
+        GetComponent<FireworksGradient>().ChangeColor(playerID[0]);
+
         Transform text = transform.Find("Scoreboard");
         for (int i = 0; i < players.Count; i++)
         {
