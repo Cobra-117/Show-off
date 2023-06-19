@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9111588685025098409
+--- !u!114 &-5817737474317611698
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23,8 +23,9 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects:
-    - {fileID: -5373952333857798061}
---- !u!114 &-5373952333857798061
+    - {fileID: 5050225615893003706}
+    - {fileID: -4515903255174891723}
+--- !u!114 &-4515903255174891723
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,7 +40,7 @@ MonoBehaviour:
   m_Time: 0
   m_Retroactive: 0
   m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: 21924a74ec61c7845940db3df0af0def, type: 2}
+  m_Asset: {fileID: 11400000, guid: e1c7df3d0cde08245ba7fb70b2bf0c8e, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,8 +56,8 @@ MonoBehaviour:
   m_Version: 0
   m_Tracks:
   - {fileID: 845709248984981447}
-  - {fileID: -9111588685025098409}
   - {fileID: 56949159034942572}
+  - {fileID: -5817737474317611698}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 60
@@ -344,6 +345,22 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []
+--- !u!114 &5050225615893003706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 5.333333333333333
+  m_Retroactive: 1
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 866df2d79b1a6e948a616f24309c6874, type: 2}
 --- !u!114 &5342222276239368189
 MonoBehaviour:
   m_ObjectHideFlags: 1

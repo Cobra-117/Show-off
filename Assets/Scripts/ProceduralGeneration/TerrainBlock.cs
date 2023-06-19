@@ -61,7 +61,7 @@ public class TerrainBlock : MonoBehaviour
                 //transform.parent.GetComponent<TerrainGenerator>().AddWater();
                 if (transform.parent == null)
                     return;
-                transform.parent.GetComponent<TerrainGenerator>().AddBlock(Random.Range(0, 
+                transform.parent.GetComponent<TerrainGenerator>().AddBlock(Random.Range(2, 
                 transform.parent.GetComponent<TerrainGenerator>().blocks.Length));
                 //generate
                 hasBeenUsed = true;
