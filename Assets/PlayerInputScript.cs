@@ -12,6 +12,13 @@ public class PlayerInputScript : MonoBehaviour
     {
         analogValue = value.Get<Vector2>();
     }
+
+
+    void OnSceneLoaded()
+    {
+
+    }
+
     void OnJump()
     {
         currentObject = GetComponent<SwitchMovement>().currentObject;
