@@ -50,7 +50,7 @@ public class CorruptedDataWall : MonoBehaviour
                 transform.Translate(new Vector3(0, speed *  Time.deltaTime, 0));
         }
         else if (axis == Axis.Z) {
-            if (transform.position.x > firstPlayer.transform.position.x - OffsetToFirstPlayer) {
+            if (transform.position.x < firstPlayer.transform.position.x - OffsetToFirstPlayer) {
                 transform.position = new Vector3(firstPlayer.transform.position.x - OffsetToFirstPlayer,
                 transform.position.y, transform.position.z);
             } else
