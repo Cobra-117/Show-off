@@ -639,6 +639,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6645145999951171203}
   - component: {fileID: 2294741454041266193}
+  - component: {fileID: 3106178264280920883}
+  - component: {fileID: 4748271680539309814}
   m_Layer: 0
   m_Name: Walking_Chunk_06
   m_TagString: Untagged
@@ -681,6 +683,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockType: 3
   dataWave: {fileID: 0}
+--- !u!65 &3106178264280920883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645145999951171212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.001911, y: 20.645891, z: 2.348846}
+  m_Center: {x: -0.4643345, y: 5.3229475, z: 18.667713}
+--- !u!65 &4748271680539309814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6645145999951171212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.001911, y: 20.645891, z: 2.348846}
+  m_Center: {x: -0.4643345, y: 5.3229475, z: -18.9}
 --- !u!1 &6645145999995124505
 GameObject:
   m_ObjectHideFlags: 0

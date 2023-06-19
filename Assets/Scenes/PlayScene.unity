@@ -3751,7 +3751,8 @@ MonoBehaviour:
   - {fileID: 2205971593593291324, guid: eb9dd9a95f7f701408484e2534e066ad, type: 3}
   - {fileID: 6052975366335176601, guid: da0d2e1a63f7b5143908548a65a24922, type: 3}
   - {fileID: 7634449040597257741, guid: 4b32df23e7ea6e348bd78540f62c4438, type: 3}
-  - {fileID: 2697239089257800537, guid: aaa4a2e49ef81c24ca6963d53a4afda7, type: 3}
+  - {fileID: 2155787689687745878, guid: d34f4c5624488ba46b51013b1fb92c58, type: 3}
+  - {fileID: 6645145999951171212, guid: 8f54149c5c2f88f43a217ed2e29f3b08, type: 3}
   Water: {fileID: 1459882829}
   decorationGenerator: {fileID: 1790441660}
   simultaneousBlocks: 8
