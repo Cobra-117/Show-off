@@ -54,7 +54,6 @@ GameObject:
   - component: {fileID: 3597978403701809083}
   - component: {fileID: 3597978403701809080}
   - component: {fileID: 3597978403701809081}
-  - component: {fileID: 3597978403701809086}
   m_Layer: 5
   m_Name: PlayerInfo
   m_TagString: playerController
@@ -164,8 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 365d07ad4adda3d48acd6d647f1e39a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alphaPointer: 0
-  namePointer: 0
   iconPointer: 0
 --- !u!114 &3597978403701809083
 MonoBehaviour:
@@ -230,23 +227,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   analogValue: {x: 0, y: 0, z: 0}
   buttonPressed: 0
---- !u!114 &3597978403701809086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3597978403701809084}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dac049796732f834cab4a6b5f9b13907, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flyingObject: {fileID: 0}
-  swimmingObject: {fileID: 0}
-  jumpObject: {fileID: 0}
-  walkObject: {fileID: 0}
-  currentObject: {fileID: 0}
 --- !u!1 &3597978403720628653
 GameObject:
   m_ObjectHideFlags: 0

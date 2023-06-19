@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static ScoreboardXML;
 
 public class ShowPlayerScores : MonoBehaviour
@@ -25,7 +26,8 @@ public class ShowPlayerScores : MonoBehaviour
             if(ob.tag.Equals("playerController"))
             {
                 ob.SetActive(true);
-                ob.GetComponent<PlayerInputScript>().enabled = false;
+                ob.GetComponent<PlayerInput>().SwitchCurrentActionMap("SelectName");
+                //ob.GetComponent<PlayerInputScript>().enabled = false;
                 players.Add(ob);
             }
         }
@@ -44,42 +46,50 @@ public class ShowPlayerScores : MonoBehaviour
         BubbleSort(playerScores, playerID);
         GetComponent<FireworksGradient>().ChangeColor(playerID[0]);
 
-        Transform text = transform.Find("Scoreboard");
-        for (int i = 0; i < players.Count; i++)
-        {
-            Debug.Log("Player " + playerID[i] + "score is: " + playerScores);
-            text.GetComponent<TextMeshProUGUI>().text += new string("Player " + playerID[i] + " score is: " + playerScores[i].ToString("#,#") + "\n");
-        }
+        GameObject score1st = GameObject.Find("Score text_1st");
+        GameObject score2nd = GameObject.Find("Score text_2nd");
+        GameObject score3rd = GameObject.Find("Score text_3rd");
 
-        foreach(GameObject player in players)
+        foreach (GameObject player in players)
         {
             Debug.Log("player ID: " + player.GetComponent<PlayerDetails>().playerID);
 
             if (player.GetComponent<PlayerDetails>().playerID == playerID[0])
             {
-                player.AddComponent<NamePicker>();
-                Debug.Log("First placer is " + player.GetComponent<PlayerDetails>().playerID);
-                player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+                score1st.GetComponent<TextMeshProUGUI>().text = playerScores[0].ToString();
+                //Debug.Log("First placer is " + player.GetComponent<PlayerDetails>().playerID);
+                //player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+                
                 Transform firstPlace = player.transform.Find("Walkiing(Clone)");
                 firstPlace.transform.position = firstPlacePosition.position;
+
+                //player.GetComponent<NamePicker>().enabled = true;
+                player.AddComponent<NamePicker>();
+                player.GetComponent<NamePicker>().placing = 1;
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[1])
             {
-                player.AddComponent<NamePicker>();
+                score2nd.GetComponent<TextMeshProUGUI>().text = playerScores[1].ToString();
                 Debug.Log("Second placer is " + player.GetComponent<PlayerDetails>().playerID);
-                player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+                //player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
                 Transform secondPlace = player.transform.Find("Walkiing(Clone)");
                 secondPlace.transform.position = secondPlacePosition.position;
+                //player.GetComponent<NamePicker>().enabled = true;
+                player.AddComponent<NamePicker>();
+                player.GetComponent<NamePicker>().placing = 2;
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[2])
             {
-                player.AddComponent<NamePicker>();
+                score3rd.GetComponent<TextMeshProUGUI>().text = playerScores[2].ToString();
                 Debug.Log("Third placer is " + player.GetComponent<PlayerDetails>().playerID);
-                player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+                //player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
                 Transform thirdPlace = player.transform.Find("Walkiing(Clone)");
                 thirdPlace.transform.position = thirdPlacePosition.position;
+                //player.GetComponent<NamePicker>().enabled = true;
+                player.AddComponent<NamePicker>();
+                player.GetComponent<NamePicker>().placing = 3;
             }
         }
 

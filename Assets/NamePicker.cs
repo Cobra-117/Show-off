@@ -7,31 +7,55 @@ using UnityEditor;
 public class NamePicker : MonoBehaviour
 {
     public char[] name = new char[10];
-    public TextMeshProUGUI Char1;
-    public TextMeshProUGUI Char2;
-    public TextMeshProUGUI Char3;
-    public TextMeshProUGUI displayName;
-    public TextMeshProUGUI currentChar;
-    public ArrayList chars = new ArrayList();
+    public GameObject Char1;
+    public GameObject Char2;
+    public GameObject Char3;
+    public GameObject currentChar;
+    public List<GameObject> chars = new();
     char[] alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
     public int alphaPointer;
     public int namePointer;
-    public int iconPointer;
+    public int placing;
 
     // Start is called before the first frame update
     void Start()
     {
         alphaPointer = 0;
         namePointer = 0;
-        iconPointer = 0;
+
+        GetLettersFromPlacing();
     
-        Char1.text = alphabets[0].ToString();
-        Char2.text = alphabets[0].ToString();
-        Char3.text = alphabets[0].ToString();
+        Char1.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
+        Char2.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
+        Char3.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
         chars.Add(Char1);
         chars.Add(Char2);
         chars.Add(Char3);
-        currentChar = (TextMeshProUGUI)chars[namePointer];
+        currentChar = chars[namePointer];
+    }
+
+    void GetLettersFromPlacing()
+    {
+        if (placing == 1)
+        {
+            Char1 = GameObject.Find("L1_1st");
+            Char2 = GameObject.Find("L2_1st");
+            Char3 = GameObject.Find("L3_1st");
+        }
+
+        else if (placing == 2)
+        {
+            Char1 = GameObject.Find("L1_2nd");
+            Char2 = GameObject.Find("L2_2nd");
+            Char3 = GameObject.Find("L3_2nd");
+        }
+
+        if (placing == 3)
+        {
+            Char1 = GameObject.Find("L1_3rd");
+            Char2 = GameObject.Find("L2_3rd");
+            Char3 = GameObject.Find("L3_3rd");
+        }
     }
 
     void OnLeftSelect()
@@ -40,7 +64,7 @@ public class NamePicker : MonoBehaviour
         if (namePointer > 0)
         {
             namePointer--;
-            currentChar = (TextMeshProUGUI)chars[namePointer];
+            currentChar = chars[namePointer];
             alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
             Debug.Log("Left select" + alphaPointer);
         }
@@ -52,7 +76,7 @@ public class NamePicker : MonoBehaviour
         if (namePointer < chars.Count - 1)
         {
             namePointer++;
-            currentChar = (TextMeshProUGUI)chars[namePointer];
+            currentChar = chars[namePointer];
             alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
             Debug.Log("Right select" + alphaPointer);
         }
@@ -65,7 +89,7 @@ public class NamePicker : MonoBehaviour
         {
             alphaPointer++;
             currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
-            currentChar.text = alphabets[alphaPointer].ToString();
+            currentChar.GetComponent<TextMeshProUGUI>().text = alphabets[alphaPointer].ToString();
             Debug.Log("Up select");
         }
     }
@@ -77,7 +101,7 @@ public class NamePicker : MonoBehaviour
         {
             alphaPointer--;
             currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
-            currentChar.text = alphabets[alphaPointer].ToString();
+            currentChar.GetComponent<TextMeshProUGUI>().text = alphabets[alphaPointer].ToString();
             Debug.Log("Down select");
         }
     }
@@ -85,15 +109,13 @@ public class NamePicker : MonoBehaviour
     void OnEnter()
     {
         Debug.Log("Enter button");
-        TextMeshProUGUI t;
+        //GameObject t;
 
-        for (int i = 0; i < chars.Count; i++)
-        {
-            t = (TextMeshProUGUI)chars[i];
-            name[i] = t.text[0];
-        }
-        
-        displayName.text = new string(name);
+        //for (int i = 0; i < chars.Count; i++)
+        //{
+        //    t = chars[i];
+        //    name[i] = t.GetComponent<TextMeshProUGUI>().text[0];
+        //}
     }
 
     // Update is called once per frame

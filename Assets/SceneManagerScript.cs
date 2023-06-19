@@ -24,8 +24,9 @@ public class SceneManagerScript : MonoBehaviour
         foreach (GameObject obj in playerInfo)
         {
             obj.transform.parent = null;
+            Destroy(obj.GetComponent<IconPicker>());
             obj.GetComponent<IconPicker>().enabled = false;
-            obj.GetComponent<PlayerInput>().SwitchCurrentActionMap("playerFlying");
+            obj.GetComponent<PlayerInput>().SwitchCurrentActionMap("playerMove");
             obj.GetComponent<PlayerInputScript>().enabled = true;
             DontDestroyOnLoad(obj);
         }
@@ -33,13 +34,7 @@ public class SceneManagerScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            useTestScene = true;
-            Debug.Log("Use flyingtest scene");
-        }
-        
+    {   
         if(controllerCount == playerInfo.Count && playerInfo.Count > 0)
         {
             RetainObjects();

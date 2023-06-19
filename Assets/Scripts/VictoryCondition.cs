@@ -27,7 +27,13 @@ public class VictoryCondition : MonoBehaviour
         }
         //if (activePlayers.Count >= 2)
         hasGameStarted = true;
+
+        //the code below shouldn't check if the player is disabled
         if (activePlayers.Count == 0 && hasGameStarted == true)
+            Invoke("DelayLoad", 1);
+
+        //Will remove the code below when line 32 is fixed
+        if (Input.GetKey(KeyCode.K))
             Invoke("DelayLoad", 1);
     }
 }

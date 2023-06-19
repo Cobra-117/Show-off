@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CorruptedDataWall : MonoBehaviour
 {
@@ -104,6 +105,11 @@ public class CorruptedDataWall : MonoBehaviour
             collision.rigidbody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
             targetGroup.RemoveMember(collision.gameObject.transform);
             //collision.gameObject.transform.parent.gameObject.GetComponent<AddPlayerToCamera>().hasInit = false;
+            Destroy(collision.gameObject.transform.parent.gameObject.GetComponent<PlayerInputScript>());
+            Destroy(collision.gameObject.GetComponent<Walk>());
+            collision.gameObject.transform.parent.gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("SelectName");
+            
+            //change this so it's not the player that is disabled
             collision.gameObject.transform.parent.gameObject.SetActive(false);
             //targetGroup.m_Targets
             audioSource.Play();

@@ -43,7 +43,7 @@ public class IconPicker : MonoBehaviour
         currentControllers = SceneManagerScript.controllerCount.ToString();
     }
 
-    void OnLeftSelect()
+    void OnLeft()
     {
         if(iconPointer > 0 && !ready)
         {
@@ -53,8 +53,10 @@ public class IconPicker : MonoBehaviour
         }
     }
 
-    void OnRightSelect()
+    void OnRight()
+
     {
+        Debug.Log(" OnRightSelect called in IconPicker. enabled: " + enabled);
         if (iconPointer < menu.GetComponent<PlayerNameSpawner>().icons.Count -1 && !ready)
         {
             iconPointer++;
@@ -63,7 +65,7 @@ public class IconPicker : MonoBehaviour
         }
     }
 
-    void OnEnter()
+    void OnSelect()
     {
         ready = true;
 
