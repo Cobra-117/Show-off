@@ -15,7 +15,7 @@ public class IconPicker : MonoBehaviour
     GameObject menu;
 
     public int iconPointer = 0;
-    bool ready;
+    public bool ready;
 
     string readyPlayers;
     string currentControllers;

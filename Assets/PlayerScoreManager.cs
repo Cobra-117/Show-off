@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,7 +48,7 @@ public class PlayerScoreManager : MonoBehaviour
         //int second = (int)(timer % 60);
         for (int i = 0; i < players.Length; i++)
         {
-            if (players[i].activeInHierarchy)
+            if (players[i].transform.Find("Walkiing(Clone)").gameObject.activeInHierarchy)
             {
                 int second = Timer.second;
                 players[i].GetComponent<PlayerDetails>().playerScore += second;
