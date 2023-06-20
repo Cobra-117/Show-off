@@ -1807,7 +1807,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 0
-  cooldown: 2
+  cooldown: 0.5
 --- !u!4 &2583115666649133809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363519893086565199, guid: 1ad762a31ba37ac4aa2282d41b16e84c,
@@ -1950,7 +1950,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 0
-  cooldown: 2
+  cooldown: 0.5
 --- !u!4 &4473562401042301717 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363519893086565199, guid: 1ad762a31ba37ac4aa2282d41b16e84c,
@@ -2228,7 +2228,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 0
-  cooldown: 2
+  cooldown: 0.5
 --- !u!4 &4009815765562389212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363519893086565199, guid: 1ad762a31ba37ac4aa2282d41b16e84c,
@@ -3207,7 +3207,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 1
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &3034369656227344302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3350,7 +3350,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 0
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &3037829924800047874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7703,7 +7703,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 0
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &3302681363129073246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36873,7 +36873,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 1
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &3573421125873227790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37081,7 +37081,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 1
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &3963792913224163779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37194,7 +37194,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 0
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &4043643209789932659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37486,7 +37486,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 1
-  cooldown: 2
+  cooldown: 0.5
 --- !u!4 &8016992425864253501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363519893086565199, guid: 1ad762a31ba37ac4aa2282d41b16e84c,
@@ -37749,7 +37749,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 1
-  cooldown: 2
+  cooldown: 0.5
 --- !u!4 &7251757144619021230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363519893086565199, guid: 1ad762a31ba37ac4aa2282d41b16e84c,
@@ -38672,7 +38672,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 1
-  cooldown: 2
+  cooldown: 0.5
 --- !u!4 &8445749362105676529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3363519893086565199, guid: 1ad762a31ba37ac4aa2282d41b16e84c,
@@ -39086,7 +39086,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 0
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &7589215604015692865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39444,7 +39444,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 0
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &7835591792050450217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39932,7 +39932,7 @@ MonoBehaviour:
   minHeight: 2.25
   speed: 2
   goingUp: 1
-  cooldown: 2
+  cooldown: 0.5
 --- !u!1001 &8367768330396203870
 PrefabInstance:
   m_ObjectHideFlags: 0
