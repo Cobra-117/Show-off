@@ -31,8 +31,8 @@ public class ResetGame : MonoBehaviour
             {
                 Destroy(p);
             }
-            SceneManagerScript.controllerCount = 0;
-            SceneManagerScript.playerInfo.Clear();
+            //SceneManagerScript.controllerCount = 0;
+            //SceneManagerScript.playerInfo.Clear();
             SceneManager.LoadScene(0);
         }
     }

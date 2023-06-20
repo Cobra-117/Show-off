@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
-    public static int controllerCount;
+    public int controllerCount;
     //public static ArrayList playerInfo = new ArrayList();
-    public static List<GameObject> playerInfo = new();
+    public List<GameObject> playerInfo = new();
     bool useTestScene;
 
 

@@ -35,19 +35,23 @@ public class ShowPlayerScores : MonoBehaviour
     void Start()
     {
         pInfo = new();
-        GameObject[] objects = FindObjectsOfType<GameObject>(true);
-        foreach (GameObject ob in objects)
+        //GameObject[] objects = FindObjectsOfType<GameObject>(true);
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("playerController");
+        foreach (GameObject obj in objects)
         {
-            if(ob.tag.Equals("playerController"))
-            {
-                ob.SetActive(true);
-                ob.GetComponent<PlayerInput>().SwitchCurrentActionMap("SelectName");
-                //ob.GetComponent<PlayerInputScript>().enabled = false;
-                players.Add(ob);
-            }
+            players.Add(obj);
         }
+        //foreach (GameObject ob in objects)
+        //{
+        //    if(ob.tag.Equals("playerController"))
+        //    {
+        //        ob.SetActive(true);
+        //        ob.GetComponent<PlayerInput>().SwitchCurrentActionMap("SelectName");
+        //        //ob.GetComponent<PlayerInputScript>().enabled = false;
+        //        players.Add(ob);
+        //    }
+        //}
 
-        //players = GameObject.FindGameObjectsWithTag("playerController");
         playerID = new int[players.Count];
         playerScores = new int[players.Count];
 

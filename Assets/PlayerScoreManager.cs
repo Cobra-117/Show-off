@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class PlayerScoreManager : MonoBehaviour
 {
     public GameObject[] players;
-    public static int[] playerScoreCount;
+    public int[] playerScoreCount;
     public GameObject playerScore;
     public GameObject iconContainer;
     public GameObject[] playerInCanvas;

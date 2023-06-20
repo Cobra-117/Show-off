@@ -25,7 +25,8 @@ public class IconPicker : MonoBehaviour
     {
         ready = false;
         menu = GameObject.FindGameObjectWithTag("LobbyMenu");
-        SceneManagerScript.controllerCount++;
+        menu.GetComponent<SceneManagerScript>().controllerCount++;
+ 
         playerReady = GameObject.Find("Players ready:");
         UpdatePlayerCounts();
         playerReady.GetComponent<TextMeshProUGUI>().text = "Players ready: " + readyPlayers + "/" + currentControllers;
@@ -39,8 +40,8 @@ public class IconPicker : MonoBehaviour
 
     void UpdatePlayerCounts()
     {
-        readyPlayers = SceneManagerScript.playerInfo.Count.ToString();
-        currentControllers = SceneManagerScript.controllerCount.ToString();
+        readyPlayers = menu.GetComponent<SceneManagerScript>().playerInfo.Count.ToString();
+        currentControllers = menu.GetComponent<SceneManagerScript>().controllerCount.ToString();
     }
 
     void OnLeft()
@@ -72,14 +73,11 @@ public class IconPicker : MonoBehaviour
         GetComponent<PlayerDetails>().playerIcon = iconPointer;
         readyIcon.GetComponent<Image>().sprite = menu.GetComponent<PlayerNameSpawner>().readyIcons[1];
 
-        if (!SceneManagerScript.playerInfo.Contains(this.gameObject))
-        SceneManagerScript.playerInfo.Add(this.gameObject);
+        if (!menu.GetComponent<SceneManagerScript>().playerInfo.Contains(this.gameObject))
+        menu.GetComponent<SceneManagerScript>().playerInfo.Add(this.gameObject);
 
         UpdatePlayerCounts();
         playerReady.GetComponent<TextMeshProUGUI>().text = "Players ready: " + readyPlayers + "/" + currentControllers;
-
-        Debug.Log("Player count: " + SceneManagerScript.controllerCount);
-        Debug.Log("Ready players: " + SceneManagerScript.playerInfo.Count);
     }
 }
 
