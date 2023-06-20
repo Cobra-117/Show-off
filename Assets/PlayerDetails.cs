@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDetails : MonoBehaviour
 {
     public int playerID;
+    public string playerName;
     public Vector3 startPosition;
     public Vector3 checkpoint;
     public int playerColor;

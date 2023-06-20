@@ -109,8 +109,6 @@ public class CorruptedDataWall : MonoBehaviour
             Destroy(collision.gameObject.GetComponent<Walk>());
             collision.gameObject.transform.parent.gameObject.GetComponent<PlayerInput>().SwitchCurrentActionMap("SelectName");
             
-            //change this so it's not the player that is disabled
-            //collision.gameObject.transform.parent.gameObject.SetActive(false);
             collision.gameObject.SetActive(false);
             //targetGroup.m_Targets
             audioSource.Play();

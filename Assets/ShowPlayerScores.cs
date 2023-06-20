@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using static ScoreboardXML;
 
 public class ShowPlayerScores : MonoBehaviour
@@ -11,29 +12,46 @@ public class ShowPlayerScores : MonoBehaviour
     public List<GameObject> players;
     public int[] playerID;
     public int[] playerScores;
+    public List<Sprite> colors = new();
+    public List<Sprite> icons = new();
     public Transform firstPlacePosition;
     public Transform secondPlacePosition;
     public Transform thirdPlacePosition;
     public List<PlayerInformation> pInfo;
 
+    public GameObject score1st;
+    public GameObject score2nd;
+    public GameObject score3rd;
+
+    public GameObject border1st;
+    public GameObject border2nd;
+    public GameObject border3rd;
+
+    public GameObject icon1st;
+    public GameObject icon2nd;
+    public GameObject icon3rd;
+
     // Start is called before the first frame update
     void Start()
     {
         pInfo = new();
-        GameObject[] objects = FindObjectsOfType<GameObject>(true);
-        foreach (GameObject ob in objects)
+        //GameObject[] objects = FindObjectsOfType<GameObject>(true);
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("playerController");
+        foreach (GameObject obj in objects)
         {
-            if(ob.tag.Equals("playerController"))
-            {
-                ob.SetActive(true);
-                ob.GetComponent<PlayerInput>().SwitchCurrentActionMap("SelectName");
-                //ob.GetComponent<PlayerInputScript>().enabled = false;
-                players.Add(ob);
-            }
+            players.Add(obj);
         }
+        //foreach (GameObject ob in objects)
+        //{
+        //    if(ob.tag.Equals("playerController"))
+        //    {
+        //        ob.SetActive(true);
+        //        ob.GetComponent<PlayerInput>().SwitchCurrentActionMap("SelectName");
+        //        //ob.GetComponent<PlayerInputScript>().enabled = false;
+        //        players.Add(ob);
+        //    }
+        //}
 
-
-        //players = GameObject.FindGameObjectsWithTag("playerController");
         playerID = new int[players.Count];
         playerScores = new int[players.Count];
 
@@ -46,10 +64,6 @@ public class ShowPlayerScores : MonoBehaviour
         BubbleSort(playerScores, playerID);
         GetComponent<FireworksGradient>().ChangeColor(playerID[0]);
 
-        GameObject score1st = GameObject.Find("Score text_1st");
-        GameObject score2nd = GameObject.Find("Score text_2nd");
-        GameObject score3rd = GameObject.Find("Score text_3rd");
-
         foreach (GameObject player in players)
         {
             Debug.Log("player ID: " + player.GetComponent<PlayerDetails>().playerID);
@@ -57,39 +71,49 @@ public class ShowPlayerScores : MonoBehaviour
             if (player.GetComponent<PlayerDetails>().playerID == playerID[0])
             {
                 score1st.GetComponent<TextMeshProUGUI>().text = playerScores[0].ToString();
-                //Debug.Log("First placer is " + player.GetComponent<PlayerDetails>().playerID);
-                //player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
-                
+
                 Transform firstPlace = player.transform.Find("Walkiing(Clone)");
+                firstPlace.gameObject.SetActive(true);
+                Destroy(firstPlace.Find("PlayerIcon(Clone)").gameObject);
                 firstPlace.transform.position = firstPlacePosition.position;
 
-                //player.GetComponent<NamePicker>().enabled = true;
                 player.AddComponent<NamePicker>();
                 player.GetComponent<NamePicker>().placing = 1;
+
+                border1st.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
+                icon1st.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[1])
             {
                 score2nd.GetComponent<TextMeshProUGUI>().text = playerScores[1].ToString();
-                Debug.Log("Second placer is " + player.GetComponent<PlayerDetails>().playerID);
-                //player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+
                 Transform secondPlace = player.transform.Find("Walkiing(Clone)");
+                secondPlace.gameObject.SetActive(true);
+                Destroy(secondPlace.Find("PlayerIcon(Clone)").gameObject);
                 secondPlace.transform.position = secondPlacePosition.position;
-                //player.GetComponent<NamePicker>().enabled = true;
+
                 player.AddComponent<NamePicker>();
                 player.GetComponent<NamePicker>().placing = 2;
+
+                border2nd.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
+                icon2nd.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[2])
             {
                 score3rd.GetComponent<TextMeshProUGUI>().text = playerScores[2].ToString();
-                Debug.Log("Third placer is " + player.GetComponent<PlayerDetails>().playerID);
-                //player.GetComponent<PlayerInputScript>().analogValue = new Vector3(0, 0, 0);
+
                 Transform thirdPlace = player.transform.Find("Walkiing(Clone)");
+                thirdPlace.gameObject.SetActive(true);
+                Destroy(thirdPlace.Find("PlayerIcon(Clone)").gameObject);
                 thirdPlace.transform.position = thirdPlacePosition.position;
-                //player.GetComponent<NamePicker>().enabled = true;
+
                 player.AddComponent<NamePicker>();
                 player.GetComponent<NamePicker>().placing = 3;
+
+                border3rd.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
+                icon3rd.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
             }
         }
 
