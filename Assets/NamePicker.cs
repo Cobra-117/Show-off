@@ -16,12 +16,18 @@ public class NamePicker : MonoBehaviour
     public int alphaPointer;
     public int namePointer;
     public int placing;
+    public Color currentCharColor;
+    public Color nameEnteredColor;
+    public bool nameEntered;
 
     // Start is called before the first frame update
     void Start()
     {
+        nameEntered = false;
         alphaPointer = 0;
         namePointer = 0;
+        currentCharColor = Color.yellow;
+        nameEnteredColor = Color.green;
 
         GetLettersFromPlacing();
     
@@ -31,6 +37,8 @@ public class NamePicker : MonoBehaviour
         chars.Add(Char1);
         chars.Add(Char2);
         chars.Add(Char3);
+
+        Char1.GetComponent<TextMeshProUGUI>().color = currentCharColor;
         currentChar = chars[namePointer];
     }
 
@@ -61,10 +69,12 @@ public class NamePicker : MonoBehaviour
     void OnLeftSelect()
     {
         Debug.Log("left button");
-        if (namePointer > 0)
+        if (namePointer > 0 && !nameEntered)
         {
+            currentChar.GetComponent<TextMeshProUGUI>().color = Color.white;
             namePointer--;
             currentChar = chars[namePointer];
+            currentChar.GetComponent<TextMeshProUGUI>().color = currentCharColor;
             alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
             Debug.Log("Left select" + alphaPointer);
         }
@@ -73,10 +83,12 @@ public class NamePicker : MonoBehaviour
     void OnRightSelect()
     {
         Debug.Log("right button");
-        if (namePointer < chars.Count - 1)
+        if (namePointer < chars.Count - 1 && !nameEntered)
         {
+            currentChar.GetComponent<TextMeshProUGUI>().color = Color.white;
             namePointer++;
             currentChar = chars[namePointer];
+            currentChar.GetComponent<TextMeshProUGUI>().color = currentCharColor;
             alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
             Debug.Log("Right select" + alphaPointer);
         }
@@ -85,7 +97,7 @@ public class NamePicker : MonoBehaviour
     void OnUpSelect()
     {
         Debug.Log("up button");
-        if (alphaPointer < alphabets.Length - 1)
+        if (alphaPointer < alphabets.Length - 1 && !nameEntered)
         {
             alphaPointer++;
             currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
@@ -97,7 +109,7 @@ public class NamePicker : MonoBehaviour
     void OnDownSelect()
     {
         Debug.Log("down button");
-        if (alphaPointer > 0)
+        if (alphaPointer > 0 && !nameEntered)
         {
             alphaPointer--;
             currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
@@ -108,19 +120,23 @@ public class NamePicker : MonoBehaviour
 
     void OnEnter()
     {
+        nameEntered = true;
+        string t;
         Debug.Log("Enter button");
-        //GameObject t;
+        GetComponent<PlayerDetails>().playerName += chars[0].GetComponent<TextMeshProUGUI>().text.ToString();
+        GetComponent<PlayerDetails>().playerName += chars[1].GetComponent<TextMeshProUGUI>().text.ToString();
+        GetComponent<PlayerDetails>().playerName += chars[2].GetComponent<TextMeshProUGUI>().text.ToString();
 
-        //for (int i = 0; i < chars.Count; i++)
-        //{
-        //    t = chars[i];
-        //    name[i] = t.GetComponent<TextMeshProUGUI>().text[0];
-        //}
+        currentCharColor = nameEnteredColor;
+        for(int i=0; i<chars.Count; i++)
+        {
+            chars[i].GetComponent<TextMeshProUGUI>().color = nameEnteredColor;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
