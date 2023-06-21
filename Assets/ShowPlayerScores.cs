@@ -17,7 +17,6 @@ public class ShowPlayerScores : MonoBehaviour
     public Transform firstPlacePosition;
     public Transform secondPlacePosition;
     public Transform thirdPlacePosition;
-    public List<PlayerInformation> pInfo;
 
     public GameObject score1st;
     public GameObject score2nd;
@@ -31,26 +30,23 @@ public class ShowPlayerScores : MonoBehaviour
     public GameObject icon2nd;
     public GameObject icon3rd;
 
+    bool firstPlayerPresent;
+    bool secondPlayerPresent;
+    bool thirdPlayerPresent;
+
     // Start is called before the first frame update
     void Start()
     {
-        pInfo = new();
         //GameObject[] objects = FindObjectsOfType<GameObject>(true);
         GameObject[] objects = GameObject.FindGameObjectsWithTag("playerController");
         foreach (GameObject obj in objects)
         {
             players.Add(obj);
         }
-        //foreach (GameObject ob in objects)
-        //{
-        //    if(ob.tag.Equals("playerController"))
-        //    {
-        //        ob.SetActive(true);
-        //        ob.GetComponent<PlayerInput>().SwitchCurrentActionMap("SelectName");
-        //        //ob.GetComponent<PlayerInputScript>().enabled = false;
-        //        players.Add(ob);
-        //    }
-        //}
+
+        firstPlayerPresent = false;
+        secondPlayerPresent = false;
+        thirdPlayerPresent = false;
 
         playerID = new int[players.Count];
         playerScores = new int[players.Count];
@@ -70,6 +66,7 @@ public class ShowPlayerScores : MonoBehaviour
 
             if (player.GetComponent<PlayerDetails>().playerID == playerID[0])
             {
+                firstPlayerPresent = true;
                 score1st.GetComponent<TextMeshProUGUI>().text = playerScores[0].ToString();
 
                 Transform firstPlace = player.transform.Find("Walkiing(Clone)");
@@ -82,10 +79,12 @@ public class ShowPlayerScores : MonoBehaviour
 
                 border1st.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
                 icon1st.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
+
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[1])
             {
+                secondPlayerPresent = true;
                 score2nd.GetComponent<TextMeshProUGUI>().text = playerScores[1].ToString();
 
                 Transform secondPlace = player.transform.Find("Walkiing(Clone)");
@@ -98,10 +97,12 @@ public class ShowPlayerScores : MonoBehaviour
 
                 border2nd.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
                 icon2nd.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
+
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[2])
             {
+                thirdPlayerPresent = true;
                 score3rd.GetComponent<TextMeshProUGUI>().text = playerScores[2].ToString();
 
                 Transform thirdPlace = player.transform.Find("Walkiing(Clone)");
@@ -114,9 +115,33 @@ public class ShowPlayerScores : MonoBehaviour
 
                 border3rd.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
                 icon3rd.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
-            }
+
+                }
+        }
+        RemoveUIBasedOnPlayer();
+    }
+
+    void RemoveUIBasedOnPlayer()
+    {
+        GameObject disabledUI;
+
+        if(!firstPlayerPresent)
+        {
+            disabledUI = GameObject.Find("1st place");
+            disabledUI.SetActive(false);
         }
 
+        if (!secondPlayerPresent)
+        {
+            disabledUI = GameObject.Find("2nd place");
+            disabledUI.SetActive(false);
+        }
+
+        if (!thirdPlayerPresent)
+        {
+            disabledUI = GameObject.Find("3rd place");
+            disabledUI.SetActive(false);
+        }
     }
 
     void BubbleSort(int[] scores, int[] playerID)
@@ -138,11 +163,5 @@ public class ShowPlayerScores : MonoBehaviour
                 }
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

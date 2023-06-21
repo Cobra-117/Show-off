@@ -1987,7 +1987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393058850}
   m_LocalRotation: {x: 0.000000021073427, y: -0.7071068, z: 0.000000021073427, w: 0.7071068}
-  m_LocalPosition: {x: -32.322662, y: 25.799099, z: 3679.259}
+  m_LocalPosition: {x: -31.82266, y: 33.799103, z: 3679.259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4580,7 +4580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965037437}
   m_LocalRotation: {x: 0.000000021073427, y: -0.7071068, z: 0.000000021073427, w: 0.7071068}
-  m_LocalPosition: {x: -32.322662, y: 25.799099, z: 0.2590106}
+  m_LocalPosition: {x: -31.82266, y: 33.799103, z: 0.2590106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5265,6 +5265,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 18602094314372401, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 560891652968582695, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
       propertyPath: m_RootOrder
@@ -5328,7 +5333,7 @@ PrefabInstance:
     - target: {fileID: 901704332215112861, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 994473604548003066, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
@@ -7596,7 +7601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7633c93f0364a418841eeb8b058634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: -5, y: 0, z: 0}
+  m_TrackedObjectOffset: {x: -2.5, y: 0, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -7647,8 +7652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 1.5, y: 1.5, z: 1}
-  ShoulderOffset: {x: -28.5, y: 24, z: 0}
+  Damping: {x: 1, y: 1, z: 1}
+  ShoulderOffset: {x: -28, y: 32, z: 0}
   VerticalArmLength: 0.4
   CameraSide: 1
   CameraDistance: 0

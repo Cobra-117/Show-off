@@ -6,7 +6,7 @@ using UnityEditor;
 
 public class NamePicker : MonoBehaviour
 {
-    public char[] name = new char[10];
+    public char[] finalName = new char[10];
     public GameObject Char1;
     public GameObject Char2;
     public GameObject Char3;
@@ -19,6 +19,7 @@ public class NamePicker : MonoBehaviour
     public Color currentCharColor;
     public Color nameEnteredColor;
     public bool nameEntered;
+    GameObject countdown;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,8 @@ public class NamePicker : MonoBehaviour
 
         Char1.GetComponent<TextMeshProUGUI>().color = currentCharColor;
         currentChar = chars[namePointer];
+
+        countdown = GameObject.Find("Till reload");
     }
 
     void GetLettersFromPlacing()
@@ -123,6 +126,7 @@ public class NamePicker : MonoBehaviour
         nameEntered = true;
         string t;
         //Debug.Log("Enter button");
+        //Debug.Log("Enter button");
         GetComponent<PlayerDetails>().playerName += chars[0].GetComponent<TextMeshProUGUI>().text.ToString();
         GetComponent<PlayerDetails>().playerName += chars[1].GetComponent<TextMeshProUGUI>().text.ToString();
         GetComponent<PlayerDetails>().playerName += chars[2].GetComponent<TextMeshProUGUI>().text.ToString();
@@ -132,11 +136,6 @@ public class NamePicker : MonoBehaviour
         {
             chars[i].GetComponent<TextMeshProUGUI>().color = nameEnteredColor;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        countdown.GetComponent<ResetGame>().pInfo.Add(new PlayerInformation(GetComponent<PlayerDetails>().playerID, GetComponent<PlayerDetails>().playerScore, GetComponent<PlayerDetails>().playerName));
     }
 }

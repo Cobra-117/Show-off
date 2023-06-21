@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 822.719, g: 68.42683, b: 950.25214, a: 1}
+  m_IndirectSpecularColor: {r: 823.0067, g: 68.51437, b: 950.578, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -124,6 +124,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &62294913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62294915}
+  m_Layer: 0
+  m_Name: Leaderboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &62294915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62294913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -74.562775, y: 53.222404, z: -50.19815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73968668
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +743,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202793490}
-  m_LocalRotation: {x: 0.018230565, y: -0.00094042305, z: 0.0000171473, w: 0.9998334}
+  m_LocalRotation: {x: 0.018230543, y: -0.00094038853, z: 0.00001714665, w: 0.9998334}
   m_LocalPosition: {x: 0.01, y: 11.913923, z: -25.895964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1148,6 +1179,7 @@ GameObject:
   - component: {fileID: 206308857}
   - component: {fileID: 206308861}
   - component: {fileID: 206308862}
+  - component: {fileID: 206308863}
   m_Layer: 5
   m_Name: Canvas?
   m_TagString: Untagged
@@ -1299,6 +1331,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vfxGraph: {fileID: 1961293313}
+--- !u!114 &206308863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206308856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fefb1cf9af8e5ca4ca0b867be57e5ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &318039586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,7 +2927,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922699734}
-  m_LocalRotation: {x: 0.018230565, y: -0.00094042305, z: 0.0000171473, w: 0.9998334}
+  m_LocalRotation: {x: 0.018230543, y: -0.00094038853, z: 0.00001714665, w: 0.9998334}
   m_LocalPosition: {x: -30.232464, y: 25.31313, z: -28.461924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4745,7 +4789,7 @@ GameObject:
   - component: {fileID: 1327770031}
   - component: {fileID: 1327770030}
   m_Layer: 5
-  m_Name: '3st place '
+  m_Name: 3rd place
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6552,7 +6596,7 @@ GameObject:
   - component: {fileID: 1707316231}
   - component: {fileID: 1707316230}
   m_Layer: 5
-  m_Name: '2st place '
+  m_Name: 2nd place
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
