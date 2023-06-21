@@ -6,7 +6,7 @@ using UnityEditor;
 
 public class NamePicker : MonoBehaviour
 {
-    public char[] name = new char[10];
+    public char[] finalName = new char[10];
     public GameObject Char1;
     public GameObject Char2;
     public GameObject Char3;
@@ -121,7 +121,6 @@ public class NamePicker : MonoBehaviour
     void OnEnter()
     {
         nameEntered = true;
-        string t;
         Debug.Log("Enter button");
         GetComponent<PlayerDetails>().playerName += chars[0].GetComponent<TextMeshProUGUI>().text.ToString();
         GetComponent<PlayerDetails>().playerName += chars[1].GetComponent<TextMeshProUGUI>().text.ToString();
@@ -132,11 +131,5 @@ public class NamePicker : MonoBehaviour
         {
             chars[i].GetComponent<TextMeshProUGUI>().color = nameEnteredColor;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
