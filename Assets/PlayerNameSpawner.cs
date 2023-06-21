@@ -27,7 +27,7 @@ public class PlayerNameSpawner : MonoBehaviour
 
     void OnPlayerJoined(PlayerInput playerInput)
     {
-        Debug.Log("Player " + playerInput.playerIndex + 1 + " joined");
+        //Debug.Log("Player " + playerInput.playerIndex + 1 + " joined");
         //Debug.Log(playerInput.GetDevice<Gamepad>().deviceId);
 
         playerInput.gameObject.transform.SetParent(transform.Find("Players UI"));

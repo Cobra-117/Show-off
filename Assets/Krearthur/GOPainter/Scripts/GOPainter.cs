@@ -891,7 +891,7 @@ namespace Krearthur.GOP
             GameObject gRoot = GameObject.Find(rootGroupObjectName);
             if (gRoot == null)
             {
-                Debug.LogError("root group object " + rootGroupObjectName + " not found");
+                //Debug.LogError("root group object " + rootGroupObjectName + " not found");
                 return null;
             }
             return gRoot;

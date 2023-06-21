@@ -25,10 +25,11 @@ public class TerrainGenerator : MonoBehaviour
         //AddWater();
         AddBlock(0, false);
         AddBlock(1, false);
-        for (int i = 0; i < 3; i++) {
+        //AddBlock(Random.Range(2, blocks.Length));
+        /*for (int i = 0; i < 3; i++) {
             //AddWater();
             AddBlock(Random.Range(2, blocks.Length));
-        }
+        }*/
 
         //Generate();
     }
@@ -45,7 +46,7 @@ public class TerrainGenerator : MonoBehaviour
             decorationGenerator.AddBlock();
         Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,
         0, 0);
-        Debug.Log("will add block of type" + blockType.ToString());
+        //Debug.Log("will add block of type" + blockType.ToString());
         GameObject block = GameObject.Instantiate(blocks[blockType]);
         block.transform.position = coordinates;
         block.transform.parent = this.transform;

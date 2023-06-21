@@ -20,7 +20,7 @@ public class PlayerDebuffs : MonoBehaviour
     {
         if(other.gameObject.tag.Equals(collideWith))
         {
-            Debug.Log("slow down");
+            //Debug.Log("slow down");
             slowDown = true;
         }
     }
@@ -29,7 +29,7 @@ public class PlayerDebuffs : MonoBehaviour
     {
         if(other.gameObject.tag.Equals(collideWith))
         {
-            Debug.Log("slow down over");
+            //Debug.Log("slow down over");
             slowDown = false;
         }
     }
@@ -39,7 +39,7 @@ public class PlayerDebuffs : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals(collideWith))
         {
-            Debug.Log("slow down");
+            //Debug.Log("slow down");
             slowDown = true;
         }
     }
@@ -48,7 +48,7 @@ public class PlayerDebuffs : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals(collideWith))
         {
-            Debug.Log("slow down over");
+            //Debug.Log("slow down over");
             slowDown = false;
         }
     }

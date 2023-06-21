@@ -68,7 +68,7 @@ public class NamePicker : MonoBehaviour
 
     void OnLeftSelect()
     {
-        Debug.Log("left button");
+        //Debug.Log("left button");
         if (namePointer > 0 && !nameEntered)
         {
             currentChar.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -76,13 +76,13 @@ public class NamePicker : MonoBehaviour
             currentChar = chars[namePointer];
             currentChar.GetComponent<TextMeshProUGUI>().color = currentCharColor;
             alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
-            Debug.Log("Left select" + alphaPointer);
+            //Debug.Log("Left select" + alphaPointer);
         }
     }
 
     void OnRightSelect()
     {
-        Debug.Log("right button");
+        //Debug.Log("right button");
         if (namePointer < chars.Count - 1 && !nameEntered)
         {
             currentChar.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -90,31 +90,31 @@ public class NamePicker : MonoBehaviour
             currentChar = chars[namePointer];
             currentChar.GetComponent<TextMeshProUGUI>().color = currentCharColor;
             alphaPointer = currentChar.GetComponent<textDetails>().alphaPointer;
-            Debug.Log("Right select" + alphaPointer);
+            //Debug.Log("Right select" + alphaPointer);
         }
     }
 
     void OnUpSelect()
     {
-        Debug.Log("up button");
+       //Debug.Log("up button");
         if (alphaPointer < alphabets.Length - 1 && !nameEntered)
         {
             alphaPointer++;
             currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
             currentChar.GetComponent<TextMeshProUGUI>().text = alphabets[alphaPointer].ToString();
-            Debug.Log("Up select");
+            //Debug.Log("Up select");
         }
     }
 
     void OnDownSelect()
     {
-        Debug.Log("down button");
+        //Debug.Log("down button");
         if (alphaPointer > 0 && !nameEntered)
         {
             alphaPointer--;
             currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
             currentChar.GetComponent<TextMeshProUGUI>().text = alphabets[alphaPointer].ToString();
-            Debug.Log("Down select");
+            //Debug.Log("Down select");
         }
     }
 
@@ -122,7 +122,7 @@ public class NamePicker : MonoBehaviour
     {
         nameEntered = true;
         string t;
-        Debug.Log("Enter button");
+        //Debug.Log("Enter button");
         GetComponent<PlayerDetails>().playerName += chars[0].GetComponent<TextMeshProUGUI>().text.ToString();
         GetComponent<PlayerDetails>().playerName += chars[1].GetComponent<TextMeshProUGUI>().text.ToString();
         GetComponent<PlayerDetails>().playerName += chars[2].GetComponent<TextMeshProUGUI>().text.ToString();

@@ -17,15 +17,13 @@ public class LoadSceneAfterVideo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!videoPlayer.isPlaying)
-            Debug.Log("not playing");
     }
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
         if (loaderCalled == true)
             return;
-        Debug.Log("end reached");
+        //Debug.Log("end reached");
         loaderCalled = false;
         SceneManager.LoadScene("PlayScene");
     }

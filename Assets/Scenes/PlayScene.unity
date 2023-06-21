@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 822.719, g: 68.42683, b: 950.25214, a: 1}
+  m_IndirectSpecularColor: {r: 823.0067, g: 68.51437, b: 950.578, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3790,7 +3790,7 @@ MonoBehaviour:
   - {fileID: 6645145999951171212, guid: 8f54149c5c2f88f43a217ed2e29f3b08, type: 3}
   Water: {fileID: 1459882829}
   decorationGenerator: {fileID: 1790441660}
-  simultaneousBlocks: 8
+  simultaneousBlocks: 4
   dataWave: {fileID: 1082949417}
 --- !u!4 &764448919
 Transform:
@@ -5263,7 +5263,7 @@ PrefabInstance:
     - target: {fileID: 18602094314372367, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 560891652968582695, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
@@ -5328,7 +5328,7 @@ PrefabInstance:
     - target: {fileID: 901704332215112861, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 994473604548003066, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}

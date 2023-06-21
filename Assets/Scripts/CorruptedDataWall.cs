@@ -26,7 +26,7 @@ public class CorruptedDataWall : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         speed = speedCurve[0];
-        Debug.Log("start");
+        //Debug.Log("start");
     }
 
     void Update()
@@ -34,8 +34,8 @@ public class CorruptedDataWall : MonoBehaviour
         GameObject firstPlayer = GetFirstPlayer();
         if (firstPlayer == null)
             return;
-        Debug.Log("Player pos:" + firstPlayer.transform.position.x.ToString());
-        Debug.Log("Wave pos: " + transform.position.x.ToString());
+        //Debug.Log("Player pos:" + firstPlayer.transform.position.x.ToString());
+        //Debug.Log("Wave pos: " + transform.position.x.ToString());
         if (axis == Axis.X) {
             if (transform.position.x < firstPlayer.transform.position.x - OffsetToFirstPlayer) {
                 transform.position = new Vector3(firstPlayer.transform.position.x - OffsetToFirstPlayer,
@@ -64,7 +64,7 @@ public class CorruptedDataWall : MonoBehaviour
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         if (players.Length == 0)
             return null;
-        Debug.Log("Nbr of player:" + players.Length);
+        //Debug.Log("Nbr of player:" + players.Length);
         GameObject firtsPlayer = players[0];
 
         for (int i = 0; i < players.Length; i++) {
@@ -96,7 +96,7 @@ public class CorruptedDataWall : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player") {
-            Debug.Log("wave touched player");
+            //Debug.Log("wave touched player");
             Component[] components = gameObject.GetComponents(typeof(Component));
             foreach(Component component in components) {
                 Debug.Log(component.ToString());
@@ -112,7 +112,7 @@ public class CorruptedDataWall : MonoBehaviour
             collision.gameObject.SetActive(false);
             //targetGroup.m_Targets
             audioSource.Play();
-            Debug.Log("Player removed");
+            //Debug.Log("Player removed");
         }
     }
 }

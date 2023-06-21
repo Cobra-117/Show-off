@@ -22,11 +22,11 @@ public class CheckpointManager : MonoBehaviour
             if (!checkpoints.Contains(other.gameObject.transform.position))
             {
                 checkpoints.Add(other.gameObject.transform.position);
-                Debug.Log("Checkpoint updated");
+                //Debug.Log("Checkpoint updated");
             }
             else
             {
-                Debug.Log("Checkpoint passed already");
+                //Debug.Log("Checkpoint passed already");
             }
         }
         
@@ -34,7 +34,7 @@ public class CheckpointManager : MonoBehaviour
         {
             //transform.position = GetComponentInParent<PlayerDetails>().checkpoint;
             transform.position = (Vector3)checkpoints[checkpoints.Count-1];
-            Debug.Log("Reset from last checkpoint");
+            //Debug.Log("Reset from last checkpoint");
         }
     }
 

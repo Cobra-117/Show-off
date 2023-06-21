@@ -29,30 +29,30 @@ public class TerrainBlock : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("trigged enter");
+        //Debug.Log("trigged enter");
         if (other.gameObject.tag == "Player") {
             if (blockType == BlockType.SWIM)
             {
-                Debug.Log("entered water");
+                //Debug.Log("entered water");
                 /*other.gameObject.transform.parent.gameObject.
                 GetComponent<SwitchMovement>().SwitchToSwimming();
                 */
             } else if (blockType == BlockType.JUMP)
             {
-                Debug.Log("entered jump");
+                //Debug.Log("entered jump");
                 /*other.gameObject.transform.parent.gameObject.
                 GetComponent<SwitchMovement>().SwitchToJumping();
                 */
             } else if (blockType == BlockType.FLY)
             {
-                Debug.Log("entered fly");
+                //Debug.Log("entered fly");
                 /*other.gameObject.transform.parent.gameObject.
                 GetComponent<SwitchMovement>().SwitchToFlying();
                 */
             }
             else if (blockType == BlockType.WALK)
             {
-                Debug.Log("entered walk");
+                //Debug.Log("entered walk");
                 /*other.gameObject.transform.parent.gameObject.
                 GetComponent<SwitchMovement>().SwitchToWalking();
                 */
@@ -71,7 +71,7 @@ public class TerrainBlock : MonoBehaviour
                 {
                     player.GetComponent<Walk>().UpdateChunk();
                 }
-                Debug.Log("adding blocks");
+                //Debug.Log("adding blocks");
             }
         }
     }
@@ -94,10 +94,10 @@ public class TerrainBlock : MonoBehaviour
                 wallName = "West Wall";
                 break;
             default:
-                Debug.LogWarning("Your direction can't be superior to 3. 0 = north, 1 = east, 2 = south, 3 = west");
+                //Debug.LogWarning("Your direction can't be superior to 3. 0 = north, 1 = east, 2 = south, 3 = west");
                 return;
         }
-        Debug.Log("removed " + direction.ToString());
+        //Debug.Log("removed " + direction.ToString());
         for (int i = 0; i < transform.childCount; i++) {
             if (transform.GetChild(i).gameObject.name == wallName)
                 transform.GetChild(i).gameObject.SetActive(false);

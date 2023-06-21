@@ -12,7 +12,7 @@ public class SlowDownPlayer : MonoBehaviour
         if (other.tag.Equals("Player") && !players.Contains(other.gameObject))
         {
             players.Add(other.gameObject);
-            Debug.Log("Player entered");
+            //Debug.Log("Player entered");
         }
     }
 
@@ -21,7 +21,7 @@ public class SlowDownPlayer : MonoBehaviour
         if (other.tag.Equals("Player") && players.Contains(other.gameObject))
         {
             players.Remove(other.gameObject);
-            Debug.Log("Player exit");
+            //Debug.Log("Player exit");
         }
     }
 

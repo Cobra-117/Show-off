@@ -26,7 +26,7 @@ public class Missile : MonoBehaviour
 			Debug.DrawRay(contact.point, contact.normal, Color.white);
 			if (collision.gameObject.tag == "Player")
 			{
-                Debug.Log("touched player");
+                //Debug.Log("touched player");
 				hitDir = contact.normal;
 				collision.gameObject.GetComponent<Walk>().HitPlayer(-hitDir * force, stunTime);
 				Destroy(this.gameObject);
