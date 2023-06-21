@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Wave_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 1290dd726b0ab954aad5e8bcc99a3874,
+  m_Shader: {fileID: -6465566751694194690, guid: a2212eb897b46e040a74f9cba9637f7d,
     type: 3}
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
@@ -120,7 +120,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _Base_Colour: {r: 0.5473477, g: 0.7331924, b: 0.9433962, a: 0}
+    - _Base_Colour: {r: 0, g: 0.3336449, b: 0.7169812, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Matrix_ColourOfEffect: {r: 1, g: 0.10854367, b: 0.0235849, a: 0}
@@ -128,10 +128,10 @@ Material:
     - _Matrix_TillingValue: {r: 1, g: 1, b: 0, a: 0}
     - _Negative_Background_Colour: {r: 0.2264151, g: 0.0032039813, b: 0.06273626,
         a: 0}
-    - _Negative_Foreground_Colour: {r: 0.015094334, g: 0.09433961, b: 0, a: 0}
+    - _Negative_Foreground_Colour: {r: 0.039308198, g: 0.23584908, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Tint_Colour: {r: 0.6745098, g: 0.6784314, b: 0.6745098, a: 0}
+    - _Tint_Colour: {r: 0.14293341, g: 0.41509432, b: 0.41117156, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6151756802925821076
 MonoBehaviour:
