@@ -6791,6 +6791,11 @@ PrefabInstance:
       propertyPath: targetGroup
       value: 
       objectReference: {fileID: 982606580}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: OffsetToFirstPlayer
+      value: 24
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2051926887, guid: defcb53c5d28c4e429c7416f4fa5e625, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: defcb53c5d28c4e429c7416f4fa5e625, type: 3}
