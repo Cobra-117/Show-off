@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 822.719, g: 68.42683, b: 950.25214, a: 1}
+  m_IndirectSpecularColor: {r: 823.0067, g: 68.51437, b: 950.578, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10638,7 +10638,7 @@ MonoBehaviour:
   m_ShadowResolution:
     m_Override: 512
     m_UseOverride: 0
-    m_Level: 1
+    m_Level: 0
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
@@ -10651,7 +10651,7 @@ MonoBehaviour:
   m_PenumbraTint: 0
   m_NormalBias: 0.75
   m_SlopeBias: 0.5
-  m_ShadowUpdateMode: 0
+  m_ShadowUpdateMode: 2
   m_AlwaysDrawDynamicShadows: 0
   m_UpdateShadowOnLightMovement: 0
   m_CachedShadowTranslationThreshold: 0.01
@@ -31727,6 +31727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2107619736fd7134fa42771c7149d413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerCount: 0
+  playerInfo: []
 --- !u!114 &1640834697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34653,6 +34655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2107619736fd7134fa42771c7149d413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerCount: 0
+  playerInfo: []
 --- !u!114 &1745519627
 MonoBehaviour:
   m_ObjectHideFlags: 0
