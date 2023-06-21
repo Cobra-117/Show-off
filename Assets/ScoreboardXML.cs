@@ -20,6 +20,11 @@ public class PlayerInformation : IComparable   //(when implementing IComparable,
         this.playerName = name;
     }
 
+    public PlayerInformation()
+    {
+
+    }
+
     public int CompareTo(object other)
     {
         if (other is PlayerInformation)
@@ -29,18 +34,16 @@ public class PlayerInformation : IComparable   //(when implementing IComparable,
     }
 }
 
+[System.Serializable]
+public class Leaderboard
+{
+    public List<PlayerInformation> players = new();
+}
+
 public class ScoreboardXML : MonoBehaviour
 {
     public static ScoreboardXML Instance;
     public Leaderboard leaderboard;
-
-    [System.Serializable]
-    public class Leaderboard
-    {
-        public List<PlayerInformation> players = new();
-    }
-
-
 
     private void Awake()
     {
@@ -51,15 +54,39 @@ public class ScoreboardXML : MonoBehaviour
         }
     }
 
+    //THE SCORES ARE SAVED TO C:\Users\<user>\AppData\LocalLow\DefaultCompany\Show off
     public void SaveScore(List<PlayerInformation> newPlayers)
     {
-        leaderboard.players = newPlayers;
+        //leaderboard.players.Clear();
 
-        SortScore(leaderboard.players);
+        //SortScore(leaderboard.players);
         XmlSerializer serializer = new XmlSerializer(typeof(Leaderboard));
-        FileStream stream = new FileStream(Application.persistentDataPath + "/Highscores/highscores.xml", FileMode.Create);
-        serializer.Serialize(stream, leaderboard);
-        stream.Close();
+
+        if(!File.Exists(Application.persistentDataPath + "/Highscores/highscores.xml"))
+        {
+            leaderboard.players = newPlayers;
+            
+            FileStream stream = new FileStream(Application.persistentDataPath + "/Highscores/highscores.xml", FileMode.Create);
+            serializer.Serialize(stream, leaderboard);
+            stream.Close();
+            return;
+        }
+
+        else if(File.Exists(Application.persistentDataPath + "/Highscores/highscores.xml"))
+        {
+            leaderboard.players = LoadScore();
+            foreach (PlayerInformation p in newPlayers)
+            {
+                leaderboard.players.Add(p);
+            }
+
+            FileStream stream = new FileStream(Application.persistentDataPath + "/Highscores/highscores.xml", FileMode.Create);
+            serializer.Serialize(stream, leaderboard);
+            stream.Close();
+            return;
+        }
+
+
     }
 
     public List<PlayerInformation> LoadScore()
@@ -69,6 +96,7 @@ public class ScoreboardXML : MonoBehaviour
             XmlSerializer serializer = new XmlSerializer(typeof(Leaderboard));
             FileStream stream = new FileStream(Application.persistentDataPath + "/HighScores/highscores.xml", FileMode.Open);
             leaderboard = serializer.Deserialize(stream) as Leaderboard;
+            stream.Close();
         }
         return leaderboard.players;
     }
@@ -84,32 +112,35 @@ public class ScoreboardXML : MonoBehaviour
         {
             return players;
         }
-        players.Sort(); // Uses the IComparable interface
+        players.Sort();
+        return players;
+        
+        // Uses the IComparable interface
         //players.Sort( ComparePlayers );
         // more fancy, with lambda:
         //players.Sort((left, right) => {return left.playerScore.CompareTo(right.playerScore); });
 
-        return players;
+        //return players;
 
-        var left = new List<PlayerInformation>();
-        var right = new List<PlayerInformation>();
+        //var left = new List<PlayerInformation>();
+        //var right = new List<PlayerInformation>();
 
-        int middle = players.Count / 2;
+        //int middle = players.Count / 2;
 
-        for(int i=0; i< players.Count; i++)
-        {
-            left.Add(players[i]);
-        }
+        //for(int i=0; i< players.Count; i++)
+        //{
+        //    left.Add(players[i]);
+        //}
 
-        for(int i=0; i<players.Count; i++)
-        {
-            right.Add(players[i]);
-        }
+        //for(int i=0; i<players.Count; i++)
+        //{
+        //    right.Add(players[i]);
+        //}
 
-        left = SortScore(left);
-        right = SortScore(right);
+        //left = SortScore(left);
+        //right = SortScore(right);
         
-        return MergeLists(left, right);
+        //return MergeLists(left, right);
     }
 
     public List<PlayerInformation> MergeLists(List<PlayerInformation> left, List<PlayerInformation> right)

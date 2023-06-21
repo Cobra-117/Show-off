@@ -17,7 +17,6 @@ public class ShowPlayerScores : MonoBehaviour
     public Transform firstPlacePosition;
     public Transform secondPlacePosition;
     public Transform thirdPlacePosition;
-    public List<PlayerInformation> pInfo;
 
     public GameObject score1st;
     public GameObject score2nd;
@@ -38,7 +37,6 @@ public class ShowPlayerScores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pInfo = new();
         //GameObject[] objects = FindObjectsOfType<GameObject>(true);
         GameObject[] objects = GameObject.FindGameObjectsWithTag("playerController");
         foreach (GameObject obj in objects)
@@ -81,6 +79,7 @@ public class ShowPlayerScores : MonoBehaviour
 
                 border1st.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
                 icon1st.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
+
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[1])
@@ -98,6 +97,7 @@ public class ShowPlayerScores : MonoBehaviour
 
                 border2nd.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
                 icon2nd.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
+
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[2])
@@ -115,7 +115,8 @@ public class ShowPlayerScores : MonoBehaviour
 
                 border3rd.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
                 icon3rd.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
-            }
+
+                }
         }
         RemoveUIBasedOnPlayer();
     }

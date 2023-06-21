@@ -19,6 +19,7 @@ public class NamePicker : MonoBehaviour
     public Color currentCharColor;
     public Color nameEnteredColor;
     public bool nameEntered;
+    GameObject countdown;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,8 @@ public class NamePicker : MonoBehaviour
 
         Char1.GetComponent<TextMeshProUGUI>().color = currentCharColor;
         currentChar = chars[namePointer];
+
+        countdown = GameObject.Find("Till reload");
     }
 
     void GetLettersFromPlacing()
@@ -131,5 +134,6 @@ public class NamePicker : MonoBehaviour
         {
             chars[i].GetComponent<TextMeshProUGUI>().color = nameEnteredColor;
         }
+        countdown.GetComponent<ResetGame>().pInfo.Add(new PlayerInformation(GetComponent<PlayerDetails>().playerID, GetComponent<PlayerDetails>().playerScore, GetComponent<PlayerDetails>().playerName));
     }
 }

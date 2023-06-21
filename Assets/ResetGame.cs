@@ -8,12 +8,33 @@ public class ResetGame : MonoBehaviour
 {
     TextMeshProUGUI timer;
     public float countdown;
+    public List<PlayerInformation> pInfo;
     
     // Start is called before the first frame update
     void Start()
     {
         countdown = 3600f;
         timer = GetComponent<TextMeshProUGUI>();
+        pInfo = new List<PlayerInformation>();
+    }
+
+    void RestartGame()
+    {
+        UploadToXML();
+        pInfo.Clear();
+        GameObject[] players = GameObject.FindGameObjectsWithTag("playerController");
+        foreach (GameObject p in players)
+        {
+            Destroy(p);
+        }
+        //SceneManagerScript.controllerCount = 0;
+        //SceneManagerScript.playerInfo.Clear();
+        SceneManager.LoadScene(0);
+    }
+
+    void UploadToXML()
+    {
+        ScoreboardXML.Instance.SaveScore(pInfo);
     }
 
     // Update is called once per frame
@@ -26,14 +47,7 @@ public class ResetGame : MonoBehaviour
         
         if (countdown == 0 || Input.GetKeyDown(KeyCode.R))
         {
-            GameObject[] players = GameObject.FindGameObjectsWithTag("playerController");
-            foreach (GameObject p in players)
-            {
-                Destroy(p);
-            }
-            //SceneManagerScript.controllerCount = 0;
-            //SceneManagerScript.playerInfo.Clear();
-            SceneManager.LoadScene(0);
+            RestartGame();
         }
     }
 }
