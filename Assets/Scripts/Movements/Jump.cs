@@ -115,12 +115,12 @@ public class Jump : MonoBehaviour
 
         if (perfect == true)
         {
-            Debug.Log("Perfect");
+            //Debug.Log("Perfect");
             return new Vector3(rotateDirection.x * horForce, vertForce, rotateDirection.z * horForce);
         }
         else if (good == true)
         {
-            Debug.Log("Good");
+            //Debug.Log("Good");
             return new Vector3(rotateDirection.x * horForce / 1.5f, vertForce / 1.5f, rotateDirection.z * horForce);
         }
         else

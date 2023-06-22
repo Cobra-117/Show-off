@@ -24,7 +24,7 @@ public class pepeRoar : MonoBehaviour
         foreach (GameObject player in players)
         {
             if(pushbackRadius >= Vector3.Distance(transform.position, player.transform.position)) {
-                Debug.Log("Reeeee");
+                //Debug.Log("Reeeee");
                 Vector3 direction = Vector3.Normalize(player.transform.position - transform.position);
                 Rigidbody player_rb = player.GetComponent<Rigidbody>();
                 player_rb.AddForce(direction * pushbackForce, ForceMode.Impulse);

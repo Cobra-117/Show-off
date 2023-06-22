@@ -50,19 +50,19 @@ public class IconPicker : MonoBehaviour
         {
             iconPointer--;
             playerIcon.GetComponent<Image>().sprite = menu.GetComponent<PlayerNameSpawner>().icons[iconPointer];
-            Debug.Log("Left select " + iconPointer);
+            //Debug.Log("Left select " + iconPointer);
         }
     }
 
     void OnRight()
 
     {
-        Debug.Log(" OnRightSelect called in IconPicker. enabled: " + enabled);
+        //Debug.Log(" OnRightSelect called in IconPicker. enabled: " + enabled);
         if (iconPointer < menu.GetComponent<PlayerNameSpawner>().icons.Count -1 && !ready)
         {
             iconPointer++;
             playerIcon.GetComponent<Image>().sprite = menu.GetComponent<PlayerNameSpawner>().icons[iconPointer];
-            Debug.Log("Right select " + iconPointer);
+            //Debug.Log("Right select " + iconPointer);
         }
     }
 

@@ -64,7 +64,7 @@ public class ShowPlayerScores : MonoBehaviour
 
         foreach (GameObject player in players)
         {
-            Debug.Log("player ID: " + player.GetComponent<PlayerDetails>().playerID);
+            //Debug.Log("player ID: " + player.GetComponent<PlayerDetails>().playerID);
 
             if (player.GetComponent<PlayerDetails>().playerID == playerID[0])
             {

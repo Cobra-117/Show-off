@@ -39,7 +39,7 @@ public class MusicManager : MonoBehaviour
             StartCoroutine("MusicSwitch", 2.0f);
 
 
-            Debug.Log(transform.position.x);
+            //Debug.Log(transform.position.x);
 		}
 	}
 

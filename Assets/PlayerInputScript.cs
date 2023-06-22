@@ -25,7 +25,7 @@ public class PlayerInputScript : MonoBehaviour
 
         if (currentObject.name.Equals("Flying"))
         {
-            Debug.Log("jump");
+            //Debug.Log("jump");
             currentObject.GetComponent<FlyingMovement>().OnButtonPress();
         }
 

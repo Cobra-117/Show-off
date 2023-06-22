@@ -27,7 +27,7 @@ public class bonkScript : MonoBehaviour
             PlayerInput input = player.GetComponentInParent<PlayerInput>();
             input.DeactivateInput();
             input.Invoke("ActivateInput", stunDuration);
-            Debug.Log("Bonk");
+            //Debug.Log("Bonk");
         }
     }
 
@@ -36,7 +36,7 @@ public class bonkScript : MonoBehaviour
         if(other.tag.Equals("Player") && !players.Contains(other.gameObject))
         {
             players.Add(other.gameObject);
-            Debug.Log("Player entered");
+            //Debug.Log("Player entered");
             //foreach (GameObject player in players)
             //{
             //    Debug.Log(player.name + "entered");
