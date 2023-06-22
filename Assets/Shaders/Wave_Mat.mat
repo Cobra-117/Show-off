@@ -128,10 +128,10 @@ Material:
     - _Matrix_TillingValue: {r: 1, g: 1, b: 0, a: 0}
     - _Negative_Background_Colour: {r: 0.2264151, g: 0.0032039813, b: 0.06273626,
         a: 0}
-    - _Negative_Foreground_Colour: {r: 0.07300818, g: 0.2264151, b: 0.043787822, a: 0}
+    - _Negative_Foreground_Colour: {r: 0.03720184, g: 0.41509432, b: 0.08518818, a: 1}
     - _Offset: {r: 1, g: 0, b: 0, a: 0}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Tint_Colour: {r: 0.0740922, g: 0.34798563, b: 0.4245283, a: 1}
+    - _Tint_Colour: {r: 0.16233535, g: 0.509534, b: 0.6037736, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &6151756802925821076
 MonoBehaviour:
