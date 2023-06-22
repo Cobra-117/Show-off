@@ -8,9 +8,9 @@ public class DecorationsGenerator : MonoBehaviour
     public GameObject blockObj;
     public int simultaneousBlocks = 4;
     int nbrOfBlocks;
-    List<GameObject> blocksList;
+    public List<GameObject> blocksList;
 
-    void Start()
+    void Awake()
     {
         blocksList = new List<GameObject>();
     }
