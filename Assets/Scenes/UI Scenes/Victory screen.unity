@@ -743,8 +743,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202793490}
-  m_LocalRotation: {x: 0.062353753, y: 0.7844919, z: -0.07995507, w: 0.6117938}
-  m_LocalPosition: {x: -10.79455, y: 14.012532, z: -17.868292}
+  m_LocalRotation: {x: 0.018230526, y: -0.0009403759, z: 0.000017146403, w: 0.9998334}
+  m_LocalPosition: {x: 0.01, y: 11.913923, z: -25.895964}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1181,6 +1181,7 @@ GameObject:
   - component: {fileID: 206308862}
   - component: {fileID: 206308863}
   - component: {fileID: 206308864}
+  - component: {fileID: 206308865}
   m_Layer: 5
   m_Name: Canvas?
   m_TagString: Untagged
@@ -1235,7 +1236,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206308856}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -1358,6 +1359,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreList: {fileID: 1154732160}
+--- !u!114 &206308865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206308856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 866df2d79b1a6e948a616f24309c6874, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 206308859}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 1
 --- !u!1 &318039586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2863,7 +2894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 1424366364}
-  m_PathPosition: 4
+  m_PathPosition: 0
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -2942,7 +2973,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922699734}
-  m_LocalRotation: {x: 0.062353753, y: 0.7844919, z: -0.07995507, w: 0.6117938}
+  m_LocalRotation: {x: 0.018230526, y: -0.0009403759, z: 0.000017146403, w: 0.9998334}
   m_LocalPosition: {x: -30.232464, y: 25.31313, z: -28.461924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3106,7 +3137,7 @@ GameObject:
   - component: {fileID: 956968504}
   - component: {fileID: 956968503}
   m_Layer: 0
-  m_Name: Victory Screen
+  m_Name: Victory Screen Timeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3136,7 +3167,7 @@ PlayableDirector:
   - key: {fileID: 56949159034942572, guid: f73e0213f23ac5f45b04e5135d91db6f, type: 2}
     value: {fileID: 922699737}
   - key: {fileID: -5817737474317611698, guid: f73e0213f23ac5f45b04e5135d91db6f, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 206308865}
   m_ExposedReferences:
     m_References:
     - d52f39910d3031c47bbfadd326a382b5: {fileID: 0}
