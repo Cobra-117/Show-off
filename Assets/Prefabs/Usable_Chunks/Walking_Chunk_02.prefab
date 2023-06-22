@@ -2988,8 +2988,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: cooldown
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6810628174774943815, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
@@ -15293,13 +15298,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: goingUp
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
       propertyPath: cooldown
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6810628174774943815, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
@@ -16848,13 +16858,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: goingUp
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
       propertyPath: cooldown
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6810628174774943815, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
@@ -22718,8 +22733,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: cooldown
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6810628174774943815, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}

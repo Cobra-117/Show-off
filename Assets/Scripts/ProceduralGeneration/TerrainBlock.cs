@@ -71,6 +71,7 @@ public class TerrainBlock : MonoBehaviour
                 {
                     player.GetComponent<Walk>().UpdateChunk();
                 }
+                GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioManager>().UpdateChunk();
                 //Debug.Log("adding blocks");
             }
         }

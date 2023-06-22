@@ -3115,7 +3115,6 @@ GameObject:
   - component: {fileID: 2697239088670349612}
   - component: {fileID: 2697239088670349603}
   - component: {fileID: 2697239088670349602}
-  - component: {fileID: 5013658850675260871}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
@@ -3202,20 +3201,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
---- !u!114 &5013658850675260871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2697239088670349600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &2697239088675804514
 GameObject:
   m_ObjectHideFlags: 0
@@ -4510,7 +4495,6 @@ GameObject:
   - component: {fileID: 2697239088902220575}
   - component: {fileID: 2697239088902220574}
   - component: {fileID: 2697239088902220573}
-  - component: {fileID: 3536778920521202733}
   m_Layer: 0
   m_Name: Rock1_Low
   m_TagString: Untagged
@@ -4597,20 +4581,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5784162064684295946, guid: b17c00f91c8a2f24d96f12df68be8e06, type: 3}
---- !u!114 &3536778920521202733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2697239088902220563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &2697239088908716715
 GameObject:
   m_ObjectHideFlags: 0
@@ -6603,7 +6573,6 @@ GameObject:
   - component: {fileID: 2697239089197723207}
   - component: {fileID: 2697239089197723206}
   - component: {fileID: 2697239089197723205}
-  - component: {fileID: 8345687830508020669}
   m_Layer: 0
   m_Name: Vine_Clump_01
   m_TagString: Untagged
@@ -6689,20 +6658,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.23, y: 1.6910683, z: 0.46}
   m_Center: {x: 0.00000023841858, y: 0.3051297, z: 0.00000011920929}
---- !u!114 &8345687830508020669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2697239089197723259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &2697239089197835920
 GameObject:
   m_ObjectHideFlags: 0
@@ -6993,7 +6948,6 @@ GameObject:
   - component: {fileID: 2697239089241774550}
   - component: {fileID: 2697239089241774549}
   - component: {fileID: 2697239089241774548}
-  - component: {fileID: 7841312603036092777}
   m_Layer: 0
   m_Name: Rock6_Low
   m_TagString: Untagged
@@ -7080,20 +7034,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7053836765159199653, guid: 5e2a692e0b8b2504687318d58400fcd4, type: 3}
---- !u!114 &7841312603036092777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2697239089241774538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &2697239089257800537
 GameObject:
   m_ObjectHideFlags: 0
@@ -12444,7 +12384,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: df4aea6d172cf194cb27200a37a46eaf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aa8d8672d837130469efb018250f40e3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -12625,7 +12565,6 @@ GameObject:
   - component: {fileID: 2697239090088975468}
   - component: {fileID: 2697239090088975459}
   - component: {fileID: 2697239090088975458}
-  - component: {fileID: 3552686815009817472}
   m_Layer: 0
   m_Name: Rock2_Low
   m_TagString: Untagged
@@ -12712,20 +12651,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3180952334448413891, guid: ec6609807300aea4f960931463f63666, type: 3}
---- !u!114 &3552686815009817472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2697239090088975456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &2697239090099056839
 GameObject:
   m_ObjectHideFlags: 0
@@ -15400,8 +15325,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: cooldown
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
@@ -15600,13 +15530,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: goingUp
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
       propertyPath: cooldown
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}

@@ -33784,13 +33784,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: goingUp
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
       propertyPath: cooldown
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
@@ -34274,8 +34279,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: cooldown
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
@@ -34854,8 +34864,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
+        type: 3}
       propertyPath: cooldown
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 147010301404185932, guid: c7faa276525b918459d79f1299f91f09,
         type: 3}
