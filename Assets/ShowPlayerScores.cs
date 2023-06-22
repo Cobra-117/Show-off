@@ -37,6 +37,8 @@ public class ShowPlayerScores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<ShowLeaderBoardScores>().ShowScores();
+        
         //GameObject[] objects = FindObjectsOfType<GameObject>(true);
         GameObject[] objects = GameObject.FindGameObjectsWithTag("playerController");
         foreach (GameObject obj in objects)
@@ -144,6 +146,7 @@ public class ShowPlayerScores : MonoBehaviour
         }
     }
 
+    //Sort from high to low
     void BubbleSort(int[] scores, int[] playerID)
     {
         for(int i=0; i < scores.Length-1; i++)
@@ -163,5 +166,11 @@ public class ShowPlayerScores : MonoBehaviour
                 }
             }
         }
+    }
+
+    //Unit test for bubble sort
+    void BubbleSortUT()
+    {
+
     }
 }
