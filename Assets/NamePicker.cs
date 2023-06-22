@@ -122,20 +122,20 @@ public class NamePicker : MonoBehaviour
     }
 
     void OnEnter()
-    {
-        nameEntered = true;
-        string t;
-        //Debug.Log("Enter button");
-        //Debug.Log("Enter button");
-        GetComponent<PlayerDetails>().playerName += chars[0].GetComponent<TextMeshProUGUI>().text.ToString();
-        GetComponent<PlayerDetails>().playerName += chars[1].GetComponent<TextMeshProUGUI>().text.ToString();
-        GetComponent<PlayerDetails>().playerName += chars[2].GetComponent<TextMeshProUGUI>().text.ToString();
-
-        currentCharColor = nameEnteredColor;
-        for(int i=0; i<chars.Count; i++)
+    {     
+        if(!nameEntered)
         {
-            chars[i].GetComponent<TextMeshProUGUI>().color = nameEnteredColor;
+            GetComponent<PlayerDetails>().playerName += chars[0].GetComponent<TextMeshProUGUI>().text.ToString();
+            GetComponent<PlayerDetails>().playerName += chars[1].GetComponent<TextMeshProUGUI>().text.ToString();
+            GetComponent<PlayerDetails>().playerName += chars[2].GetComponent<TextMeshProUGUI>().text.ToString();
+
+            currentCharColor = nameEnteredColor;
+            for (int i = 0; i < chars.Count; i++)
+            {
+                chars[i].GetComponent<TextMeshProUGUI>().color = nameEnteredColor;
+            }
+            countdown.GetComponent<ResetGame>().pInfo.Add(new PlayerInformation(GetComponent<PlayerDetails>().playerID, GetComponent<PlayerDetails>().playerScore, GetComponent<PlayerDetails>().playerName));
         }
-        countdown.GetComponent<ResetGame>().pInfo.Add(new PlayerInformation(GetComponent<PlayerDetails>().playerID, GetComponent<PlayerDetails>().playerScore, GetComponent<PlayerDetails>().playerName));
+        nameEntered = true;
     }
 }
