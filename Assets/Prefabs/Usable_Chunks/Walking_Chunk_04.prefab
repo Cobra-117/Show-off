@@ -1805,7 +1805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 0
   cooldown: 0.5
 --- !u!4 &2583115666649133809 stripped
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 0
   cooldown: 0.5
 --- !u!4 &4473562401042301717 stripped
@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 0
   cooldown: 0.5
 --- !u!4 &4009815765562389212 stripped
@@ -3205,7 +3205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 1
   cooldown: 0.5
 --- !u!1001 &3034369656227344302
@@ -3348,7 +3348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 0
   cooldown: 0.5
 --- !u!1001 &3037829924800047874
@@ -7701,7 +7701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 0
   cooldown: 0.5
 --- !u!1001 &3302681363129073246
@@ -36871,7 +36871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 1
   cooldown: 0.5
 --- !u!1001 &3573421125873227790
@@ -37079,7 +37079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 1
   cooldown: 0.5
 --- !u!1001 &3963792913224163779
@@ -37192,7 +37192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 0
   cooldown: 0.5
 --- !u!1001 &4043643209789932659
@@ -37484,7 +37484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 1
   cooldown: 0.5
 --- !u!4 &8016992425864253501 stripped
@@ -37747,7 +37747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 1
   cooldown: 0.5
 --- !u!4 &7251757144619021230 stripped
@@ -38670,7 +38670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 1
   cooldown: 0.5
 --- !u!4 &8445749362105676529 stripped
@@ -39084,7 +39084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 0
   cooldown: 0.5
 --- !u!1001 &7589215604015692865
@@ -39442,7 +39442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 0
   cooldown: 0.5
 --- !u!1001 &7835591792050450217
@@ -39930,7 +39930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHeight: 5.25
   minHeight: 2.25
-  speed: 2
+  speed: 3.5
   goingUp: 1
   cooldown: 0.5
 --- !u!1001 &8367768330396203870

@@ -208,7 +208,6 @@ GameObject:
   - component: {fileID: 1706225283810431977}
   - component: {fileID: 1706225283810431976}
   - component: {fileID: 1706225283810431979}
-  - component: {fileID: 8423247980934730397}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
@@ -295,20 +294,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
---- !u!114 &8423247980934730397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706225283810431973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &1706225283824959786
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +404,6 @@ GameObject:
   - component: {fileID: 1706225283835088430}
   - component: {fileID: 1706225283835088425}
   - component: {fileID: 1706225283835088424}
-  - component: {fileID: 9092531490251777639}
   m_Layer: 0
   m_Name: Rock1_Low
   m_TagString: Untagged
@@ -506,20 +490,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5784162064684295946, guid: b17c00f91c8a2f24d96f12df68be8e06, type: 3}
---- !u!114 &9092531490251777639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706225283835088426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &1706225283864671662
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,7 +2112,6 @@ GameObject:
   - component: {fileID: 1706225284833879072}
   - component: {fileID: 1706225284833879075}
   - component: {fileID: 1706225284833879074}
-  - component: {fileID: 1393698619270906527}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
@@ -2229,20 +2198,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
---- !u!114 &1393698619270906527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706225284833879100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &1706225284837933122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,7 +2406,6 @@ GameObject:
   - component: {fileID: 1706225284930981530}
   - component: {fileID: 1706225284930981525}
   - component: {fileID: 1706225284930981524}
-  - component: {fileID: 8599384186141977201}
   m_Layer: 0
   m_Name: Rock7_Low
   m_TagString: Untagged
@@ -2538,20 +2492,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
---- !u!114 &8599384186141977201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706225284930981526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &1706225284941251284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3771,7 +3711,6 @@ GameObject:
   - component: {fileID: 1706225285704711337}
   - component: {fileID: 1706225285704711336}
   - component: {fileID: 1706225285704711339}
-  - component: {fileID: 276434552671841179}
   m_Layer: 0
   m_Name: Rock1_Low
   m_TagString: Untagged
@@ -3858,20 +3797,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5784162064684295946, guid: b17c00f91c8a2f24d96f12df68be8e06, type: 3}
---- !u!114 &276434552671841179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706225285704711333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &1706225285729757951
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,7 +4299,6 @@ GameObject:
   - component: {fileID: 3657835981874950886}
   - component: {fileID: 3657835981874950881}
   - component: {fileID: 3657835981874950880}
-  - component: {fileID: 3657835981874950883}
   m_Layer: 0
   m_Name: Rock7_Low (2)
   m_TagString: Untagged
@@ -4461,20 +4385,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
---- !u!114 &3657835981874950883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3657835981874950893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &3657835982092918339
 GameObject:
   m_ObjectHideFlags: 0
@@ -4585,7 +4495,6 @@ GameObject:
   - component: {fileID: 3657835982226309057}
   - component: {fileID: 3657835982226309056}
   - component: {fileID: 3657835982226309059}
-  - component: {fileID: 3657835982226309058}
   m_Layer: 0
   m_Name: Rock7_Low (1)
   m_TagString: Untagged
@@ -4672,20 +4581,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
---- !u!114 &3657835982226309058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3657835982226309068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &3657835982291863902
 GameObject:
   m_ObjectHideFlags: 0
@@ -4796,7 +4691,6 @@ GameObject:
   - component: {fileID: 3657835982460027985}
   - component: {fileID: 3657835982460027984}
   - component: {fileID: 3657835982460027987}
-  - component: {fileID: 3657835982460027986}
   m_Layer: 0
   m_Name: Rock1_Low (2)
   m_TagString: Untagged
@@ -4883,20 +4777,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5784162064684295946, guid: b17c00f91c8a2f24d96f12df68be8e06, type: 3}
---- !u!114 &3657835982460027986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3657835982460027996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &3657835982462150071
 GameObject:
   m_ObjectHideFlags: 0
@@ -5040,7 +4920,6 @@ GameObject:
   - component: {fileID: 3657835982527973653}
   - component: {fileID: 3657835982527973652}
   - component: {fileID: 3657835982527973655}
-  - component: {fileID: 3657835982527973654}
   m_Layer: 0
   m_Name: Rock7_Low (3)
   m_TagString: Untagged
@@ -5127,20 +5006,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4576572575157475337, guid: 968eabf83ed50fc49a6bfea24d51c3f9, type: 3}
---- !u!114 &3657835982527973654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3657835982527973648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1deae8adc54fa94a937480f92e93109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  stunTime: 0.3
 --- !u!1 &3657835982595555800
 GameObject:
   m_ObjectHideFlags: 0
