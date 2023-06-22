@@ -5495,15 +5495,20 @@ PrefabInstance:
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.z
       value: 3.2
       objectReference: {fileID: 0}
+    - target: {fileID: 18602094314372364, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 18602094314372367, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 18602094314372401, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 560891652968582695, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
