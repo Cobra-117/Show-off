@@ -3645,6 +3645,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockSize: {x: 40, y: 0}
+  easyBlocks: []
+  hardBlocks: []
   blocks:
   - {fileID: 977477906323147531, guid: b6519a637affca84aa12a2873e202fa0, type: 3}
   - {fileID: 4490266675803921787, guid: 9f0360a5d2881b546a8989cdac7eed37, type: 3}
@@ -3654,6 +3656,7 @@ MonoBehaviour:
   decorationGenerator: {fileID: 0}
   simultaneousBlocks: 7
   dataWave: {fileID: 0}
+  hardBlocksStarts: 0
 --- !u!4 &723469500
 Transform:
   m_ObjectHideFlags: 0
@@ -3800,18 +3803,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockSize: {x: 40, y: 0}
-  blocks:
+  easyBlocks:
   - {fileID: 1706225285363741935, guid: 5cc29c94576b7cc48826ccc6b41ff605, type: 3}
   - {fileID: 2697239089257800537, guid: 536361c3ad6a02c4e96fab8bad8b5b7e, type: 3}
   - {fileID: 2205971593593291324, guid: eb9dd9a95f7f701408484e2534e066ad, type: 3}
   - {fileID: 6052975366335176601, guid: da0d2e1a63f7b5143908548a65a24922, type: 3}
   - {fileID: 7634449040597257741, guid: 4b32df23e7ea6e348bd78540f62c4438, type: 3}
+  hardBlocks:
   - {fileID: 2155787689687745878, guid: d34f4c5624488ba46b51013b1fb92c58, type: 3}
   - {fileID: 6645145999951171212, guid: 8f54149c5c2f88f43a217ed2e29f3b08, type: 3}
+  blocks: []
   Water: {fileID: 0}
   decorationGenerator: {fileID: 1790441660}
   simultaneousBlocks: 4
   dataWave: {fileID: 1082949417}
+  hardBlocksStarts: 4
 --- !u!4 &764448919
 Transform:
   m_ObjectHideFlags: 0
@@ -5638,11 +5644,11 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: defcb53c5d28c4e429c7416f4fa5e625, type: 3}
 --- !u!114 &1082949417 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 994473604548003066, guid: defcb53c5d28c4e429c7416f4fa5e625,
+  m_CorrespondingSourceObject: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
     type: 3}
   m_PrefabInstance: {fileID: 1082949416}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082949418}
+  m_GameObject: {fileID: 1082949420}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de6bbca9e9c13c846844a75779e81aa5, type: 3}

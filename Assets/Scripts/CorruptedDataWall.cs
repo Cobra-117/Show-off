@@ -83,6 +83,7 @@ public class CorruptedDataWall : MonoBehaviour
 
     public void UpdateChunk()
     {
+        Debug.Log("updating chunk");
         if (isFirstChunk) {
             isFirstChunk = false;
             return;
