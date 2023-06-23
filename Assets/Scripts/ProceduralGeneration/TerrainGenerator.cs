@@ -5,11 +5,15 @@ using UnityEngine;
 public class TerrainGenerator : MonoBehaviour
 {
     public Vector2 blockSize;
-    public GameObject[] blocks;
+    public GameObject[] easyBlocks;
+    public GameObject[] hardBlocks;
+    //public GameObject[] blocks;
+    public List<GameObject> blocks;
     public GameObject Water;
     public DecorationsGenerator decorationGenerator;
     public int simultaneousBlocks = 7;
     public CorruptedDataWall dataWave;
+    public int hardBlocksStarts;
 
     int nbrOfBlocks;
     List<GameObject> blocksList;
@@ -22,6 +26,10 @@ public class TerrainGenerator : MonoBehaviour
         waterList = new List<GameObject>();
         Random.InitState(System.DateTime.Now.Millisecond);
         decorationGenerator.AddBlock();
+        blocks = new List<GameObject>();
+        foreach (GameObject block in easyBlocks) {
+            blocks.Add(block);
+        }
         //AddWater();
         AddBlock(0, false);
         AddBlock(1, false);
@@ -42,6 +50,11 @@ public class TerrainGenerator : MonoBehaviour
 
     public void AddBlock(int blockType, bool randomRotation = true)
     {
+        if (nbrOfBlocks > hardBlocksStarts) {
+            for (int i = 0; i < hardBlocks.Length; i++) {
+                blocks.Add(hardBlocks[i]);
+            }
+        }
         if (nbrOfBlocks %2 != 0)
             decorationGenerator.AddBlock();
         Vector3 coordinates = new Vector3(nbrOfBlocks * blockSize.x,

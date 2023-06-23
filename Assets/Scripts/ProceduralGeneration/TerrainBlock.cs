@@ -62,7 +62,7 @@ public class TerrainBlock : MonoBehaviour
                 if (transform.parent == null)
                     return;
                 transform.parent.GetComponent<TerrainGenerator>().AddBlock(Random.Range(2, 
-                transform.parent.GetComponent<TerrainGenerator>().blocks.Length));
+                transform.parent.GetComponent<TerrainGenerator>().blocks.Count));
                 //generate
                 hasBeenUsed = true;
                 dataWave.UpdateChunk();
