@@ -69,7 +69,7 @@ public class ShowPlayerScores : MonoBehaviour
             if (player.GetComponent<PlayerDetails>().playerID == playerID[0])
             {
                 firstPlayerPresent = true;
-                score1st.GetComponent<TextMeshProUGUI>().text = playerScores[0].ToString();
+                score1st.GetComponent<TextMeshProUGUI>().text = playerScores[0].ToString("#,#");
 
                 Transform firstPlace = player.transform.Find("Walkiing(Clone)");
                 firstPlace.gameObject.SetActive(true);
@@ -87,7 +87,7 @@ public class ShowPlayerScores : MonoBehaviour
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[1])
             {
                 secondPlayerPresent = true;
-                score2nd.GetComponent<TextMeshProUGUI>().text = playerScores[1].ToString();
+                score2nd.GetComponent<TextMeshProUGUI>().text = playerScores[1].ToString("#,#");
 
                 Transform secondPlace = player.transform.Find("Walkiing(Clone)");
                 secondPlace.gameObject.SetActive(true);
@@ -105,7 +105,7 @@ public class ShowPlayerScores : MonoBehaviour
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[2])
             {
                 thirdPlayerPresent = true;
-                score3rd.GetComponent<TextMeshProUGUI>().text = playerScores[2].ToString();
+                score3rd.GetComponent<TextMeshProUGUI>().text = playerScores[2].ToString("#,#");
 
                 Transform thirdPlace = player.transform.Find("Walkiing(Clone)");
                 thirdPlace.gameObject.SetActive(true);
