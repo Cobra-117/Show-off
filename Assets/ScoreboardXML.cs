@@ -28,7 +28,8 @@ public class PlayerInformation : IComparable   //(when implementing IComparable,
     public int CompareTo(object other)
     {
         if (other is PlayerInformation)
-            return this.playerScore.CompareTo(((PlayerInformation)other).playerScore); // returns -1, 0 or 1, like any comparer
+            return ((PlayerInformation)other).playerScore.CompareTo(this.playerScore);
+            //return this.playerScore.CompareTo(((PlayerInformation)other).playerScore); // returns -1, 0 or 1, like any comparer
 
         return 0; // I guess
     }

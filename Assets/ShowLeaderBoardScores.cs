@@ -17,11 +17,11 @@ public class ShowLeaderBoardScores : MonoBehaviour
     {
         p = ScoreboardXML.Instance.LoadScore();
         p.Sort();
-        p.Reverse();
+        //p.Reverse();
         scoreList.GetComponent<TextMeshProUGUI>().text = "High Scores:\n";
         foreach (PlayerInformation pl in p)
         {
-            string s = new string(pl.playerName + " " + pl.playerScore + "\n");
+            string s = new string(pl.playerName + " " + pl.playerScore.ToString("#,#") + "\n");
             scoreList.GetComponent<TextMeshProUGUI>().text += s;
         }
         
