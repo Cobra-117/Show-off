@@ -14,6 +14,8 @@ public class ShowPlayerScores : MonoBehaviour
     public int[] playerScores;
     public List<Sprite> colors = new();
     public List<Sprite> icons = new();
+    public GameObject countdown;
+
     public Transform firstPlacePosition;
     public Transform secondPlacePosition;
     public Transform thirdPlacePosition;
@@ -37,7 +39,8 @@ public class ShowPlayerScores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<ShowLeaderBoardScores>().ShowScores();
+        countdown = GameObject.Find("Till reload");
+        //GetComponent<ShowLeaderBoardScores>().ShowScores();
         
         //GameObject[] objects = FindObjectsOfType<GameObject>(true);
         GameObject[] objects = GameObject.FindGameObjectsWithTag("playerController");
@@ -68,6 +71,8 @@ public class ShowPlayerScores : MonoBehaviour
 
             if (player.GetComponent<PlayerDetails>().playerID == playerID[0])
             {
+                countdown.GetComponent<ResetGame>().playerCount++;
+                
                 firstPlayerPresent = true;
                 score1st.GetComponent<TextMeshProUGUI>().text = playerScores[0].ToString("#,#");
 
@@ -81,11 +86,12 @@ public class ShowPlayerScores : MonoBehaviour
 
                 border1st.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
                 icon1st.GetComponent<Image>().sprite = icons[player.GetComponent<PlayerDetails>().playerIcon];
-
             }
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[1])
             {
+                countdown.GetComponent<ResetGame>().playerCount++;
+
                 secondPlayerPresent = true;
                 score2nd.GetComponent<TextMeshProUGUI>().text = playerScores[1].ToString("#,#");
 
@@ -104,6 +110,8 @@ public class ShowPlayerScores : MonoBehaviour
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[2])
             {
+                countdown.GetComponent<ResetGame>().playerCount++;
+
                 thirdPlayerPresent = true;
                 score3rd.GetComponent<TextMeshProUGUI>().text = playerScores[2].ToString("#,#");
 

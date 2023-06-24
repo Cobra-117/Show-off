@@ -20,6 +20,7 @@ public class NamePicker : MonoBehaviour
     public Color nameEnteredColor;
     public bool nameEntered;
     GameObject countdown;
+    GameObject restartText;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,7 @@ public class NamePicker : MonoBehaviour
         currentChar = chars[namePointer];
 
         countdown = GameObject.Find("Till reload");
+        restartText = GameObject.Find("PlayerRestart");
     }
 
     void GetLettersFromPlacing()
@@ -121,6 +123,16 @@ public class NamePicker : MonoBehaviour
         }
     }
 
+    private void OnSelect()
+    {
+        if(!nameEntered)
+        {
+            IncreaseReadyPlayers();
+        }
+        
+        nameEntered = true;
+    }
+
     void OnEnter()
     {     
         if(!nameEntered)
@@ -135,7 +147,15 @@ public class NamePicker : MonoBehaviour
                 chars[i].GetComponent<TextMeshProUGUI>().color = nameEnteredColor;
             }
             countdown.GetComponent<ResetGame>().pInfo.Add(new PlayerInformation(GetComponent<PlayerDetails>().playerID, GetComponent<PlayerDetails>().playerScore, GetComponent<PlayerDetails>().playerName));
+            IncreaseReadyPlayers();
+
         }
         nameEntered = true;
+    }
+
+    private void IncreaseReadyPlayers()
+    {
+        countdown.GetComponent<ResetGame>().readyPlayers++;
+        restartText.GetComponent<TextMeshProUGUI>().text += new string("\nPlayer " + GetComponent<PlayerDetails>().playerID + " ready");
     }
 }

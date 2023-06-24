@@ -9,6 +9,8 @@ public class ResetGame : MonoBehaviour
     TextMeshProUGUI timer;
     public float countdown;
     public List<PlayerInformation> pInfo;
+    public int readyPlayers;
+    public int playerCount;
     
     // Start is called before the first frame update
     void Start()
@@ -43,11 +45,11 @@ public class ResetGame : MonoBehaviour
         countdown -= Time.deltaTime;
         int second = (int)(countdown % 60);
         if (timer != null )
-            timer.text = "Time till restart:\n" + second + " seconds\n Or restart with 'r'";
+            timer.text = "Time till restart:\n" + second + " seconds\n";
         
-        if (second == 0 || Input.GetKeyDown(KeyCode.R))
+        if (second == 0 || Input.GetKeyDown(KeyCode.R) || readyPlayers == playerCount)
         {
-            RestartGame();
+            Invoke("RestartGame", 1.5f);
         }
     }
 }
