@@ -53,7 +53,8 @@ public class FireworksGradient : MonoBehaviour
 
         float[] intensities = new float[2];
         intensities[0] = 10f;
-        intensities[1] = 6f;
+        intensities[1] = 10f;
+        intensities[2] = 4f;
 
         GradientColorKey[] colorKeys = new GradientColorKey[3];
         colorKeys[0].color = colors[0] * intensities[0];
@@ -62,7 +63,7 @@ public class FireworksGradient : MonoBehaviour
         colorKeys[1].color = colors[1] * intensities[1];
         colorKeys[1].time = 0.06f; // 6% of the gradient
 
-        colorKeys[2].color = colors[2];
+        colorKeys[2].color = colors[2]*intensities[2];
         colorKeys[2].time = 1f;
 
         gradient.colorKeys = colorKeys;
