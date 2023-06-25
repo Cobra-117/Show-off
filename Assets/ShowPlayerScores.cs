@@ -39,6 +39,8 @@ public class ShowPlayerScores : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BubbleSortUT();
+        
         countdown = GameObject.Find("Till reload");
         //GetComponent<ShowLeaderBoardScores>().ShowScores();
         
@@ -179,6 +181,39 @@ public class ShowPlayerScores : MonoBehaviour
     //Unit test for bubble sort
     void BubbleSortUT()
     {
+        int[] score1 = new int[] { 500, 20, 1000, 4200, 2000, 100, 6000, 2500, 5300 };
+        int[] playerID1 = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+        int[] score1Sorted = new int[] { 6000, 5300, 4200, 2500, 2000, 1000, 500, 100, 20 };
+
+        BubbleSort(score1, playerID1);
+
+        Debug.Log("Sorted list 1:");
+        for (int i=0; i<score1.Length; i++)
+        {
+            if (score1[i] == score1Sorted[i])
+            Debug.Log("PlayerID " + playerID1[i] + " has score " + score1[i]);
+
+            if (i == score1.Length-1)
+                Debug.Log("UT1 sorted correctly");
+        }
+
+        int[] score2 = new int[] { 4000, 6000, 2000, 10000, 5000, 3400, 4800, 3000, 3000 };
+        int[] playerID2 = new int[] { 2, 4, 5, 1, 3, 8, 9, 6, 7 };
+
+        int[] score2Sorted = new int[] { 10000, 6000, 5000, 4800, 4000, 3400, 3000, 3000, 2000 };
+
+        BubbleSort(score2, playerID2);
+
+        Debug.Log("Sorted list 2:");
+        for (int i = 0; i < score2.Length; i++)
+        {
+            if (score2[i] == score2Sorted[i])
+            Debug.Log("PlayerID " + playerID2[i] + " has score " + score2[i]);
+
+            if (i == score2.Length-1)
+                Debug.Log("UT2 sorted correctly");
+        }
 
     }
 }
