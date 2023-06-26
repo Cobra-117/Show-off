@@ -11,6 +11,7 @@ public class ResetGame : MonoBehaviour
     public List<PlayerInformation> pInfo;
     public int readyPlayers;
     public int playerCount;
+    public GameObject playerCounter;
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,8 @@ public class ResetGame : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        playerCounter.GetComponent<TextMeshProUGUI>().text = "Players Ready: " + readyPlayers + "/" + playerCount;
+
         countdown -= Time.deltaTime;
         int second = (int)(countdown % 60);
         if (timer != null )

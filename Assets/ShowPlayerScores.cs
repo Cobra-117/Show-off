@@ -57,6 +57,7 @@ public class ShowPlayerScores : MonoBehaviour
 
         playerID = new int[players.Count];
         playerScores = new int[players.Count];
+        countdown.GetComponent<ResetGame>().playerCount = players.Count;
 
         foreach(GameObject player in players)
         {
@@ -70,10 +71,12 @@ public class ShowPlayerScores : MonoBehaviour
         foreach (GameObject player in players)
         {
             //Debug.Log("player ID: " + player.GetComponent<PlayerDetails>().playerID);
+            player.AddComponent<NamePicker>();
+            player.GetComponent<NamePicker>().placing = 0;
 
             if (player.GetComponent<PlayerDetails>().playerID == playerID[0])
             {
-                countdown.GetComponent<ResetGame>().playerCount++;
+                //countdown.GetComponent<ResetGame>().playerCount++;
                 
                 firstPlayerPresent = true;
                 score1st.GetComponent<TextMeshProUGUI>().text = playerScores[0].ToString("#,#");
@@ -83,7 +86,6 @@ public class ShowPlayerScores : MonoBehaviour
                 Destroy(firstPlace.Find("PlayerIcon(Clone)").gameObject);
                 firstPlace.transform.position = firstPlacePosition.position;
 
-                player.AddComponent<NamePicker>();
                 player.GetComponent<NamePicker>().placing = 1;
 
                 border1st.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
@@ -92,7 +94,7 @@ public class ShowPlayerScores : MonoBehaviour
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[1])
             {
-                countdown.GetComponent<ResetGame>().playerCount++;
+                //countdown.GetComponent<ResetGame>().playerCount++;
 
                 secondPlayerPresent = true;
                 score2nd.GetComponent<TextMeshProUGUI>().text = playerScores[1].ToString("#,#");
@@ -102,7 +104,6 @@ public class ShowPlayerScores : MonoBehaviour
                 Destroy(secondPlace.Find("PlayerIcon(Clone)").gameObject);
                 secondPlace.transform.position = secondPlacePosition.position;
 
-                player.AddComponent<NamePicker>();
                 player.GetComponent<NamePicker>().placing = 2;
 
                 border2nd.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
@@ -112,7 +113,7 @@ public class ShowPlayerScores : MonoBehaviour
 
             else if (player.GetComponent<PlayerDetails>().playerID == playerID[2])
             {
-                countdown.GetComponent<ResetGame>().playerCount++;
+                //countdown.GetComponent<ResetGame>().playerCount++;
 
                 thirdPlayerPresent = true;
                 score3rd.GetComponent<TextMeshProUGUI>().text = playerScores[2].ToString("#,#");
@@ -122,7 +123,6 @@ public class ShowPlayerScores : MonoBehaviour
                 Destroy(thirdPlace.Find("PlayerIcon(Clone)").gameObject);
                 thirdPlace.transform.position = thirdPlacePosition.position;
 
-                player.AddComponent<NamePicker>();
                 player.GetComponent<NamePicker>().placing = 3;
 
                 border3rd.GetComponent<Image>().sprite = colors[player.GetComponent<PlayerDetails>().playerColor];
