@@ -74,7 +74,7 @@ public class NamePicker : MonoBehaviour
     void OnLeftSelect()
     {
         //Debug.Log("left button");
-        if (namePointer > 0 && !nameEntered)
+        if (namePointer > 0 && !nameEntered && placing != 0)
         {
             currentChar.GetComponent<TextMeshProUGUI>().color = Color.white;
             namePointer--;
@@ -88,7 +88,7 @@ public class NamePicker : MonoBehaviour
     void OnRightSelect()
     {
         //Debug.Log("right button");
-        if (namePointer < chars.Count - 1 && !nameEntered)
+        if (namePointer < chars.Count - 1 && !nameEntered && placing != 0)
         {
             currentChar.GetComponent<TextMeshProUGUI>().color = Color.white;
             namePointer++;
@@ -102,7 +102,7 @@ public class NamePicker : MonoBehaviour
     void OnUpSelect()
     {
        //Debug.Log("up button");
-        if (alphaPointer < alphabets.Length - 1 && !nameEntered)
+        if (alphaPointer < alphabets.Length - 1 && !nameEntered && placing != 0)
         {
             alphaPointer++;
             currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
@@ -114,7 +114,7 @@ public class NamePicker : MonoBehaviour
     void OnDownSelect()
     {
         //Debug.Log("down button");
-        if (alphaPointer > 0 && !nameEntered)
+        if (alphaPointer > 0 && !nameEntered && placing != 0)
         {
             alphaPointer--;
             currentChar.GetComponent<textDetails>().alphaPointer = alphaPointer;
@@ -135,7 +135,7 @@ public class NamePicker : MonoBehaviour
 
     void OnEnter()
     {     
-        if(!nameEntered)
+        if(!nameEntered && placing != 0)
         {
             GetComponent<PlayerDetails>().playerName += chars[0].GetComponent<TextMeshProUGUI>().text.ToString();
             GetComponent<PlayerDetails>().playerName += chars[1].GetComponent<TextMeshProUGUI>().text.ToString();
@@ -148,7 +148,7 @@ public class NamePicker : MonoBehaviour
             }
             countdown.GetComponent<ResetGame>().pInfo.Add(new PlayerInformation(GetComponent<PlayerDetails>().playerID, GetComponent<PlayerDetails>().playerScore, GetComponent<PlayerDetails>().playerName));
             IncreaseReadyPlayers();
-
+            
         }
         nameEntered = true;
     }
