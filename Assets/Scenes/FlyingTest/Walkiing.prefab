@@ -973,8 +973,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedCurve:
   - 5
+  - 5
+  - 5.5
+  - 5.5
   - 6
+  - 6
+  - 6.5
+  - 6.5
   - 7
+  - 7
+  - 7.5
+  - 7.5
+  - 8
+  - 8
+  - 8.5
+  - 8.5
+  - 9
+  - 9
+  - 9.5
+  - 9.5
+  - 10
   speed: 5
   airVelocity: 1
   gravity: 40
