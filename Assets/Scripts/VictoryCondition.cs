@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class VictoryCondition : MonoBehaviour
 {
     bool hasGameStarted = false;
+    public GameObject panel;
     void Start()
     {
 
@@ -29,7 +30,10 @@ public class VictoryCondition : MonoBehaviour
         hasGameStarted = true;
 
         //the code below shouldn't check if the player is disabled
-        if (activePlayers.Count == 0 && hasGameStarted == true)
+        if (activePlayers.Count == 0 && hasGameStarted == true) {
+            Debug.Log("set panel active");
+            panel.SetActive(true);
             Invoke("DelayLoad", 1);
+        }
     }
 }
