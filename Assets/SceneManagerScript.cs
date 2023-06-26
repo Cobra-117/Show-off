@@ -27,7 +27,7 @@ public class SceneManagerScript : MonoBehaviour
             Destroy(obj.GetComponent<IconPicker>());
             obj.GetComponent<IconPicker>().enabled = false;
             obj.GetComponent<PlayerInput>().SwitchCurrentActionMap("playerMove");
-            obj.GetComponent<PlayerInputScript>().enabled = true;
+            //obj.GetComponent<PlayerInputScript>().enabled = true;
             DontDestroyOnLoad(obj);
         }
     }

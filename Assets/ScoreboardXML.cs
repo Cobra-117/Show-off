@@ -28,9 +28,9 @@ public class PlayerInformation : IComparable   //(when implementing IComparable,
     public int CompareTo(object other)
     {
         if (other is PlayerInformation)
-            return this.playerScore.CompareTo(((PlayerInformation)other).playerScore); // returns -1, 0 or 1, like any comparer
+            return ((PlayerInformation)other).playerScore.CompareTo(this.playerScore);
 
-        return 0; // I guess
+        return 0;
     }
 }
 
@@ -57,19 +57,11 @@ public class ScoreboardXML : MonoBehaviour
     //THE SCORES ARE SAVED TO C:\Users\<user>\AppData\LocalLow\DefaultCompany\Show off
     public void SaveScore(List<PlayerInformation> newPlayers)
     {
-        //leaderboard.players.Clear();
-
-        //SortScore(leaderboard.players);
         XmlSerializer serializer = new XmlSerializer(typeof(Leaderboard));
 
         if(!File.Exists(Application.persistentDataPath + "/Highscores/highscores.xml"))
         {
             leaderboard.players = newPlayers;
-            
-            FileStream stream = new FileStream(Application.persistentDataPath + "/Highscores/highscores.xml", FileMode.Create);
-            serializer.Serialize(stream, leaderboard);
-            stream.Close();
-            return;
         }
 
         else if(File.Exists(Application.persistentDataPath + "/Highscores/highscores.xml"))
@@ -79,14 +71,12 @@ public class ScoreboardXML : MonoBehaviour
             {
                 leaderboard.players.Add(p);
             }
-
-            FileStream stream = new FileStream(Application.persistentDataPath + "/Highscores/highscores.xml", FileMode.Create);
-            serializer.Serialize(stream, leaderboard);
-            stream.Close();
-            return;
         }
 
-
+        FileStream stream = new FileStream(Application.persistentDataPath + "/Highscores/highscores.xml", FileMode.Create);
+        serializer.Serialize(stream, leaderboard);
+        stream.Close();
+        return;
     }
 
     public List<PlayerInformation> LoadScore()
@@ -106,15 +96,17 @@ public class ScoreboardXML : MonoBehaviour
         return left.playerScore.CompareTo(right.playerScore); // returns -1, 0 or 1, like any comparer
     }
 
+
+    //Unused merge sort
     public List<PlayerInformation> SortScore(List<PlayerInformation> players)
     {
-        if(players.Count<=1)
-        {
-            return players;
-        }
-        players.Sort();
-        return players;
-        
+        //if(players.Count<=1)
+        //{
+        //    return players;
+        //}
+        //players.Sort();
+        //return players;
+
         // Uses the IComparable interface
         //players.Sort( ComparePlayers );
         // more fancy, with lambda:
@@ -122,25 +114,25 @@ public class ScoreboardXML : MonoBehaviour
 
         //return players;
 
-        //var left = new List<PlayerInformation>();
-        //var right = new List<PlayerInformation>();
+        var left = new List<PlayerInformation>();
+        var right = new List<PlayerInformation>();
 
-        //int middle = players.Count / 2;
+        int middle = players.Count / 2;
 
-        //for(int i=0; i< players.Count; i++)
-        //{
-        //    left.Add(players[i]);
-        //}
+        for (int i = 0; i < players.Count; i++)
+        {
+            left.Add(players[i]);
+        }
 
-        //for(int i=0; i<players.Count; i++)
-        //{
-        //    right.Add(players[i]);
-        //}
+        for (int i = 0; i < players.Count; i++)
+        {
+            right.Add(players[i]);
+        }
 
-        //left = SortScore(left);
-        //right = SortScore(right);
-        
-        //return MergeLists(left, right);
+        left = SortScore(left);
+        right = SortScore(right);
+
+        return MergeLists(left, right);
     }
 
     public List<PlayerInformation> MergeLists(List<PlayerInformation> left, List<PlayerInformation> right)
