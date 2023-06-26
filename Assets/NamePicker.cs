@@ -31,18 +31,9 @@ public class NamePicker : MonoBehaviour
         currentCharColor = Color.yellow;
         nameEnteredColor = Color.green;
 
+        if(placing !=0)
         GetLettersFromPlacing();
     
-        Char1.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
-        Char2.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
-        Char3.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
-        chars.Add(Char1);
-        chars.Add(Char2);
-        chars.Add(Char3);
-
-        Char1.GetComponent<TextMeshProUGUI>().color = currentCharColor;
-        currentChar = chars[namePointer];
-
         countdown = GameObject.Find("Till reload");
         restartText = GameObject.Find("PlayerRestart");
     }
@@ -69,6 +60,16 @@ public class NamePicker : MonoBehaviour
             Char2 = GameObject.Find("L2_3rd");
             Char3 = GameObject.Find("L3_3rd");
         }
+
+        Char1.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
+        Char2.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
+        Char3.GetComponent<TextMeshProUGUI>().text = alphabets[0].ToString();
+        chars.Add(Char1);
+        chars.Add(Char2);
+        chars.Add(Char3);
+
+        Char1.GetComponent<TextMeshProUGUI>().color = currentCharColor;
+        currentChar = chars[namePointer];
     }
 
     void OnLeftSelect()
