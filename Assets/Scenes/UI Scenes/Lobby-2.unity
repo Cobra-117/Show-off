@@ -35426,7 +35426,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 02467da249256435896e1936f8640c6a, type: 3}
   - {fileID: 21300000, guid: 59c056b8cafdf428681cf0dfe4fc04bc, type: 3}
   - {fileID: 21300000, guid: 37c08757ba134467dbb866fc804777f1, type: 3}
-  - {fileID: 21300000, guid: b856b6a8f348c4a97ae2e76e6c149e1d, type: 3}
+  - {fileID: 21300000, guid: 54c521c5d67f74490bd6357cb61557b2, type: 3}
+  - {fileID: 21300000, guid: 2dbc2d01ad93b45c282e6b15720a687c, type: 3}
   readyIcons:
   - {fileID: 21300000, guid: f5775cfff6a26456094c37551fedd7a1, type: 3}
   - {fileID: 21300000, guid: b94b321d35a454c7b8129d921c457053, type: 3}
