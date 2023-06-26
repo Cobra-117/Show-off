@@ -51,7 +51,7 @@ public class FireworksGradient : MonoBehaviour
         //color from player is set in switch above
         colors[2] = new Color(1f, 0.5f, 0f);
 
-        float[] intensities = new float[2];
+        float[] intensities = new float[3];
         intensities[0] = 10f;
         intensities[1] = 10f;
         intensities[2] = 4f;
