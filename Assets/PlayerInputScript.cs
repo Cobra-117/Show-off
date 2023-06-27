@@ -8,7 +8,7 @@ public class PlayerInputScript : MonoBehaviour
     public Vector3 analogValue;
     public bool buttonPressed;
     //GameObject currentObject;
-    public GameObject pauseText;
+    public GameObject cameraObject;
 
     void OnMove(InputValue value)
     {
@@ -17,48 +17,28 @@ public class PlayerInputScript : MonoBehaviour
 
     void OnPause()
     {
-        if (pauseText.GetComponent<PauseScript>().isPaused)
-        {
-            pauseText.GetComponent<PauseScript>().isPaused = false;
+        if (PauseMenu.isGamePaused == false)
+        {   
+            cameraObject.GetComponent<PauseMenu>().Pause();
+            PauseMenu.isGamePaused = true;
         }
 
-        else if (!pauseText.GetComponent<PauseScript>().isPaused)
+        else if (PauseMenu.isGamePaused == true)
         {
-            pauseText.GetComponent<PauseScript>().isPaused = true;
+            cameraObject.GetComponent<PauseMenu>().Resume();
+            PauseMenu.isGamePaused = false;
         }
-            
-
     }
 
-    void OnSceneLoaded()
-    {
-        pauseText = GameObject.FindGameObjectWithTag("LobbyMenu");
-    }
-
-    //void OnJump()
+    //void OnSceneLoaded()
     //{
-    //    currentObject = GetComponent<SwitchMovement>().currentObject;
-
-    //    if (currentObject.name.Equals("Flying"))
-    //    {
-    //        //Debug.Log("jump");
-    //        currentObject.GetComponent<FlyingMovement>().OnButtonPress();
-    //    }
-
-    //    if (currentObject.name.Equals("Swim"))
-    //        currentObject.GetComponent<SwimmingMovement>().OnButtonPress();
-
-    //    if (currentObject.name.Equals("Walk"))
-    //        currentObject.GetComponent<Walk>().OnButtonPress();
-
-    //    if (currentObject.name.Equals("Frog"))
-    //        currentObject.GetComponent<Jump>().OnButtonPress();
+    //    cameraObject = GameObject.FindGameObjectWithTag("LobbyMenu");
     //}
 
     // Start is called before the first frame update
     void Start()
     {
-        pauseText = GameObject.FindGameObjectWithTag("pauseText");
+        cameraObject = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame

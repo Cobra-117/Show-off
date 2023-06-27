@@ -23,14 +23,14 @@ public class PauseMenu : MonoBehaviour
         }   
     }
 
-    void Pause()
+    public void Pause()
     {
         Debug.Log("Paused game");
         Time.timeScale = 0f;
         PauseCanva.SetActive(true);
     }
 
-    void Resume()
+    public void Resume()
     {
         Debug.Log("Resumed game");
         Time.timeScale = 1f;
