@@ -820,8 +820,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1074098385}
   - {fileID: 813731014}
+  - {fileID: 1074098385}
   - {fileID: 2129826384}
   - {fileID: 731025586}
   - {fileID: 62786206}
@@ -4154,7 +4154,7 @@ RectTransform:
   m_Children:
   - {fileID: 1745896276}
   m_Father: {fileID: 159826950}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -7259,7 +7259,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Game paused
 
-    Press escape to resume'
+
+    Resume: "Menu" / "Esc"
+
+    Return to lobby: "B" / "Back"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 59b44bfc58b460443881d5c6bd913f42, type: 2}
   m_sharedMaterial: {fileID: 8824133092220528310, guid: 59b44bfc58b460443881d5c6bd913f42,

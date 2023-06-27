@@ -30,6 +30,16 @@ public class PlayerInputScript : MonoBehaviour
         }
     }
 
+    void OnBack()
+    {
+        if(PauseMenu.isGamePaused)
+        {
+            cameraObject.GetComponent<PauseMenu>().Resume();
+            PauseMenu.isGamePaused = false;
+            cameraObject.GetComponent<PauseMenu>().GoToLobby();
+        }
+    }
+
     //void OnSceneLoaded()
     //{
     //    cameraObject = GameObject.FindGameObjectWithTag("LobbyMenu");

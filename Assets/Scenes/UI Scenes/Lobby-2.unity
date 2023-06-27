@@ -18708,9 +18708,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Are you sure you want to quit?
 
-    "Esc": YES
 
-    "Backspace": NO
+    "Menu" / "Esc": NO
+
+    "B" / "Back":
+    YES
 
 '
   m_isRightToLeft: 0
@@ -35896,6 +35898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitText: {fileID: 900270965}
+  t: {fileID: 0}
 --- !u!1001 &1749293683
 PrefabInstance:
   m_ObjectHideFlags: 0

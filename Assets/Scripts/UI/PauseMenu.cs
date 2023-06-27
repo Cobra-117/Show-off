@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -15,12 +17,22 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            Debug.Log("escape key pressed");
-            if (!isGamePaused) { Pause();}
-            else {Resume();}
-            isGamePaused = !isGamePaused;
-        }   
+        //if (Input.GetKeyDown(KeyCode.Escape)) {
+        //    Debug.Log("escape key pressed");
+        //    if (!isGamePaused) { Pause();}
+        //    else {Resume();}
+        //    isGamePaused = !isGamePaused;
+        //}
+        
+        //if(Input.GetKeyDown(KeyCode.Backspace))
+        //{
+        //    if (isGamePaused)
+        //    {
+        //        Resume();
+        //        isGamePaused = false;
+        //        GoToLobby();
+        //    }        
+        //}
     }
 
     public void Pause()
@@ -37,7 +49,7 @@ public class PauseMenu : MonoBehaviour
         PauseCanva.SetActive(false);
     }
 
-    void GoToLobby()
+    public void GoToLobby()
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("playerController");
         foreach (GameObject p in players)
@@ -46,6 +58,6 @@ public class PauseMenu : MonoBehaviour
         }
         //SceneManagerScript.controllerCount = 0;
         //SceneManagerScript.playerInfo.Clear();
-        //SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 }
