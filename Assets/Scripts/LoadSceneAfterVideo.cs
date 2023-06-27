@@ -7,6 +7,8 @@ public class LoadSceneAfterVideo : MonoBehaviour
 {
     public bool loaderCalled = false;
     UnityEngine.Video.VideoPlayer videoPlayer;
+
+    public GameObject canva;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class LoadSceneAfterVideo : MonoBehaviour
         if (loaderCalled == true)
             return;
         //Debug.Log("end reached");
+        canva.SetActive(true);
         loaderCalled = false;
         SceneManager.LoadScene("PlayScene");
     }
