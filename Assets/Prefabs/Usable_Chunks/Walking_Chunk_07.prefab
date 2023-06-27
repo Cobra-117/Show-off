@@ -1067,6 +1067,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6897993000256329222}
+  - component: {fileID: 2728226191624601541}
+  - component: {fileID: 6064990171309318746}
+  - component: {fileID: 4123412478186985911}
   m_Layer: 0
   m_Name: Walking_Chunk_07
   m_TagString: Untagged
@@ -1097,6 +1100,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2728226191624601541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897993000256329225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887618138aa4ee64e8332c2261ed89f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockType: 3
+  dataWave: {fileID: 0}
+--- !u!65 &6064990171309318746
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897993000256329225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.001911, y: 20.645891, z: 2.348846}
+  m_Center: {x: -0.4643345, y: 5.3229475, z: 18.667713}
+--- !u!65 &4123412478186985911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897993000256329225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.001911, y: 20.645891, z: 2.348846}
+  m_Center: {x: -0.4643345, y: 5.3229475, z: -18.9}
 --- !u!1 &6897993000287704521
 GameObject:
   m_ObjectHideFlags: 0
@@ -28743,7 +28786,7 @@ PrefabInstance:
     - target: {fileID: 6572683484597976625, guid: 8d27d0aea23f5b64b87430e6e55129ee,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: death
       objectReference: {fileID: 0}
     - target: {fileID: 6572683484597976625, guid: 8d27d0aea23f5b64b87430e6e55129ee,
         type: 3}
