@@ -45,6 +45,8 @@ public class PlayerScoreManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (PauseMenu.isGamePaused)
+			return;
         //int second = (int)(timer % 60);
         for (int i = 0; i < players.Length; i++)
         {

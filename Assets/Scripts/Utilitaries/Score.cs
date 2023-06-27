@@ -30,6 +30,8 @@ public class Players : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (PauseMenu.isGamePaused)
+			return;
         for (int i = 0; i < players.Count; i++) {
             if (players[i].isAlive)
                 players[i].score += 1;

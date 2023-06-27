@@ -114,6 +114,8 @@ public class Walk : MonoBehaviour
 	}
 	
 	void FixedUpdate () {
+		if (PauseMenu.isGamePaused)
+			return;
 		if (canMove)
 		{
 			//if (moveDir.x != 0 || moveDir.z != 0)
