@@ -625,7 +625,7 @@ MonoBehaviour:
   active: 1
   quality:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   enabled:
     m_OverrideState: 1
     m_Value: 1
@@ -652,13 +652,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: -0.19
+    m_Value: 2.66
   maximumHeight:
     m_OverrideState: 1
     m_Value: 19.76
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 2.25
+    m_Value: 4.03
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -691,7 +691,7 @@ MonoBehaviour:
     m_Value: 64
   m_VolumetricFogBudget:
     m_OverrideState: 1
-    m_Value: 0.166
+    m_Value: 0.333
   m_ResolutionDepthRatio:
     m_OverrideState: 1
     m_Value: 0.5

@@ -25,7 +25,7 @@ public class SceneManagerScript : MonoBehaviour
         {
             obj.transform.parent = null;
             Destroy(obj.GetComponent<IconPicker>());
-            obj.GetComponent<IconPicker>().enabled = false;
+            //obj.GetComponent<IconPicker>().enabled = false;
             obj.GetComponent<PlayerInput>().SwitchCurrentActionMap("playerMove");
             //obj.GetComponent<PlayerInputScript>().enabled = true;
             DontDestroyOnLoad(obj);
