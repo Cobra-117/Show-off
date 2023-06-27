@@ -129,9 +129,8 @@ public class NamePicker : MonoBehaviour
         if(!nameEntered)
         {
             IncreaseReadyPlayers();
-        }
-        
-        nameEntered = true;
+            nameEntered = true;
+        }    
     }
 
     void OnEnter()
@@ -149,9 +148,8 @@ public class NamePicker : MonoBehaviour
             }
             countdown.GetComponent<ResetGame>().pInfo.Add(new PlayerInformation(GetComponent<PlayerDetails>().playerID, GetComponent<PlayerDetails>().playerScore, GetComponent<PlayerDetails>().playerName));
             IncreaseReadyPlayers();
-            
-        }
-        nameEntered = true;
+            nameEntered = true;
+        }  
     }
 
     private void IncreaseReadyPlayers()
