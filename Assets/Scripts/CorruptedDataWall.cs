@@ -31,6 +31,8 @@ public class CorruptedDataWall : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.isGamePaused)
+			return;
         GameObject firstPlayer = GetFirstPlayer();
         if (firstPlayer == null)
             return;
