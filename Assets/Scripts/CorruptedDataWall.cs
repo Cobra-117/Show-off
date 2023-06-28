@@ -11,6 +11,7 @@ public class CorruptedDataWall : MonoBehaviour
     }
     public float speed;
     public float[] speedCurve;
+    public float speedMultiplier = 1;
 
     int currentChunk = 0;
     public float OffsetToFirstPlayer = 15;
@@ -20,6 +21,8 @@ public class CorruptedDataWall : MonoBehaviour
     public Cinemachine.CinemachineTargetGroup targetGroup;
     
     bool isFirstChunk = true;
+
+    bool lastManAliveMode = false;
     // Update is called once per frame
     
     void Start() 
@@ -33,6 +36,10 @@ public class CorruptedDataWall : MonoBehaviour
     {
         if (PauseMenu.isGamePaused)
 			return;
+        if (lastManAliveMode == true && speedMultiplier <= 2.0f) {
+            speedMultiplier += Time.deltaTime/30;
+            Debug.Log("speed mut" + speedMultiplier.ToString());
+        }
         GameObject firstPlayer = GetFirstPlayer();
         if (firstPlayer == null)
             return;
@@ -43,21 +50,21 @@ public class CorruptedDataWall : MonoBehaviour
                 transform.position = new Vector3(firstPlayer.transform.position.x - OffsetToFirstPlayer,
                 transform.position.y, transform.position.z);
             } else 
-                transform.Translate(new Vector3(speed *  Time.deltaTime, 0, 0));
+                transform.Translate(new Vector3(speed * speedMultiplier *  Time.deltaTime, 0, 0));
         }
         else if (axis == Axis.Y) {
             if (transform.position.x > firstPlayer.transform.position.x - OffsetToFirstPlayer) {
                 transform.position = new Vector3(firstPlayer.transform.position.x - OffsetToFirstPlayer,
                 transform.position.y, transform.position.z);
             } else
-                transform.Translate(new Vector3(0, speed *  Time.deltaTime, 0));
+                transform.Translate(new Vector3(0, speed * speedMultiplier *  Time.deltaTime, 0));
         }
         else if (axis == Axis.Z) {
             if (transform.position.x < firstPlayer.transform.position.x - OffsetToFirstPlayer) {
                 transform.position = new Vector3(firstPlayer.transform.position.x - OffsetToFirstPlayer,
                 transform.position.y, transform.position.z);
             } else
-                transform.Translate(new Vector3(0, 0, speed *  Time.deltaTime));
+                transform.Translate(new Vector3(0, 0, speed * speedMultiplier *  Time.deltaTime));
         }
     }
 
@@ -115,7 +122,22 @@ public class CorruptedDataWall : MonoBehaviour
             collision.gameObject.SetActive(false);
             //targetGroup.m_Targets
             audioSource.Play();
+            if (GetNbrOfPlayers() == 1)
+                lastManAliveMode = true;
+            
             //Debug.Log("Player removed");
+           
         }
+    }
+
+    int GetNbrOfPlayers()
+    {
+        GameObject[] playersobj = GameObject.FindGameObjectsWithTag("Player");
+        List<GameObject> activePlayers = new List<GameObject>();
+        for (int i = 0; i < playersobj.Length; i++) {
+        if (playersobj[i].activeInHierarchy)
+            activePlayers.Add(playersobj[i]);
+        }
+        return activePlayers.Count;
     }
 }
