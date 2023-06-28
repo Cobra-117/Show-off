@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
     int currentClip;
     public int currentChunk = -1;
 
+    public bool shouldChangeClip = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,14 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (shouldChangeClip == true && !audioSource.isPlaying)
+        {
+            audioSource.clip = clips[currentClip];
+            audioSource.Play();
+            shouldChangeClip = false;
+            audioSource.loop = true;
+            Debug.Log("changed clip");
+        }
     }
 
     public void UpdateChunk()
@@ -30,8 +39,8 @@ public class AudioManager : MonoBehaviour
         && currentChunk % 2 == 0)
         {
             currentClip += 1;
-            audioSource.clip = clips[currentClip];
-            audioSource.Play();
+            shouldChangeClip = true;
+            audioSource.loop = false;
         }
     }
 }
