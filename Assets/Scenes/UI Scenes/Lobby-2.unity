@@ -18845,10 +18845,9 @@ MonoBehaviour:
   m_text: 'Are you sure you want to quit?
 
 
-    "Menu" / "Esc": NO
+    "Esc": YES
 
-    "B" / "Back":
-    YES
+    "Backspace": NO
 
 '
   m_isRightToLeft: 0

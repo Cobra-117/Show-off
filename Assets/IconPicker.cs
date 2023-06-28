@@ -80,19 +80,19 @@ public class IconPicker : MonoBehaviour
         playerReady.GetComponent<TextMeshProUGUI>().text = "Players ready: " + readyPlayers + "/" + currentControllers;
     }
 
-    void OnStart()
-    {
-        if (menu.GetComponent<ExitGame>().t.enabled == true)
-            menu.GetComponent<ExitGame>().t.enabled = false;
+    //void OnStart()
+    //{
+    //    if (menu.GetComponent<ExitGame>().t.enabled == true)
+    //        menu.GetComponent<ExitGame>().t.enabled = false;
 
-        else if (menu.GetComponent<ExitGame>().t.enabled == false)
-            menu.GetComponent<ExitGame>().t.enabled = true;
-    }
+    //    else if (menu.GetComponent<ExitGame>().t.enabled == false)
+    //        menu.GetComponent<ExitGame>().t.enabled = true;
+    //}
 
-    void OnBack()
-    {
-        if (menu.GetComponent<ExitGame>().t.enabled == true)
-            Application.Quit();
-    }
+    //void OnBack()
+    //{
+    //    if (menu.GetComponent<ExitGame>().t.enabled == true)
+    //        Application.Quit();
+    //}
 }
 
