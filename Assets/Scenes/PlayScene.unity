@@ -7337,9 +7337,9 @@ MonoBehaviour:
   m_text: 'Game paused
 
 
-    Resume: "Menu" / "Esc"
+    Resume: "Esc"
 
-    Return to lobby: "B" / "Back"'
+    Return to lobby: "Backspace"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 59b44bfc58b460443881d5c6bd913f42, type: 2}
   m_sharedMaterial: {fileID: 8824133092220528310, guid: 59b44bfc58b460443881d5c6bd913f42,

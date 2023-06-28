@@ -15,30 +15,30 @@ public class PlayerInputScript : MonoBehaviour
         analogValue = value.Get<Vector2>();
     }
 
-    void OnPause()
-    {
-        if (PauseMenu.isGamePaused == false)
-        {   
-            cameraObject.GetComponent<PauseMenu>().Pause();
-            PauseMenu.isGamePaused = true;
-        }
+    //void OnPause()
+    //{
+    //    if (PauseMenu.isGamePaused == false)
+    //    {   
+    //        cameraObject.GetComponent<PauseMenu>().Pause();
+    //        PauseMenu.isGamePaused = true;
+    //    }
 
-        else if (PauseMenu.isGamePaused == true)
-        {
-            cameraObject.GetComponent<PauseMenu>().Resume();
-            PauseMenu.isGamePaused = false;
-        }
-    }
+    //    else if (PauseMenu.isGamePaused == true)
+    //    {
+    //        cameraObject.GetComponent<PauseMenu>().Resume();
+    //        PauseMenu.isGamePaused = false;
+    //    }
+    //}
 
-    void OnBack()
-    {
-        if(PauseMenu.isGamePaused)
-        {
-            cameraObject.GetComponent<PauseMenu>().Resume();
-            PauseMenu.isGamePaused = false;
-            cameraObject.GetComponent<PauseMenu>().GoToLobby();
-        }
-    }
+    //void OnBack()
+    //{
+    //    if(PauseMenu.isGamePaused)
+    //    {
+    //        cameraObject.GetComponent<PauseMenu>().Resume();
+    //        PauseMenu.isGamePaused = false;
+    //        cameraObject.GetComponent<PauseMenu>().GoToLobby();
+    //    }
+    //}
 
     //void OnSceneLoaded()
     //{

@@ -145,7 +145,7 @@
                 {
                     "name": "",
                     "id": "5262f3b6-1454-4f9e-afa0-729750805cf6",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -167,7 +167,7 @@
                 {
                     "name": "",
                     "id": "6ba2882e-bf3d-4b13-88db-a6d1bb180507",
-                    "path": "<Keyboard>/backspace",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
