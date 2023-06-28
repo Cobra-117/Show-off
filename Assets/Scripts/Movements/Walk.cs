@@ -8,6 +8,8 @@ public class Walk : MonoBehaviour
 {
 	public float[] speedCurve;
 	public float speed = 10.0f;
+
+	public float speedMultiplier = 1f;
 	public float airVelocity = 8f;
 	public float gravity = 10.0f;
 	public float maxVelocityChange = 10.0f;
@@ -134,7 +136,7 @@ public class Walk : MonoBehaviour
 			{
 			 // Calculate how fast we should be moving
 				Vector3 targetVelocity = rotateDirection;
-				targetVelocity *= speed;
+				targetVelocity *= (speed * speedMultiplier);
 				animator.Play("Take 001");
 				//Debug.Log("Fix animation");
 				//if (animator.)

@@ -122,8 +122,10 @@ public class CorruptedDataWall : MonoBehaviour
             collision.gameObject.SetActive(false);
             //targetGroup.m_Targets
             audioSource.Play();
-            if (GetNbrOfPlayers() == 1)
+            if (GetNbrOfPlayers() == 1) {
                 lastManAliveMode = true;
+                UpdatePlayersSpeedMut();
+            }
             
             //Debug.Log("Player removed");
            
@@ -139,5 +141,16 @@ public class CorruptedDataWall : MonoBehaviour
             activePlayers.Add(playersobj[i]);
         }
         return activePlayers.Count;
+    }
+
+    void UpdatePlayersSpeedMut()
+    {
+        GameObject[] playersobj = GameObject.FindGameObjectsWithTag("Player");
+        List<GameObject> activePlayers = new List<GameObject>();
+        for (int i = 0; i < playersobj.Length; i++) {
+        if (playersobj[i].activeInHierarchy)
+            playersobj[i].GetComponent<Walk>().speedMultiplier = 1f;
+            //activePlayers.Add(playersobj[i]);
+        }
     }
 }
