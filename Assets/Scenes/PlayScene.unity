@@ -2219,6 +2219,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 47d84632beb2b1f4d94da7c7b05a848a, type: 3}
   - {fileID: 8300000, guid: 4a27ea6a23eb6f947abf3728a89882ca, type: 3}
   currentChunk: -1
+  shouldChangeClip: 0
 --- !u!114 &393058860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2272,6 +2273,7 @@ MonoBehaviour:
   - 2
   - 2.5
   - 3
+  speedMultiplier: 1
   OffsetToFirstPlayer: 15
   axis: 0
   audioSource: {fileID: 397037092}
@@ -5923,13 +5925,128 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
+      propertyPath: speedCurve.Array.size
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
       propertyPath: speedCurve.Array.data[1]
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
         type: 3}
       propertyPath: speedCurve.Array.data[2]
-      value: 2
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[3]
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[5]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[6]
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[7]
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[8]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[9]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[10]
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[11]
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[12]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[13]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[14]
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[15]
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[16]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[17]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[18]
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[19]
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[20]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[21]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[22]
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[23]
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040702781620390613, guid: defcb53c5d28c4e429c7416f4fa5e625,
+        type: 3}
+      propertyPath: speedCurve.Array.data[24]
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2051926887, guid: defcb53c5d28c4e429c7416f4fa5e625, type: 3}
@@ -6257,14 +6374,14 @@ MonoBehaviour:
   m_ShadowResolution:
     m_Override: 512
     m_UseOverride: 0
-    m_Level: 1
+    m_Level: 2
   m_ShadowDimmer: 1
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
   m_UseContactShadow:
     m_Override: 0
     m_UseOverride: 0
-    m_Level: 1
+    m_Level: 2
   m_RayTracedContactShadow: 0
   m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
   m_PenumbraTint: 0
@@ -7253,6 +7370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   speedCurve: []
+  speedMultiplier: 1
   OffsetToFirstPlayer: 15
   axis: 1
   audioSource: {fileID: 0}
