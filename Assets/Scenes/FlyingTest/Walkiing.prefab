@@ -978,6 +978,7 @@ MonoBehaviour:
   - 9.5
   - 10
   speed: 5
+  speedMultiplier: 1
   airVelocity: 1
   gravity: 40
   maxVelocityChange: 10
